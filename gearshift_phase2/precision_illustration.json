@@ -1,0 +1,29 @@
+{
+  "note": "Normal-approximation illustration using the previous 100-question pair discordance of 12/100. These are not prospective power guarantees, do not account for selection, and do not license optional stopping. Different task families can have different discordance and variance.",
+  "rows": [
+    {
+      "independent_problems": 100,
+      "assumed_discordance_rate": 0.12,
+      "assumed_paired_difference": 0.02,
+      "approx_two_sided_95_half_width_pp": 6.7781891014858635
+    },
+    {
+      "independent_problems": 200,
+      "assumed_discordance_rate": 0.12,
+      "assumed_paired_difference": 0.02,
+      "approx_two_sided_95_half_width_pp": 4.792903477825406
+    },
+    {
+      "independent_problems": 400,
+      "assumed_discordance_rate": 0.12,
+      "assumed_paired_difference": 0.02,
+      "approx_two_sided_95_half_width_pp": 3.3890945507429318
+    },
+    {
+      "independent_problems": 800,
+      "assumed_discordance_rate": 0.12,
+      "assumed_paired_difference": 0.02,
+      "approx_two_sided_95_half_width_pp": 2.396451738912703
+    }
+  ]
+}

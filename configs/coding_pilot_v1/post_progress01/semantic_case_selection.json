@@ -1,0 +1,15 @@
+{
+  "task_ids": [
+    "atcoder/abc348_e",
+    "leetcode/3428",
+    "leetcode/3464"
+  ],
+  "selection": "Before new H/P outputs, choose owner-named objective corruption, missing requested XOR method, and missing alternating-cost entrypoint. Mechanism examples, not representative prevalence.",
+  "compare": [
+    "M",
+    "H",
+    "D",
+    "P"
+  ],
+  "source": "Visible original task statements and generated code only; no hidden-answer oracle or function-name repair."
+}

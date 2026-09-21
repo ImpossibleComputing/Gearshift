@@ -1,0 +1,303 @@
+Continue Gearshift in two stages: first preserve the publication
+snapshot, then run a focused diagnostic pass. This is an execution
+request, not another planning exercise. These instructions are
+self-contained; use an available independent-review packet as
+supporting evidence, not as a prerequisite.
+
+1. COMMIT AND TAG THE COMPLETED WORK BEFORE NEW EXPERIMENTS
+
+The first Impossible Computing progress article now covers the
+larger-model recovery result. Its editorial master is:
+https://docs.google.com/document/d/1ZiD6307LLaLJiIXSE5uDvO48mDfGbfT6Xc7KL2-O2Ag/edit
+
+The article retains a conversational voice, a preface about
+Impossible's inference focus and sharing failures, prior-work
+attribution, and the negative results.
+
+Do not replace it with another competing draft or edit the Google
+Doc. If authorized Drive access is available, read it and save an
+identified Markdown snapshot locally. Otherwise retain the current
+local article as a draft and explicitly note that it is not
+synchronized with the editorial master. Article-access limitations
+must not block committing the code and evidence.
+
+Before changing experimental code:
+
+- Inspect Git status, existing commits/tags, tracked/ignored files,
+  and saved run manifests. Preserve unrelated user changes; stage
+  the relevant Gearshift work deliberately.
+- Commit completed source, fixes, tests, configs, reproduction
+  instructions, reports, small result records, artifact inventories,
+  and appropriate publication assets.
+- Inspect staged content for credentials, private evaluation
+  material, and oversized artifacts. Do not blindly add environments,
+  weights, KV/feature tensors, checkpoints, archive copies, or
+  private hidden tests.
+- Back up heavy artifacts outside Git, with exact hashes, locations,
+  and retrieval/regeneration instructions. A tag does not preserve
+  excluded artifacts. Disclose unrecoverable omissions.
+- Preserve actual source revisions/snapshots used for historical
+  runs. The new packaging commit is not necessarily the revision
+  that originally generated every result.
+- Add publication/PROGRESS_01_SNAPSHOT.md identifying the article
+  title, evidence cutoff, included runs, model/config/corpus/
+  checkpoint hashes, raw-record and figure sources, limitations,
+  and editorial-master location. Label it a research-progress
+  snapshot, not an approved public release or final article copy.
+- Run relevant lightweight tests and records-only table/figure
+  regeneration. Do not rerun the GPU study merely for packaging.
+- Make the necessary local commits, then create the annotated tag
+  gearshift-progress-01 at the final snapshot commit.
+
+The tag annotation must identify Progress Post 01 and its key
+development result:
+A=34/40, B=27/40, trained C=3/40, matched D=34/40.
+
+Verify the tag resolves to the intended commit. If the tag already
+exists, inspect it: reuse it only if it already represents this exact
+snapshot. Never force-move or delete a publication tag. Report a
+genuine collision rather than silently retagging.
+
+Return the tag and full commit SHA. Final prose edits can be later
+commits citing this immutable evidence tag; do not move the tag as
+the article evolves.
+
+Then create research/post-progress-01 from the tagged snapshot for
+new diagnostics, or reuse an existing compatible branch without
+discarding work. Use new result/config namespaces and commit new
+work separately at sensible milestones.
+
+Local commits and the annotated tag are explicitly authorized.
+Do not push, create a public release, change repository visibility,
+deploy the website, or choose/change a license.
+
+2. ESTABLISHED EVIDENCE AND OPEN HYPOTHESES
+
+Read RECOVERY_RESULTS.md and its underlying records. The reviewed
+Qwen3-32B→Qwen3-8B run reports:
+
+- Large alone A: 34/40; independent small B: 27/40.
+- Trained mapped C: 3/40; matched text replay D: 34/40.
+- Initial affine mapper: 0/40.
+- D reproduces every original answer-token sequence.
+- C loses 31 tasks and gains none against D.
+- Thirty-eight C answers stop naturally.
+
+The audit identifies 13 of 16 runtime failures as missing explicitly
+requested entrypoints. Some other outputs solve a materially
+different task: minimum weighted tree distances become maximum
+unweighted distances. Verify these diagnoses against saved
+prompts/code before relying on them.
+
+Selected checkpoint:
+update 96
+SHA-256:
+0b9700ffd9cb38c23bcfa1327181b32992b128c6b95078214328382f86b8d68f
+
+Its functional exposure was 3,072 scored prediction positions, not
+the full attempt's 3,680 positions across 115 updates.
+
+Training and validation sample zero-indexed answer windows:
+0–7, 32–39, 128–135, 512–519.
+
+Full history and intervening continuation are processed: this is
+sparse supervision, not context cropping. Both receiver paths are
+teacher-forced along source-written answers; reference probabilities
+come from the native receiver.
+
+Validation improved at every recorded checkpoint. This run does not
+establish a plateau or prove that KL mis-ranked trained checkpoints:
+only one trained checkpoint received task evaluation.
+
+Investigate prompt-state corruption, training/inference mismatch,
+limited supervision, and mapper capacity as hypotheses—not causes
+we have already established.
+
+3. VERIFY THE ACTUAL TRAINING AND INFERENCE PATHS
+
+Before interpreting new training, compare the hand-written
+differentiable continuation path with the deployed receiver forward
+path on the actual frozen Qwen3-8B BF16 configuration.
+
+Use a small declared set of saved real histories spanning short and
+long contexts, with both native and mapped caches. Feed identical
+token prefixes, masks, positions, rotary handling, dtypes, and
+attention settings.
+
+Compare logits/distributions at the handoff and later answer
+positions. Check native prefill/resumption, cache mutation, and
+aliasing. Where practical, compare gradients for a small cache slice
+or mapper subset through both paths; disclose unchecked aspects.
+
+Establish tolerances using same-path numerical controls, not by
+choosing thresholds that excuse discrepancies. Diagnose material
+differences before interpreting loss curves. Preserve any bug
+reproduction, commit repairs separately, and rerun affected matched
+controls under new identities. Never rewrite the tagged result.
+
+Use deterministic settings for numerical checks, while retaining
+declared task-quality sampling for generation. Tiny-model unit
+tests are not a substitute for this actual-model check.
+
+4. FROZEN-MAPPER PROMPT-PRESERVATION EXPERIMENT
+
+Run this before another broad training effort. Keep the selected
+mapper frozen and use all 40 already-inspected development tasks
+with their exact saved source histories.
+
+Compare:
+
+M: existing pure mapped-cache handoff.
+
+H: native receiver cache of the complete original prompt/chat prefix,
+   followed by the translated source-reasoning suffix.
+
+D: native receiver prefill of the exact whole history.
+
+P: receiver given only the original prompt and asked to answer
+   without fresh reasoning, using its valid non-thinking template.
+   Keep the existing independently thinking B baseline separately.
+
+Reuse valid baselines. Rerun matched controls where runtime changes
+prevent fair reuse.
+
+For H:
+- Record exact prompt/reasoning boundaries and token IDs.
+- Preserve suffix positions and avoid duplicate/skipped tokens.
+- Isolate mutable caches.
+- Test native/native splicing as a control.
+- Count native prompt work: H is partial prefill, not zero prefill.
+- Do not call new answer tokens pristine independent state; they
+  still depend on the historical cache.
+
+P tests whether the receiver succeeds without transferred reasoning.
+H beating M alone does not prove that translated reasoning helps.
+
+If H appears useful relative to P, a small, explicitly labeled
+matched-length wrong-reasoning-suffix diagnostic may help test
+dependence on that suffix. Preserve the correct native prompt and
+document the construction. Do not pad arbitrary keys or present a
+corrupted-history control as a deployable alternative.
+
+Score hidden-test passes and separately inspect interface compliance,
+task/objective preservation, syntax, runtime failures, repetition,
+and stopping. Ground semantic examples in the visible task and label
+case selection.
+
+Do not rename functions or repair outputs before primary scoring.
+Any post-hoc repair test remains a separate diagnostic.
+
+Report paired H−M, H−D, and H−P outcomes with task-level uncertainty,
+plus matched timing and token accounting. Nonsignificance is not
+equivalence.
+
+Hybrid failure would not itself rule out prompt-related corruption:
+translated suffix states also depend on source representations of
+the original prompt.
+
+5. CAN THE MAPPER LEARN A HANDFUL OF SEEN HISTORIES?
+
+Select four existing TRAINING histories by a recorded deterministic
+rule spanning available context lengths before new output inspection.
+Do not use reserved confirmation cases or select favorable development
+examples.
+
+Evaluate native receiver replay on these cases so the receiver's own
+limitations are visible.
+
+Run a deliberate memorization/optimization sanity test:
+- Keep both language models frozen.
+- Keep the affine mapper family unchanged initially.
+- Start from a recorded checkpoint.
+- Optimize only on these four histories.
+- Broaden supervision across the answer: early task/interface
+  decisions, code, later code/return behavior, and EOS, rather than
+  forever reusing four fixed windows.
+- Use dense or seeded resampled positions with valid masks and no
+  hidden-test/reference-answer leakage.
+
+Audit actual token spans: explanation, signature, code body, return,
+and stopping. Report scored positions, unique task/position exposure,
+gradient norms, and per-case loss. Do not infer coverage from update
+count or assume introductory prose is useless.
+
+Preserve the existing source-written continuation reference in the
+first coverage experiment. Testing native-receiver-generated
+continuations is a separate comparison, not a silent simultaneous
+change. Generate references without hidden answers or tests.
+
+Measure teacher-forced fidelity AND free-running answers on those
+same four cases at checkpoints. Hidden tests score artifacts only;
+they are not optimizer inputs. Compare with native replay, not just
+the initializer.
+
+Choose a practical bounded schedule within the remaining budget.
+Adapt routine memory/batching details autonomously. Stop when the
+sanity-test question is answered or its declared allowance is spent,
+not simply because the previous run ended at 96/128 steps. Do not
+expand into indefinite optimization or architecture search.
+
+Label this SEEN-TRAINING-CASE performance, never generalization.
+If it works, a small unchanged-validation check can reveal overfitting.
+Do not run the reserved 200-task or second-seed confirmation in this
+pass.
+
+6. EXECUTION SCOPE
+
+Use the existing model pair, pinned revisions, valid completed corpus,
+and saved histories. Do not collect another broad corpus, increase
+model sizes, restart subjective judging, or launch production serving.
+
+Use the REMAINING existing cumulative $1,000 / 500 GPU-hour
+authorization—not a new budget. The supplied report estimated
+$280.04 and 49.147 GPU-hours consumed, plus retained storage.
+Reconcile live resources and the ledger before spending.
+
+Allocate a sensible diagnostic budget and preserve funds for the next
+decision. Exceeding existing authorization requires approval.
+
+Retain the successful recovery's warning-based memory policy,
+telemetry, checkpointing, cleanup, and sensible retries. Do not
+reinstate arbitrary historical-peak/free-memory vetoes.
+
+Routine fixes, staging/offloading, and restarts within scope should
+not require repeated permission. Preserve numerical controls and
+experiment identities where changes affect conclusions.
+
+Keep generated-code execution isolated from network, secrets, and
+unrestricted host access. Preserve hidden-test separation, data-split
+boundaries, original results, and failures.
+
+7. DELIVERABLES
+
+Create gearshift_post_progress01_review.zip containing:
+
+- POST_PROGRESS_01_RESULTS.md: actual runs, failures, unresolved
+  questions, and which hypotheses the results support or weaken.
+- Publication tag/commit verification, new branch and subsequent
+  SHAs, and a change summary relative to the publication tag.
+- Code, tests, configs, task/corpus/mapper manifests, exact
+  source-history IDs, raw outputs, score receipts, training exposure
+  and curves, numerical-path comparisons, memory/timing records,
+  and reproduction commands.
+- A file-size/SHA-256 manifest and inventories for excluded heavy
+  artifacts. Tables and plots must regenerate from compact records
+  without weights.
+
+Exclude credentials, environments, weights, large tensor caches,
+private hidden tests, and Git internals from the ZIP. Preserve heavy
+evidence separately and report its locations.
+
+Finish with:
+- Exact ZIP path and SHA-256.
+- Verified local publication tag and full commit SHA.
+- Diagnostic results and remaining uncertainty.
+- Cumulative spending and remaining paid resources.
+
+Stop idle GPUs after verified backup. Do not claim the tag was pushed
+or the article published.
+
+Export useful partial findings if a stage hits a concrete blocker.
+The first article remains about the frozen Progress 01 snapshot;
+these diagnostics must not delay its review or silently change its
+claims.

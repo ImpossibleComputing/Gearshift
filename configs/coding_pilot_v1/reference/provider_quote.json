@@ -1,0 +1,36 @@
+{
+  "checked_utc": "2026-09-15T14:51:40.814296+00:00",
+  "currency": "USD",
+  "quote_type": "Published list prices; no allocation, availability guarantee or account-specific quote",
+  "gpu": {
+    "provider": "Runpod",
+    "product": "Dedicated Secure Cloud H200 Pod",
+    "memory_advertised_gb": 141,
+    "usd_per_gpu_hour": 4.59,
+    "url": "https://www.runpod.io/pricing"
+  },
+  "storage": {
+    "network_under_1tb_usd_gb_month": 0.07,
+    "container_usd_gb_month": 0.1,
+    "volume_running_usd_gb_month": 0.1,
+    "volume_idle_usd_gb_month": 0.2,
+    "url": "https://www.runpod.io/pricing"
+  },
+  "calculation": {
+    "gpu_48h_usd": 220.32,
+    "network_250gb_48h_estimate_usd": 1.1666666666666667,
+    "container_40gb_48h_estimate_usd": 0.26666666666666666,
+    "billing_month_assumption_hours": 720,
+    "taxes_and_provider_adjustments": "not included; cap includes contingency"
+  },
+  "sources": [
+    {
+      "url": "https://www.runpod.io/pricing",
+      "page_updated": "2026-09-13"
+    },
+    {
+      "url": "https://www.runpod.io/articles/guides/ai-server-cost",
+      "purpose": "Published Secure Cloud tier corroboration"
+    }
+  ]
+}

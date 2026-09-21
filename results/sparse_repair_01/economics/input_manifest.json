@@ -1,0 +1,37 @@
+{
+  "bytes": 2585022,
+  "file": "input_records.json",
+  "sha256": "9825e94334cb9ddf5d78dc2d4c899bae569349cbd45b69b28cd1813942b7d158",
+  "source_inputs": [
+    {
+      "bytes": 4491113,
+      "path": "results/coding_pilot_v1/confirmation_01_20260919T094418Z/primary/report/per_task_seed.csv",
+      "sha256": "8a8e932a58373d249e777d94d983224d9d0493ef9c72c032603091c4a74431bb"
+    },
+    {
+      "bytes": 2723,
+      "path": "results/coding_pilot_v1/confirmation_01_20260919T094418Z/primary/report/report_manifest.json",
+      "sha256": "45ecc4d44376b410f52733ffa3fa1530b5916d11667d7b710cb873b695041785"
+    },
+    {
+      "bytes": 5823111,
+      "path": "results/coding_pilot_v1/confirmation_01_20260919T094418Z/primary/scoring/scoring_plan.json",
+      "sha256": "3d62a5789f96437d242ce7fe909672883d27d1259b6059ae1ac7a6846eafd8dc"
+    },
+    {
+      "bytes": 31148,
+      "path": "configs/coding_pilot_v1/confirmation_01/declaration.json",
+      "sha256": "16387d5361c795121929fd9244821f12ee005f9b36b2febddca5d9ef89f7536f"
+    },
+    {
+      "bytes": 12851678,
+      "path": "results/coding_pilot_v1/confirmation_01_20260919T094418Z/primary/generation_closure.json",
+      "sha256": "57cb0c840a9480d243143a6887e2dfc267fa50b3936a0b2d50023583c1c76036"
+    },
+    {
+      "bytes": 2682646,
+      "path": "results/coding_pilot_v1/confirmation_01_20260919T094418Z/primary/scoring/scored_answer_manifest.json",
+      "sha256": "d758ae77e5dcabb70cc7886541941bdd8fc27f56b36f37f95c5051bf3c89e6e8"
+    }
+  ]
+}

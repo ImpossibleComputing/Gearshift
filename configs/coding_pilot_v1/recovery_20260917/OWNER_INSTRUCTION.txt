@@ -1,0 +1,240 @@
+Resume Gearshift with two independent deliverables:
+
+1. Obtain the first valid mapped-cache coding result for the
+   larger-model pilot.
+2. Prepare a substantive progress post from evidence we already
+   have. Publication preparation must not wait for the experiment
+   to finish or produce a favorable result.
+
+This is an execution instruction, not another planning request.
+
+It supersedes earlier requirements that:
+- The 85% peak-allocation / 10 GiB free-memory thresholds must
+  remain fatal or be passed unchanged.
+- All 160 histories must finish before any exploratory mapper
+  initialization, training, or development evaluation.
+- The first progress post must wait for full confirmation.
+
+Preserve the original experiments and their rules as historical
+records. Record this amendment before executing revised work.
+
+AUTHORITY AND SCOPE
+
+You may resume authorized Runpod work within the REMAINING
+existing cumulative $1,000 / 500 GPU-hour limits. These are not
+new allowances. Reconcile the latest ledger, active resources,
+and storage charges before provisioning; include prior spend.
+
+Proceed autonomously with routine implementation repairs,
+worker restarts, memory management, and scheduling changes
+within that budget. Do not repeatedly ask for approval of
+reversible engineering decisions.
+
+Keep scientific integrity, generated-code sandboxing, credentials
+protection, checkpointing, and resource cleanup. Do not publish,
+push, deploy the website, choose a license, or exceed the budget.
+
+Do not restart the paused subjective-judging queue or add new
+model families, task families, or benchmark expansions.
+
+FIRST: PREPARE THE PROGRESS POST
+
+Before launching another long GPU job, create a complete first
+draft from the existing saved evidence. This is not an outline.
+
+Write publication/GEARSHIFT_PROGRESS_01.md, approximately
+1,200–1,800 words, suitable for Impossible Computing's website.
+
+Working title:
+“Gearshift: What We’ve Learned About Handing Reasoning Between Models”
+
+Explain the question, the implementation, the useful findings,
+the failures, and the next experiment. Write for experienced
+technical readers without turning the article into an audit log.
+
+Read the actual reports and supporting records. Distinguish:
+- The original small-model pilot and protocol follow-up.
+- The broader phase-2 results, including generalization failures.
+- The newer larger-model coding baseline.
+- Work not yet performed.
+
+The current larger-model development results are:
+A: large alone, 34/40.
+B: independent smaller model, 27/40.
+D: native text handoff, 34/40.
+C: mapped-cache handoff, not yet measured.
+
+Verify those counts and the exact model revisions against the
+records. Keep development results explicitly exploratory.
+Do not describe text-handoff success as mapped-cache success,
+a general capability guarantee, or an established speedup.
+
+Include the important negative evidence. Do not lead with the
+early arithmetic success while burying the later code deficit.
+Qualify affected evidence-task metrics using EVIDENCE_AUDIT.md.
+An infrastructure stop is not a negative cache-quality result.
+
+The memory incident is an engineering lesson, not the article's
+main scientific finding. Do not claim its cause is known.
+
+Use a few informative figures or tables generated from existing
+records. Keep populations, hardware, output quality, and timing
+scope explicit. Do not combine unlike runs into a leaderboard.
+
+Attach a compact claim-to-evidence table with local source paths
+and exact metrics. Verify any external related-work citations
+against primary sources; do not trust titles or novelty claims
+from previous chat messages. Do not claim priority we have not
+established.
+
+List actual publication blockers separately, such as an unresolved
+license for a public code release or a figure requiring cleanup.
+Do not make a polished public code release a prerequisite for
+reviewing the article. Do not invent repository links or claim
+that anything is already public.
+
+Report the draft's path as soon as it exists, then continue the
+research. Do not make the owner wait for GPU completion to review
+the post.
+
+SECOND: INSTRUMENT AND RECOVER THE MEMORY FAILURE
+
+Inspect CODING_RESULTS.md, the worker code, the saved failing
+streams, and the existing recovery artifacts. Read the memory
+review if it is present, but do not depend on an extra attachment.
+
+Start with one saved failing trajectory, not another fleet of
+unchanged workers.
+
+Add durable telemetry at useful stage boundaries and periodic
+generation checkpoints:
+- Current allocated and reserved GPU memory.
+- Peak allocated and reserved memory, with reset scope recorded.
+- Driver free/total memory.
+- Task ID, process/device, sequence length, stage, and timestamp.
+- Host memory and allocator diagnostics when useful.
+
+Replace the old fatal percentage/free-memory policy with logged
+warnings for this instrumented recovery. Historical peak usage
+must not itself stop a currently healthy worker.
+
+Checkpoint token IDs, random-generator state, and necessary
+resume metadata before any controlled abort. Keep checkpointing
+lightweight; do not create another large GPU allocation to save
+progress. Catch actual allocation failures where possible,
+preserve available diagnostics, and restart a compromised worker.
+
+Do not retry an unchanged failing configuration indefinitely.
+Use evidence to repair tensor lifetimes, residency, extraction
+scheduling, allocator behavior, or other demonstrated problems.
+Separating source generation from receiver extraction is allowed.
+Validate relevant cache/numerical controls after changes.
+
+Keep model weights, tasks, sampling settings, and token budgets
+unchanged for the saved-stream reproduction. Reuse the saved
+prefix and RNG state where recoverable. If reconstruction or a
+runtime change alters the continuation, preserve both attempts
+under distinct identities; do not claim byte-identical recovery.
+
+Do not shorten a failing history, select a different task, change
+quantization, or silently redraw a sample and label that exact
+recovery. A separately documented exploratory change is different
+from recovering the original trajectory.
+
+A failure should stop or isolate its affected worker, not erase
+healthy siblings or terminate every independent line of work.
+
+THIRD: GET A MAPPED-CACHE MEASUREMENT WITHOUT WAITING
+FOR COMPLETE HISTORY COLLECTION
+
+Take a fixed manifest of the valid completed corpus currently
+available. The latest report has 104 training and 21 validation
+histories, with 104 training-feature files already verified.
+Recheck actual availability and reuse compatible artifacts.
+
+This authorizes a separate partial-corpus exploratory run.
+It is not completion of the original 128/32 design.
+
+Preserve split boundaries. Record which histories are absent
+and disclose completion-selection bias, particularly possible
+underrepresentation of long trajectories. Do not select the
+subset by task success or mapper performance.
+
+Initialize a source-specific affine mapper from available
+training features. Validate its cache injection and measure an
+initial mapped development result where practical. Then run
+a useful, bounded functional-training attempt using the existing
+coding objectives and validation machinery.
+
+Prioritize obtaining a valid trained-mapper measurement over
+exhausting every objective, seed, or hyperparameter. Declare
+the training schedule and checkpoint-selection rule before
+evaluating that checkpoint on development tasks. Log changes
+and do not require numerical convergence before reporting.
+
+Use validation for checkpoint selection. The already inspected
+40-task development set can support labeled diagnostics and
+recipe development; it is not fresh confirmation.
+
+For the first meaningful checkpoint, evaluate C on all 40
+development tasks against the recorded A/B/D comparisons:
+
+A: large-only.
+B: independent smaller model.
+C: mapped-cache handoff.
+D: native text handoff.
+
+Use the same source histories and matched output contracts
+for C and D. If runtime/cache reconstruction changes prevent
+fair reuse, rerun the necessary matched controls and retain
+the original baselines separately.
+
+Report hidden-test pass rates, paired gains/losses, parse and
+execution failures, repetition, and termination. Report C−B,
+C−D, and C−A. Separate source reasoning, mapping, prefill,
+answer generation, and total costs.
+
+Do not silently exclude infrastructure failures or score them
+as model-quality failures. Report coverage and unresolved cases.
+Keep the generated-code sandbox and hidden-test separation.
+
+Continue repairing/completing the original corpus when useful,
+but collection must not block a valid provisional mapper run.
+Use separate corpus/checkpoint versions when new histories arrive.
+
+Keep the reserved 200-task confirmation set and second-seed
+confirmation untouched during this recovery/development stage.
+Do not spend the rest of the budget on expanding experiments
+before exporting the first mapped result.
+
+OUTPUT AND CHECKPOINT
+
+Produce gearshift_recovery_review.zip containing:
+- The progress-post draft, figures, and claim-to-evidence table.
+- RECOVERY_RESULTS.md with actual outcomes and limitations.
+- Revised code/configs and relevant test output.
+- The memory telemetry and failure/recovery evidence.
+- Exact partial-corpus and checkpoint identities.
+- Raw development outputs, scores, source trajectory identities,
+  decoding settings, and timing records.
+- A size/SHA-256 manifest and reproduction instructions.
+
+Exclude credentials, model weights, large caches, feature tensors,
+virtual environments, and Git internals. List excluded heavy
+artifacts by hash/location with regeneration instructions.
+
+Maintain a rolling small result bundle. Export the first valid
+mapped A/B/C/D development comparison as soon as complete.
+Its release must not wait for all 160 histories, both objectives,
+the 200-task confirmation, or a positive result.
+
+The immediate completion target is:
+a reviewable progress post plus the first interpretable mapped
+development result, or a concrete evidence-backed blocker.
+
+Before returning, back up artifacts and stop idle paid compute.
+Report exact paths, cumulative spending, active resources and
+storage charges, what actually ran, and what remains unresolved.
+
+Do not invent a completion estimate or claim success based only
+on passing infrastructure tests.

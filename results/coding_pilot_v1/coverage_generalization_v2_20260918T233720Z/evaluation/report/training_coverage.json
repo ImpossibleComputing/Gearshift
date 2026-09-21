@@ -1,0 +1,410 @@
+[
+  {
+    "arm": "FIXED",
+    "step": 0,
+    "scored_positions": 0,
+    "unique_task_positions": 0,
+    "by_category": {
+      "EOS": {
+        "scored": 0,
+        "unique": 0
+      },
+      "code_body": {
+        "scored": 0,
+        "unique": 0
+      },
+      "code_fence": {
+        "scored": 0,
+        "unique": 0
+      },
+      "prose": {
+        "scored": 0,
+        "unique": 0
+      },
+      "signature": {
+        "scored": 0,
+        "unique": 0
+      },
+      "return_statement": {
+        "scored": 0,
+        "unique": 0
+      }
+    },
+    "source_path": "results/coding_pilot_v1/coverage_generalization_v2_20260918T233720Z/arms/FIXED/coverage/step_0000.json",
+    "source_sha256": "53141aed1bb98f821361a3425fd9a454b8420c9c943c2c692178e6e163e3d306"
+  },
+  {
+    "arm": "FIXED",
+    "step": 128,
+    "scored_positions": 4096,
+    "unique_task_positions": 2888,
+    "by_category": {
+      "EOS": {
+        "scored": 6,
+        "unique": 4
+      },
+      "code_body": {
+        "scored": 656,
+        "unique": 424
+      },
+      "code_fence": {
+        "scored": 72,
+        "unique": 59
+      },
+      "prose": {
+        "scored": 3345,
+        "unique": 2387
+      },
+      "signature": {
+        "scored": 11,
+        "unique": 11
+      },
+      "return_statement": {
+        "scored": 6,
+        "unique": 3
+      }
+    },
+    "source_path": "results/coding_pilot_v1/coverage_generalization_v2_20260918T233720Z/arms/FIXED/coverage/step_0128.json",
+    "source_sha256": "81c67c67cef780e612fe898f26120a2995f18bb0fb449963f072b2a2380c88bc"
+  },
+  {
+    "arm": "FIXED",
+    "step": 256,
+    "scored_positions": 8192,
+    "unique_task_positions": 2888,
+    "by_category": {
+      "EOS": {
+        "scored": 13,
+        "unique": 4
+      },
+      "code_body": {
+        "scored": 1347,
+        "unique": 424
+      },
+      "code_fence": {
+        "scored": 145,
+        "unique": 59
+      },
+      "prose": {
+        "scored": 6653,
+        "unique": 2387
+      },
+      "signature": {
+        "scored": 22,
+        "unique": 11
+      },
+      "return_statement": {
+        "scored": 12,
+        "unique": 3
+      }
+    },
+    "source_path": "results/coding_pilot_v1/coverage_generalization_v2_20260918T233720Z/arms/FIXED/coverage/step_0256.json",
+    "source_sha256": "5eea739c0e0a744f0e46f042693c9502b9f95e97f69820196254b9590d90c246"
+  },
+  {
+    "arm": "FIXED",
+    "step": 512,
+    "scored_positions": 16384,
+    "unique_task_positions": 2888,
+    "by_category": {
+      "EOS": {
+        "scored": 27,
+        "unique": 4
+      },
+      "code_body": {
+        "scored": 2713,
+        "unique": 424
+      },
+      "code_fence": {
+        "scored": 305,
+        "unique": 59
+      },
+      "prose": {
+        "scored": 13260,
+        "unique": 2387
+      },
+      "signature": {
+        "scored": 55,
+        "unique": 11
+      },
+      "return_statement": {
+        "scored": 24,
+        "unique": 3
+      }
+    },
+    "source_path": "results/coding_pilot_v1/coverage_generalization_v2_20260918T233720Z/arms/FIXED/coverage/step_0512.json",
+    "source_sha256": "45ecdfc0840f9f25bf6a7188d79c9b055b7a974c2ba9035c68bd0273fff0ab03"
+  },
+  {
+    "arm": "FIXED",
+    "step": 768,
+    "scored_positions": 24576,
+    "unique_task_positions": 2888,
+    "by_category": {
+      "EOS": {
+        "scored": 39,
+        "unique": 4
+      },
+      "code_body": {
+        "scored": 4057,
+        "unique": 424
+      },
+      "code_fence": {
+        "scored": 449,
+        "unique": 59
+      },
+      "prose": {
+        "scored": 19918,
+        "unique": 2387
+      },
+      "signature": {
+        "scored": 77,
+        "unique": 11
+      },
+      "return_statement": {
+        "scored": 36,
+        "unique": 3
+      }
+    },
+    "source_path": "results/coding_pilot_v1/coverage_generalization_v2_20260918T233720Z/arms/FIXED/coverage/step_0768.json",
+    "source_sha256": "d4dec476f9dc88cb10ef1926ea3cdd7f3d30762e49682ce4e7cbfe2296fa9f07"
+  },
+  {
+    "arm": "FIXED",
+    "step": 1024,
+    "scored_positions": 32768,
+    "unique_task_positions": 2888,
+    "by_category": {
+      "EOS": {
+        "scored": 53,
+        "unique": 4
+      },
+      "code_body": {
+        "scored": 5444,
+        "unique": 424
+      },
+      "code_fence": {
+        "scored": 600,
+        "unique": 59
+      },
+      "prose": {
+        "scored": 26516,
+        "unique": 2387
+      },
+      "signature": {
+        "scored": 107,
+        "unique": 11
+      },
+      "return_statement": {
+        "scored": 48,
+        "unique": 3
+      }
+    },
+    "source_path": "results/coding_pilot_v1/coverage_generalization_v2_20260918T233720Z/arms/FIXED/coverage/step_1024.json",
+    "source_sha256": "d12686693dbcc76d5e7c129891f12604bde225b097d6264dfc481c285fdaabb6"
+  },
+  {
+    "arm": "ROTATING",
+    "step": 0,
+    "scored_positions": 0,
+    "unique_task_positions": 0,
+    "by_category": {
+      "EOS": {
+        "scored": 0,
+        "unique": 0
+      },
+      "code_body": {
+        "scored": 0,
+        "unique": 0
+      },
+      "code_fence": {
+        "scored": 0,
+        "unique": 0
+      },
+      "prose": {
+        "scored": 0,
+        "unique": 0
+      },
+      "signature": {
+        "scored": 0,
+        "unique": 0
+      },
+      "return_statement": {
+        "scored": 0,
+        "unique": 0
+      }
+    },
+    "source_path": "results/coding_pilot_v1/coverage_generalization_v2_20260918T233720Z/arms/ROTATING/coverage/step_0000.json",
+    "source_sha256": "53141aed1bb98f821361a3425fd9a454b8420c9c943c2c692178e6e163e3d306"
+  },
+  {
+    "arm": "ROTATING",
+    "step": 128,
+    "scored_positions": 4096,
+    "unique_task_positions": 3904,
+    "by_category": {
+      "EOS": {
+        "scored": 13,
+        "unique": 13
+      },
+      "code_body": {
+        "scored": 1158,
+        "unique": 1146
+      },
+      "code_fence": {
+        "scored": 98,
+        "unique": 89
+      },
+      "prose": {
+        "scored": 2673,
+        "unique": 2502
+      },
+      "signature": {
+        "scored": 96,
+        "unique": 96
+      },
+      "return_statement": {
+        "scored": 58,
+        "unique": 58
+      }
+    },
+    "source_path": "results/coding_pilot_v1/coverage_generalization_v2_20260918T233720Z/arms/ROTATING/coverage/step_0128.json",
+    "source_sha256": "29c86ec26d573846d3e279ec4039f26e3c31295d93d2aa1da5de9519a229f156"
+  },
+  {
+    "arm": "ROTATING",
+    "step": 256,
+    "scored_positions": 8192,
+    "unique_task_positions": 6992,
+    "by_category": {
+      "EOS": {
+        "scored": 19,
+        "unique": 19
+      },
+      "code_body": {
+        "scored": 2276,
+        "unique": 2199
+      },
+      "code_fence": {
+        "scored": 185,
+        "unique": 119
+      },
+      "prose": {
+        "scored": 5402,
+        "unique": 4356
+      },
+      "signature": {
+        "scored": 210,
+        "unique": 199
+      },
+      "return_statement": {
+        "scored": 100,
+        "unique": 100
+      }
+    },
+    "source_path": "results/coding_pilot_v1/coverage_generalization_v2_20260918T233720Z/arms/ROTATING/coverage/step_0256.json",
+    "source_sha256": "e5365f2d746b42f5a60689af63bb281c8c4282cd020adf168de45bff066c48b5"
+  },
+  {
+    "arm": "ROTATING",
+    "step": 512,
+    "scored_positions": 16384,
+    "unique_task_positions": 13142,
+    "by_category": {
+      "EOS": {
+        "scored": 34,
+        "unique": 34
+      },
+      "code_body": {
+        "scored": 4519,
+        "unique": 4289
+      },
+      "code_fence": {
+        "scored": 360,
+        "unique": 156
+      },
+      "prose": {
+        "scored": 10857,
+        "unique": 8093
+      },
+      "signature": {
+        "scored": 435,
+        "unique": 391
+      },
+      "return_statement": {
+        "scored": 179,
+        "unique": 179
+      }
+    },
+    "source_path": "results/coding_pilot_v1/coverage_generalization_v2_20260918T233720Z/arms/ROTATING/coverage/step_0512.json",
+    "source_sha256": "ac27d0ccc367d92d97d38fd5c36f770f842e3986551c1ecd6b4e6302f087ad5b"
+  },
+  {
+    "arm": "ROTATING",
+    "step": 768,
+    "scored_positions": 24576,
+    "unique_task_positions": 19251,
+    "by_category": {
+      "EOS": {
+        "scored": 49,
+        "unique": 47
+      },
+      "code_body": {
+        "scored": 6737,
+        "unique": 6333
+      },
+      "code_fence": {
+        "scored": 544,
+        "unique": 218
+      },
+      "prose": {
+        "scored": 16312,
+        "unique": 11796
+      },
+      "signature": {
+        "scored": 654,
+        "unique": 581
+      },
+      "return_statement": {
+        "scored": 280,
+        "unique": 276
+      }
+    },
+    "source_path": "results/coding_pilot_v1/coverage_generalization_v2_20260918T233720Z/arms/ROTATING/coverage/step_0768.json",
+    "source_sha256": "8dda3355fdb8491fb361964a4d5e3f694f432d781524833670a7eb199c481c4a"
+  },
+  {
+    "arm": "ROTATING",
+    "step": 1024,
+    "scored_positions": 32768,
+    "unique_task_positions": 25277,
+    "by_category": {
+      "EOS": {
+        "scored": 61,
+        "unique": 58
+      },
+      "code_body": {
+        "scored": 9083,
+        "unique": 8427
+      },
+      "code_fence": {
+        "scored": 739,
+        "unique": 286
+      },
+      "prose": {
+        "scored": 21632,
+        "unique": 15378
+      },
+      "signature": {
+        "scored": 857,
+        "unique": 738
+      },
+      "return_statement": {
+        "scored": 396,
+        "unique": 390
+      }
+    },
+    "source_path": "results/coding_pilot_v1/coverage_generalization_v2_20260918T233720Z/arms/ROTATING/coverage/step_1024.json",
+    "source_sha256": "50f29f8fe7d7499300ed1eebdeb67cb295b48eaddf033ba9447c65d21b405a73"
+  }
+]

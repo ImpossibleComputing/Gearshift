@@ -1,0 +1,17 @@
+# Downloaded benchmark data and local outputs must not enter publication.
+/data/
+/.benchmark-cache/
+/.analysis-venv/
+/.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.pt
+*.safetensors
+*.log
+*.zip
+*.tar
+*.tar.gz
+.DS_Store
+/reproduced/
+*.lock

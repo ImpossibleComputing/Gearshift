@@ -1,0 +1,23 @@
+{
+  "declared_epoch": 1789491027.654478,
+  "new_result_namespace": "preflight_v2",
+  "original_failure_sha256": "4354fd9bb688c3ee6c7d6e431aa6c974e7686d8ffe544a25ded9625e00b537a5",
+  "original_failure_retained": true,
+  "benchmark_answers_before_amendment": 0,
+  "problem": "The v1 whole_vs_split control included the closing token in a 129-token bulk prefill. Uninterrupted autoregressive generation consumes that emitted token in its own call. It therefore compared different arithmetic schedules, whereas the actual cache-copy test was exactly equal.",
+  "diagnosis_not_yet_verified": "BF16 kernel-shape rounding is a hypothesis until the FP32 arithmetic audit passes on both models.",
+  "controls": "Compare uninterrupted and restored caches with identical forward-call segmentation. Cover a pending closing token and a pending final capped-reasoning token followed by the closing token. Independently repeat the schedule, compare logits and eight deterministic continuation tokens, and assert cache length/absolute position.",
+  "unchanged_cache_tolerance": {
+    "max_abs": 0.125,
+    "abs_KL": 0.0001,
+    "top1_required": true,
+    "all_continuation_tokens_match": true
+  },
+  "bulk_replay_diagnostic": "Retain original BF16 bulk-versus-incremental discrepancy. Require FP32-arithmetic replay of the same BF16-stored weights to reduce it to max absolute logit difference <=0.005 and absolute KL <=1e-6 with equal top-1. Require exact restoration of original BF16 logits afterwards; otherwise stop before benchmark generation.",
+  "quality_protocol_changes": null,
+  "quality_models_remain_frozen_bfloat16": true,
+  "membership_changes": null,
+  "sampling_or_baseline_gate_changes": null,
+  "budget_extension": false,
+  "training_and_confirmation_still_gated": true
+}

@@ -1,0 +1,20 @@
+{
+  "host": "ic-studio",
+  "project": "/Users/qeetbastudio/Projects/Gearshift",
+  "scientific_config": "configs/phase2_final.json",
+  "environment": {
+    "HF_HUB_OFFLINE": "1",
+    "HF_DATASETS_OFFLINE": "1",
+    "GEARSHIFT_JUDGE_CLI": "/Users/qeetbastudio/.local/share/gearshift/tools/judge-cli-0.154.0-alpha.6.2",
+    "GEARSHIFT_JUDGE_ISOLATION": "evidence/phase2/judge_isolation_studio_v2",
+    "GEARSHIFT_JUDGE_MODEL": "gpt-6-astra",
+    "GEARSHIFT_JUDGE_EFFORT": "xhigh",
+    "GEARSHIFT_JUDGE_CALIBRATION": "results/phase2_v1/judge_calibration_studio_v2"
+  },
+  "judge_binary": {
+    "bytes": 222786528,
+    "sha256": "ecad78dbf98adb89ec475edac86630406cbe59d9f3070b17d88065f136b94bcb"
+  },
+  "authentication": "Existing destination sign-in. No credentials copied. Included-usage guard remains mandatory.",
+  "reason": "Owner-requested restart of all 640 characterization tasks on the Studio. Frozen prompts, sample IDs, budgets, scoring and model revisions unchanged."
+}

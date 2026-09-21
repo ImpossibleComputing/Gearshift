@@ -1,0 +1,164 @@
+{
+  "schema": 1,
+  "created_utc": "2026-09-17T22:36:21.915573+00:00",
+  "publication_commit": "64725974fa55459350d1c9d09037bab64d0c5ec6",
+  "selection_rule": "Sort 104 TRAINING histories by (complete prefix token count, task_id); ranks 0, floor(103/3), floor(206/3),103; declared before any new answers.",
+  "four_training_histories": [
+    {
+      "task_id": "atcoder/abc320_a",
+      "rank_zero_indexed": 0,
+      "prefix_tokens": 926,
+      "answer_tokens": 33,
+      "folder": "results/coding_pilot_v1/history_recovery_20260916_01/history04/tasks/atcoder__abc320_a",
+      "source_history_sha256": "2b8aae9b60605e2966b4e7a8adec2896dba0b5d37b138f8fdc2874f54e21bb36",
+      "teacher_answer_sha256": "da2adf419d77bf756cc5e312fad2458f427e50a1d710262eccd2971b4a378b41"
+    },
+    {
+      "task_id": "atcoder/abc333_b",
+      "rank_zero_indexed": 34,
+      "prefix_tokens": 4575,
+      "answer_tokens": 513,
+      "folder": "results/coding_pilot_v1/history_recovery_20260916_01/history04/tasks/atcoder__abc333_b",
+      "source_history_sha256": "2c5798f0df6817246ceaeda754e9eec68fb3787d727bb867e44c7a29a7f88bc5",
+      "teacher_answer_sha256": "d62456c75c98a8abaa2cbc518ec66a1bee3216720f918f3869cb58ce55909d51"
+    },
+    {
+      "task_id": "leetcode/3114",
+      "rank_zero_indexed": 68,
+      "prefix_tokens": 9409,
+      "answer_tokens": 640,
+      "folder": "results/coding_pilot_v1/history_recovery_20260916_01/history08/tasks/leetcode__3114",
+      "source_history_sha256": "05641f30ee7c1a195e46c1aa301b35cc8e5573d87c7f8cb2954211af6b946424",
+      "teacher_answer_sha256": "b02526ec465e1f84b5e18145a81449c65193bfe488f54d6ce705fe530b83d3fd"
+    },
+    {
+      "task_id": "leetcode/3091",
+      "rank_zero_indexed": 103,
+      "prefix_tokens": 20636,
+      "answer_tokens": 755,
+      "folder": "results/coding_pilot_v1/history_recovery_20260916_01/history06/tasks/leetcode__3091",
+      "source_history_sha256": "0bd4b526d19e5e9f63ed6b94ae5e081e3b5f8183fa69d040789fc935d35798b1",
+      "teacher_answer_sha256": "42dc521d24325bff7cba6cab724d35d6de5f380c00e4040096b358f9f608edec"
+    }
+  ],
+  "numerical_histories": [
+    {
+      "task_id": "atcoder/abc320_a",
+      "rank_zero_indexed": 0,
+      "prefix_tokens": 926,
+      "answer_tokens": 33,
+      "folder": "results/coding_pilot_v1/history_recovery_20260916_01/history04/tasks/atcoder__abc320_a",
+      "source_history_sha256": "2b8aae9b60605e2966b4e7a8adec2896dba0b5d37b138f8fdc2874f54e21bb36",
+      "teacher_answer_sha256": "da2adf419d77bf756cc5e312fad2458f427e50a1d710262eccd2971b4a378b41"
+    },
+    {
+      "task_id": "atcoder/abc333_b",
+      "rank_zero_indexed": 34,
+      "prefix_tokens": 4575,
+      "answer_tokens": 513,
+      "folder": "results/coding_pilot_v1/history_recovery_20260916_01/history04/tasks/atcoder__abc333_b",
+      "source_history_sha256": "2c5798f0df6817246ceaeda754e9eec68fb3787d727bb867e44c7a29a7f88bc5",
+      "teacher_answer_sha256": "d62456c75c98a8abaa2cbc518ec66a1bee3216720f918f3869cb58ce55909d51"
+    },
+    {
+      "task_id": "leetcode/3114",
+      "rank_zero_indexed": 68,
+      "prefix_tokens": 9409,
+      "answer_tokens": 640,
+      "folder": "results/coding_pilot_v1/history_recovery_20260916_01/history08/tasks/leetcode__3114",
+      "source_history_sha256": "05641f30ee7c1a195e46c1aa301b35cc8e5573d87c7f8cb2954211af6b946424",
+      "teacher_answer_sha256": "b02526ec465e1f84b5e18145a81449c65193bfe488f54d6ce705fe530b83d3fd"
+    },
+    {
+      "task_id": "leetcode/3091",
+      "rank_zero_indexed": 103,
+      "prefix_tokens": 20636,
+      "answer_tokens": 755,
+      "folder": "results/coding_pilot_v1/history_recovery_20260916_01/history06/tasks/leetcode__3091",
+      "source_history_sha256": "0bd4b526d19e5e9f63ed6b94ae5e081e3b5f8183fa69d040789fc935d35798b1",
+      "teacher_answer_sha256": "42dc521d24325bff7cba6cab724d35d6de5f380c00e4040096b358f9f608edec"
+    }
+  ],
+  "numerical_answer_positions_rule": "0, min(32,last), min(128,last), min(512,last), last; complete intervening teacher-forced source answer tokens.",
+  "numerical_tolerance_rule": "Compare repeat, explicit-mask/native-forward, and checkpoint-on/off same-path controls first. Cross-path discrepancies above observed same-path envelope are flagged, never relaxed after inspection. Exact deterministic repetitions expected.",
+  "selected_checkpoint": "results/coding_pilot_v1/recovery_train_20260917_04/train/mapper_step_0096.pt",
+  "selected_checkpoint_sha256": "0b9700ffd9cb38c23bcfa1327181b32992b128c6b95078214328382f86b8d68f",
+  "starting_checkpoint_exposure": 3072,
+  "corpus_manifest": "results/coding_pilot_v1/partial_corpus_20260917_v1/corpus_manifest.json",
+  "corpus_manifest_sha256": "f8736f7bd6785b48f969ad512fe8512c82fcdb6667798c31c552b9edd691eb1d",
+  "diagnostic_max_additional_usd": 120,
+  "diagnostic_max_additional_gpu_hours": 20,
+  "cumulative_cap_usd": 1000,
+  "cumulative_cap_gpu_hours": 500,
+  "budget_start": {
+    "epoch": 1789684578.8826408,
+    "pid": 796,
+    "active_resources": [
+      [
+        "volume",
+        "jj2zyi9yrc"
+      ]
+    ],
+    "controller_stop_resource_ids": [
+      "jj2zyi9yrc"
+    ],
+    "upper_usd": 280.248203,
+    "gpu_hours": 49.14705264363024,
+    "stage": "preflight",
+    "stage_hours": 49.14705264363024,
+    "stage_gpu_hours": 49.14705264363024,
+    "stage_wall_hours": 54.59535988026195,
+    "stage_upper_usd": 280.24820271021787,
+    "stop": false,
+    "stop_reasons": [],
+    "warning": [],
+    "dispatch_blocked": false,
+    "dispatch_block_reasons": [],
+    "stage_gpu_hour_ceiling": 500.0,
+    "stage_dollar_ceiling": 1000.0,
+    "hard_total_cap_usd": 1000.0,
+    "hard_total_gpu_hours": 500.0,
+    "cleanup_dispatch_ceiling_usd": 980.0,
+    "max_concurrent_gpus": 8,
+    "parallel_execution_approved": true,
+    "active_gpu_count": 0,
+    "active_cpu_storage_inspection_count": 0,
+    "storage_inspection_approved": true,
+    "active_upper_rate_usd": 0.04
+  },
+  "stages": [
+    "actual_model_numerical",
+    "frozen_prompt_preservation_40",
+    "four_seen_training_histories"
+  ],
+  "memorization": {
+    "source_written_references": true,
+    "family": "unchanged affine mapper",
+    "seed": 20260917,
+    "maximum_training_seconds": 14400,
+    "maximum_updates": 800,
+    "positions_per_update": 64,
+    "schedule": "round-robin four histories; seeded shuffled cycling positions, include first and final prediction each update, valid unique positions only; complete prefix and intervening continuation processed",
+    "checkpoint_updates": [
+      0,
+      4,
+      16,
+      40,
+      80,
+      160,
+      320,
+      480,
+      640,
+      800
+    ],
+    "evaluation": "Teacher-forced dense-position fidelity on all four seen histories plus free-running sampled answers at every checkpoint; native replay at checkpoint0; hidden tests score artifacts only.",
+    "success_stop": "Two successive checkpoints with mean seen teacher-forced KL <=0.02; evaluate free-running before stop. Hidden-test outcomes never control optimizer or checkpoint selection.",
+    "optimizer": {
+      "name": "AdamW",
+      "lr": 1e-05,
+      "weight_decay": 0,
+      "clip_norm": 1
+    }
+  },
+  "confirmation_used": false
+}

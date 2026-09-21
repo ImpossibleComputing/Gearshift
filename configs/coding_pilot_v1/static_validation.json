@@ -1,0 +1,31 @@
+{
+  "status": "passed_static_planning_checks_only",
+  "execution_allowed": false,
+  "geometry": {
+    "source": {
+      "layers": 64,
+      "kv_heads": 8,
+      "head_dim": 128,
+      "cache_bytes_per_token": 262144
+    },
+    "receiver": {
+      "layers": 36,
+      "kv_heads": 8,
+      "head_dim": 128,
+      "cache_bytes_per_token": 147456
+    }
+  },
+  "combined_weight_gib": 76.28064346313477,
+  "combined_cache_gib_at_32768": 12.5,
+  "selected_tasks": 400,
+  "actual_gpu_fit": "unmeasured",
+  "pilot_inference": "not_run",
+  "sandbox": "not_yet_ported_and_verified_for_linux",
+  "missing_execution_gates": [
+    "Owner approval and new spending cap",
+    "Verified natural-boundary sampler",
+    "Linux sandbox",
+    "Measured full-prefix gradient memory",
+    "Task-aware selection and execution watchdog"
+  ]
+}

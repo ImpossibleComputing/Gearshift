@@ -1,0 +1,12 @@
+{
+  "mode": "tree",
+  "files_or_blobs": 583,
+  "bytes": 128688834,
+  "official_rows_scanned": 1055,
+  "upstream_24word_fingerprints": 63703,
+  "private_prompt_copies": 380,
+  "interior_24token_fingerprints": 7039,
+  "approved_HumanEval_exact_blob_exceptions": 1,
+  "findings": [],
+  "limitations": "Exact structural/token and normalized 24-word overlap scan, not proof against every transformation or short fragment. Allowlisted source/numeric inputs and omitted all raw candidates, raw histories, scoring logs, archives. Token-pattern corpus uses local visible prompts; forbidden-field checks cover all public JSON."
+}

@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "authorization_type": "owner_removed_time_cutoff",
+  "recorded_utc": "2026-09-15T02:38:33.618376+00:00",
+  "owner_message": "We don't need to shut down at the cut off. The work is proceeding well, and we are staying incredibly low on costs. So we should just keep going.",
+  "shutdown_deadline_utc": null,
+  "authorization_end_utc": null,
+  "hard_cap_usd": 1000,
+  "shutdown_threshold_usd": 900,
+  "max_allocated_hourly_usd": 20,
+  "completion_scope": "Finish the existing bounded research, grading, review bundle verification and local commit. Release task pods when GPU work finishes. No new research scope, publishing, pushes, credits or paid judging fallback."
+}

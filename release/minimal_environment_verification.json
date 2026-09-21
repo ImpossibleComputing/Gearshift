@@ -1,0 +1,8 @@
+{
+  "python": "3.12.4",
+  "installed_packages": [
+    "numpy==2.5.3"
+  ],
+  "report_reproduction_succeeded": true,
+  "verification_sha256": "0f0876780970ad542f968ff88b8d2b8220b42de196a4c6cf657b68a3a3bb99e6"
+}

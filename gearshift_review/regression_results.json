@@ -1,0 +1,48 @@
+{
+  "scope": "Run source-level controls without Hugging Face or model downloads.\n\nOriginal function/class ASTs execute unchanged; only unavailable external I/O or\nmodel-loading endpoints are replaced in explicitly marked resume fixtures.\nThis does not run model inference, DynamicCache, or the full original test suite.\n",
+  "original_pure_unit_tests": [
+    {
+      "name": "test_rotation_inverse_for_different_positions",
+      "result": "PASS"
+    },
+    {
+      "name": "test_distribution_metrics_known_values",
+      "result": "PASS"
+    },
+    {
+      "name": "test_constant_mean_baseline_has_zero_r2",
+      "result": "PASS"
+    },
+    {
+      "name": "test_answer_grading",
+      "result": "PASS"
+    }
+  ],
+  "regressions": [
+    {
+      "name": "configuration_identity_gaps",
+      "changed_fields_admitted_without_rejection": [
+        "gsm8k_revision",
+        "wikitext_revision",
+        "eval_examples",
+        "continuation_tokens",
+        "lengths"
+      ]
+    },
+    {
+      "name": "output_basename_collision",
+      "data_roots_equal": true,
+      "data_root": "data/same-name",
+      "metadata_validated_before_reuse": false
+    },
+    {
+      "name": "resume_sample_size_change",
+      "requested_questions": 12,
+      "manifest_questions": 12,
+      "saved_questions": 24,
+      "saved_answer_rows": 120,
+      "rejected": false,
+      "issue_reproduced": true
+    }
+  ]
+}

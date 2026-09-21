@@ -1,0 +1,351 @@
+{
+  "namespace": "coding_pilot_v1",
+  "status": "draft_prepared_not_executed",
+  "authorization": {
+    "execution_allowed": false,
+    "approved_spending_cap_usd": null,
+    "previous_phase_authorization_applies": false,
+    "owner_approval_required": true
+  },
+  "models": {
+    "source": {
+      "id": "Qwen/Qwen3-32B",
+      "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+      "frozen": true,
+      "dtype": "bfloat16"
+    },
+    "receiver": {
+      "id": "Qwen/Qwen3-8B",
+      "revision": "b968826d9c46dd6066d109eabc6255188de91218",
+      "frozen": true,
+      "dtype": "bfloat16"
+    }
+  },
+  "arms": {
+    "A": "large_only",
+    "B": "small_only",
+    "C": "gearshift",
+    "D": "text_handoff"
+  },
+  "hardware": {
+    "provider": "Runpod",
+    "candidate_gpu": "H200",
+    "count": 1,
+    "advertised_memory_gb": 141,
+    "actual_fit_verified": false,
+    "max_actual_allocation_fraction": 0.85,
+    "minimum_free_headroom_gib": 10
+  },
+  "protocol": {
+    "prompt": "Original task requests the complete code artifact; one user turn, thinking enabled.",
+    "boundary": "natural_end_of_thinking",
+    "boundary_token_id": 151668,
+    "new_user_turn": false,
+    "handoff": "Map the source prefix cache before the emitted closing-think token; feed that token exactly once at the original absolute position in A/C/D. Validate against uninterrupted native generation; no duplicate final token.",
+    "capped_source": "Retain and label. Feed a prespecified closing-think bridge under all relevant native and transferred caches; never drop or retry a task because of quality. This bridge must pass native-cache controls before use.",
+    "prompt_max_tokens": 8192,
+    "reasoning_max_tokens": 16384,
+    "answer_max_tokens": 4096,
+    "max_total_tokens": 40960,
+    "development_cap_gate": {
+      "threshold_fraction": 0.1,
+      "one_allowed_reasoning_cap_increase": 24576,
+      "applies_to": "Both source reasoning and standalone-small reasoning before confirmation lock",
+      "if_still_exceeds": "stop before training and report protocol/budget limitation"
+    },
+    "source_history_reuse": [
+      "large_only",
+      "gearshift",
+      "text_handoff"
+    ],
+    "small_only_independent_reasoning": true
+  },
+  "decoding": {
+    "task_quality": {
+      "do_sample": true,
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repetition_penalty": 1.0,
+      "presence_penalty": 0.0,
+      "num_beams": 1,
+      "policy": "Same thinking-mode sampling through reasoning and final answer. Do not switch to non-thinking template at the boundary."
+    },
+    "cache_controls": {
+      "do_sample": false,
+      "algorithm": "argmax",
+      "deterministic_algorithms": true
+    },
+    "samples_per_task_per_arm": 1,
+    "seed_base": 20260915,
+    "seed_derivation": "First 8 bytes of SHA256(namespace|task_id|sample_index|stream), modulo 2**63. Dedicated source_reasoning stream shared A/C/D; independent small_reasoning and answer_large/answer_small streams. C/D use separate generator objects with the same answer_small seed. Save generator state at boundary; no global run-order RNG.",
+    "eos_token_ids": [
+      151645,
+      151643
+    ]
+  },
+  "data": {
+    "dataset": "livecodebench/code_generation_lite",
+    "revision": "0fe84c3912ea0c4d4a78037083943e8f0c4dd505",
+    "release": "release_v6",
+    "scenario": "codegeneration",
+    "runner_repository_revision": "28fef95ea8c9f7a547c8329f2cd3d32b92c1fa24",
+    "membership_file": "draft_membership.json",
+    "membership_sha256": "482a0c8c42c5b23f3e937f08892794557c8a68bf08f8b650f63453c3210cb8db",
+    "training_tasks": 128,
+    "validation_tasks": 32,
+    "development_tasks": 40,
+    "confirmation_tasks": 200,
+    "historical_humaneval": "diagnosis only; not fresh confirmation",
+    "confirmation_exposure": "metadata only locally; upstream model exposure unknown"
+  },
+  "baseline_gate": {
+    "run_first": [
+      "large_only",
+      "small_only",
+      "text_handoff"
+    ],
+    "development_tasks": 40,
+    "minimum_large_passes": 12,
+    "minimum_small_passes": 4,
+    "maximum_small_passes": 34,
+    "minimum_large_minus_small_passes": 4,
+    "minimum_text_handoff_minus_small_passes": 2,
+    "policy": "Operational go/no-go thresholds, not significance claims. If any fails, diagnose only within 4-hour preflight; stop before mapper training, do not search confirmation or expand cases."
+  },
+  "mapper": {
+    "family": "fresh_source_specific_per_target_layer_affine_K_and_V",
+    "source_layers": 64,
+    "target_layers": 36,
+    "source_features": 1024,
+    "target_features": 1024,
+    "initial_alignment": "nearest normalized depth; adjacent layer alternatives on training/validation only",
+    "key_positions": "remove source RoPE, transform, apply receiver RoPE at identical absolute positions",
+    "ridge": 0.01,
+    "paired_fit_positions_per_history": 64,
+    "functional_objectives": [
+      "ordinary_continuation",
+      "natural_handoff_boundary"
+    ],
+    "mapper_master_dtype": "float32",
+    "learning_rate": 1e-05,
+    "max_updates_per_run": 2048,
+    "minimum_updates": 256,
+    "validation_every": 128,
+    "patience": 4,
+    "min_relative_kl_improvement": 0.005,
+    "gradient_predictions_per_update": 32,
+    "later_positions": [
+      0,
+      32,
+      128,
+      512
+    ],
+    "gradient_clip": 1.0,
+    "microbatch_histories": 1,
+    "max_training_context_tokens": 40960,
+    "checkpoint_every_updates": 128,
+    "selection": "For each objective, validation KL nominates at most two checkpoints. On the fixed 40 development tasks, select highest hidden-test pass count, then lower total latency, then earlier step. Report all nominated candidates. Freeze before confirmation.",
+    "seed_plan": "Compare two objectives at first seed; replicate selected objective at second prespecified seed 20260916. First seed remains headline; second seed uses a preregistered 40-task confirmation subset and never selects the best final result.",
+    "per_run_wall_hours": 3,
+    "total_training_hours": 12,
+    "gradient_memory_fit_verified": false,
+    "no_old_pair_weights": true,
+    "language_models_frozen": true,
+    "second_seed_confirmation_ids": [
+      {
+        "platform": "atcoder",
+        "question_id": "arc188_d"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3525"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3781"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc381_d"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc398_f"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3832"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3587"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc384_a"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc371_c"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3811"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3777"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc374_c"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3791"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc385_e"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc365_c"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc368_d"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc396_b"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3744"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc373_g"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3527"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc393_b"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "arc188_a"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3778"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc368_c"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3651"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "arc189_c"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc370_d"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc397_b"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc398_d"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "arc192_e"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc373_b"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3759"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3788"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3764"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc371_b"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc400_d"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3495"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc366_g"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc376_f"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc367_e"
+      }
+    ]
+  },
+  "statistics": {
+    "primary": "pass@1 from exactly one sampled answer per task/arm; no repair, best-of-many or majority vote",
+    "contrasts": [
+      "gearshift-small_only",
+      "gearshift-text_handoff",
+      "gearshift-large_only"
+    ],
+    "bootstrap_resamples": 10000,
+    "cluster": "original task; repeated seeds stay within task",
+    "confidence_level": 0.95,
+    "gap_closed": "secondary only; suppress when abs(A-B)<0.05 or paired interval for A-B includes zero",
+    "noninferiority_or_equivalence_claim": false
+  },
+  "budget": {
+    "proposed_hard_cap_usd": 300,
+    "approved": false,
+    "maximum_single_gpu_hours": 48,
+    "preflight_max_hours": 4,
+    "preflight_subcap_usd": 25,
+    "source_history_preparation_max_hours": 8,
+    "training_max_hours": 12,
+    "confirmation_max_hours": 20,
+    "backup_cleanup_reserve_hours": 4,
+    "hourly_gpu_price_ceiling_usd": 5.5,
+    "cleanup_start_total_usd": 280,
+    "hard_kill_total_usd": 300,
+    "network_volume_gb": 250,
+    "container_disk_gb": 40,
+    "cache_disk_lru_max_gib": 32,
+    "on_budget_stop": "Stop dispatch, save atomic progress and in-flight output if budget permits, verify two local copies of compact artifacts, terminate only task-owned pod and delete task-owned storage after verified backup. Never wait for owner while a GPU remains billed."
+  },
+  "implementation_status": "Planning configuration and static validator only. Natural-boundary sampler, Linux sandbox adapter, baseline gates and training orchestration need implementation and verification after execution approval."
+}

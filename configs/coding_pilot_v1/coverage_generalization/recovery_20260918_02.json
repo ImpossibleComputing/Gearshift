@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "created_epoch": 1789752365.176875,
+  "source_result_root": "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment",
+  "source_stage_identity": "9985394d8d15a0f4d86eda1b13fe8ca0e5a32c65ff4500dbfb1b9309670e2776",
+  "verified_import_path": "evidence/coding_pilot_v1/coverage_generalization/incidents/network_20260918/verified_recovery_import.json",
+  "target_updates": 1024,
+  "primary_common_checkpoint": 128,
+  "completed_logged_updates": 230,
+  "training_resumed": false,
+  "quality_scores_consulted": false,
+  "selection_rule": "Largest durable verified paired checkpoint after provider DNS/controller interruption. No quality-based checkpoint choice, new training, or optimizer reset continuation.",
+  "completed_updates_are_last_backup_lower_bound": true,
+  "inputs": {
+    "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment/memory_telemetry.jsonl": "d63efb0edb91a8ecc72f2807160d36856cca677456514910d2f20d57bd08f7a9",
+    "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment/frozen_schedule_prefix.json": "7efd005312545c589283ad0610754f3dd0b43c0c08ea8ccaba9fc80a14232e67",
+    "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment/training_failure.json": "095957b8fc905e37883b60bd86ac1a0d02e8f2392153fada7dfab918bab8d1dc",
+    "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment/training_identity.json": "ee1b36eb33232b3348d0cc6ff09f0da9774f9fa9ad2f54f86e96d2996e329ed1",
+    "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment/native_gate.json": "f869f37684131087992b8e60a23aa5449b23dba56201894c6339a9306160634c",
+    "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment/optimizer_reset.json": "d6e2db93f7d8eb4f00b0a082960202022e284953bb7d7d0d36b1a2e1161b9c72",
+    "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment/identity.json": "83259f27152cc7060348012705060e226aa24f1730afc1e151598821106fc20b",
+    "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment/frozen_endpoint.json": "1f64d6d2d72429c4cfcaa08e472a3ce78b218d2813386e6d6f6ee470f390a5ea",
+    "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment/answer_span_audit.json": "f2fc903621266222b220d3ce7f68598a82308faf401de59b07a1ceb76efc91d5",
+    "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment/planned_exposure.json": "5b0fcf7f1be40867cd8103db7452f940cb151382d8f1c40d203ec88f735103fc",
+    "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment/progress.json": "1ad6fe55d34e4923767f35517199ba961ca9bd8c9155b44740359da766d79787",
+    "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment/checkpoint_manifest.json": "dbf34164c9bca3044aeee4c3f34faa3e205d98d8f0874ec6c2efb450e0db9766",
+    "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment/validation_curve.json": "61f415fe4c5c2bdec1ef5622988cb1ddfeecfb63b65061ce5d31073848b4f9fd",
+    "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment/training_steps.json": "adbc28034f7df79f60f3139d0cba8033abbd236c4aa4e581d6f61c73f87b179e",
+    "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment/memory_latest.json": "ca19788daa92d497e5ccf4ae66307158c60f1e242b6fa7fffaefcf17d23f580b",
+    "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment/ROTATING/mapper_step_0128.pt": "c0d5c0773f83422dea511970774544e4612a4fb068c6a7d6a299683fb018eec6",
+    "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment/paired_checkpoints/step_0000.json": "9fd8c5ebdcca267b8d5ba98f7d0f7290d2ab0f9096004c08de608a9da9224402",
+    "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment/paired_checkpoints/step_0128.json": "f5e1a7b8e2e266f2af65f9f6db2bac00b5c8eb0ff410a70b17a817703ee3b877",
+    "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment/controls/receiver_rope_roundtrip.json": "92524210684a85d38c5762f1f0096c09bf878a72840e973dffb1c3a928fbdce6",
+    "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment/controls/source_precision_audit.json": "cc68dad942c120013b66a6ca680acba956769f4761dde2af5e395d4e44a113c8",
+    "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment/controls/source_rope_roundtrip.json": "41407d993d9b2e3289f2e5c309d1dd990f6b135992b6ace9a0cd2cc850122b22",
+    "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment/controls/receiver_matched_native_controls.json": "7c93e5b3676fba8e031a4d88417792b57ac471d1c2d04b42f124c5a7734df99e",
+    "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment/controls/receiver_precision_audit.json": "1e50110c1e6ba7a0b86e14d31f6b6d1d476a8a828a535b1707da86514aa578f3",
+    "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment/controls/source_matched_native_controls.json": "39efb2db7d8b0d3b3484106c66bd7a6c1cdcd2f39d850cf75517258b9da05359",
+    "results/coding_pilot_v1/coverage_experiment_20260918_01/experiment/FIXED/mapper_step_0128.pt": "304033f386e5717c7e231b2156cc8a5402b16dc7d1507a25be97896fe4449724",
+    "evidence/coding_pilot_v1/coverage_generalization/incidents/network_20260918/verified_recovery_import.json": "0bb0336c1ca97c3f4b65afcc00096530292e7ca2e509d7cfb267540b5af92064"
+  },
+  "retained_storage": [
+    {
+      "volume_id": "r4q5tbmdb9",
+      "name": "gearshift-coding-v1-20260915-coverage_experiment_20260918_01-experiment-capacity01-storage",
+      "recovery_receipt": "evidence/coding_pilot_v1/coverage_generalization/incidents/network_20260918/retained_volume_recovery.json",
+      "sha256": "212ade980ef7310dbb859053b31ac8d16e95cceb98ff5eb7211c0714d31ee75c"
+    }
+  ],
+  "predispatch_attempt_01": "Blocked before any allocation because newly retained failed-run storage was not yet in the plan inventory."
+}

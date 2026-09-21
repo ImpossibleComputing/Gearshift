@@ -1,0 +1,31 @@
+{
+  "amendment_sha256": "13ab5f8bda9524841f556ff7b2143807d870653e92451065650466d5452ad0be",
+  "corpus_manifest_sha256": "f8736f7bd6785b48f969ad512fe8512c82fcdb6667798c31c552b9edd691eb1d",
+  "objective": "natural_handoff_boundary",
+  "seed": 20260915,
+  "maximum_updates": 128,
+  "training_wall_seconds": 5400,
+  "validation_steps": [
+    1,
+    8,
+    32,
+    64,
+    96,
+    128
+  ],
+  "gradient_predictions_per_update": 32,
+  "offsets": [
+    0,
+    32,
+    128,
+    512
+  ],
+  "optimizer": "AdamW lr1e-5 weight_decay0 gradient_clip1",
+  "validation": "All21 fixed validation histories, common full-boundary KL, equal task means at available original offsets; never hidden tests",
+  "checkpoint_selection": "Minimum validation KL among completed trained checkpoints, ties earlier step. At least one full update and all21 validation cases required. No development outcome selects this checkpoint.",
+  "interruption": "Save mapper state after every full update, before checking time/stop; immutable validated checkpoints nominated. No optimizer-resume claim.",
+  "time_rule": "Training stops at128updates or90minutes; reserve worker time for validating a latest full update if none validated. No convergence required or claimed.",
+  "initial_dev": "Measure affine baseline alongside trained C on all40 same development tasks where practical; never use these scores for checkpoint selection.",
+  "cache_reconstruction": "Full saved source prefix in512-token chunks for mapper input, identical to training runtime. No cropping or source resampling. Native D rebuilt with its original chunked schedule and same RNG; preserve any token drift and report matched D separately.",
+  "confirmation": "Reserved200 and second-seed40 untouched; development exploratory only."
+}

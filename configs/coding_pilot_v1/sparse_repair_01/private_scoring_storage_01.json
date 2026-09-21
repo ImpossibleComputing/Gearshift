@@ -1,0 +1,29 @@
+{
+  "schema": 1,
+  "purpose": "isolated_sparse_screen_scoring_storage",
+  "experiment_id": "sparse_repair_01",
+  "status": "FROZEN",
+  "volume_id": "kzmo0a5erc",
+  "region": "EUR-IS-1",
+  "size_gb": 20,
+  "cpu_profile": "cpu5g16",
+  "mount_path": "/workspace",
+  "allowed_result_root": "/workspace/GearshiftSparseRepair/results/sparse_repair_01",
+  "private_relative_path": "private/development.json",
+  "private_input_sha256": "51843183c4b58f74bf995c656fda0f7e788f4913c3d9dc6d7947d22efe1089ae",
+  "declaration_sha256": "2fd04f4e3a20f8c38f4193582ef704ffff3d3cb28aba8f212711fa8329e13c9c",
+  "generation_closure_sha256": "88070cfdadafe91eace3c0e1e45b3af6aabbb51115b56fcbcc2d92ddfe5f0e15",
+  "generation_closure_file_sha256": "4dbed24e6848ccde74a63137abb474d7e2d3db8b5499c5eae4eab081a69c0233",
+  "candidate_python_sha256": "1d3cf64f97cadc79fdc6fe2496a21b7b456cb94211978cfef5a65f616af74fd5",
+  "provider_volume_receipt": {
+    "path": "results/sparse_repair_01/resources/private_storage_fallback/created_volume.json",
+    "sha256": "f038c47d6810e36a74b3f4b8640c6e5d7a78dc4865a8ebd6b26d5d6f4c7a9c66"
+  },
+  "newly_created_dedicated_private": true,
+  "generation_mount_allowed": false,
+  "protected_original_volumes_unchanged": true,
+  "temporary_storage": true,
+  "cleanup_policy": "Root may delete only this newly-created temporary volume after exact private input remains verified in original protected storage/Studio and public results are independently backed up; guards never delete volumes.",
+  "reason": "Two explicit CPU capacity rejections in EU-RO-1 after generation seal; current CPU catalog offers EUR-IS-1. Scorer, candidate programs, extraction and limits unchanged.",
+  "created_epoch": 1789989881.746248
+}

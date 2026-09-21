@@ -1,0 +1,113 @@
+{
+  "platform": "macOS Apple Silicon",
+  "python": "3.12.4",
+  "numpy": "2.5.3",
+  "pytest": "9.1.1",
+  "command": "HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 TOKENIZERS_PARALLELISM=false WANDB_DISABLED=true PYTHONDONTWRITEBYTECODE=1 python -m pytest -q -ra -p no:cacheprovider --disable-warnings",
+  "summary": "1483 passed, 23 skipped, 34 warnings, 48 subtests passed in 66.22s (0:01:06)",
+  "junit_counts": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "23",
+    "tests": "1554",
+    "time": "62.606",
+    "timestamp": "2026-09-21T12:59:03.789571-07:00"
+  },
+  "skipped_cases": [
+    {
+      "test": "tests.test_coding_confirmation_regional_generation::test_source_helpers_must_be_committed_before_actual_stage",
+      "reason": "historical visible confirmation inputs omitted; pinned upstream retrieval required"
+    },
+    {
+      "test": "tests.test_coding_confirmation_replication::test_frozen_second_seed_exact_recipe_and104_history_population",
+      "reason": "private historical 104-history token corpus intentionally not redistributed"
+    },
+    {
+      "test": "tests.test_coding_confirmation_replication::test_frozen_contract_rejects_recipe_drift[seed]",
+      "reason": "private historical 104-history token corpus intentionally not redistributed"
+    },
+    {
+      "test": "tests.test_coding_confirmation_replication::test_frozen_contract_rejects_recipe_drift[initializer]",
+      "reason": "private historical 104-history token corpus intentionally not redistributed"
+    },
+    {
+      "test": "tests.test_coding_confirmation_replication::test_frozen_contract_rejects_recipe_drift[schedules]",
+      "reason": "private historical 104-history token corpus intentionally not redistributed"
+    },
+    {
+      "test": "tests.test_coding_confirmation_replication::test_frozen_contract_rejects_recipe_drift[implementation]",
+      "reason": "private historical 104-history token corpus intentionally not redistributed"
+    },
+    {
+      "test": "tests.test_coding_confirmation_replication::test_frozen_contract_rejects_recipe_drift[endpoint]",
+      "reason": "private historical 104-history token corpus intentionally not redistributed"
+    },
+    {
+      "test": "tests.test_coding_confirmation_replication_supervisor::test_stage_inventory_verifies_all_compact_inputs_and_requires_original_initializer",
+      "reason": "private historical 104-history token corpus intentionally not redistributed"
+    },
+    {
+      "test": "tests.test_coding_sandbox_v2::test_valid_multimegabyte_stdio_capture_is_complete_and_tail_is_checked",
+      "reason": "Requires dedicated Linux root/seccomp scoring environment"
+    },
+    {
+      "test": "tests.test_coding_sandbox_v2::test_multimegabyte_function_serialization_has_no_parent_truncation",
+      "reason": "Requires dedicated Linux root/seccomp scoring environment"
+    },
+    {
+      "test": "tests.test_coding_sandbox_v2::test_actual_output_flood_is_terminated[stdio]",
+      "reason": "Requires dedicated Linux root/seccomp scoring environment"
+    },
+    {
+      "test": "tests.test_coding_sandbox_v2::test_actual_output_flood_is_terminated[discarded_function_stdout]",
+      "reason": "Requires dedicated Linux root/seccomp scoring environment"
+    },
+    {
+      "test": "tests.test_coding_sandbox_v2::test_actual_output_flood_is_terminated[function_result]",
+      "reason": "Requires dedicated Linux root/seccomp scoring environment"
+    },
+    {
+      "test": "tests.test_coding_sandbox_v2::test_infinite_loop_is_algorithmic_timeout_without_retry",
+      "reason": "Requires dedicated Linux root/seccomp scoring environment"
+    },
+    {
+      "test": "tests.test_coding_sandbox_v2::test_confinement_still_blocks_host_files_writes_network_and_children[open('/etc/passwd').read()]",
+      "reason": "Requires dedicated Linux root/seccomp scoring environment"
+    },
+    {
+      "test": "tests.test_coding_sandbox_v2::test_confinement_still_blocks_host_files_writes_network_and_children[open('/tmp/escape','w').write('x')]",
+      "reason": "Requires dedicated Linux root/seccomp scoring environment"
+    },
+    {
+      "test": "tests.test_coding_sandbox_v2::test_confinement_still_blocks_host_files_writes_network_and_children[import socket;socket.socket()]",
+      "reason": "Requires dedicated Linux root/seccomp scoring environment"
+    },
+    {
+      "test": "tests.test_coding_sandbox_v2::test_confinement_still_blocks_host_files_writes_network_and_children[import os;os.fork()]",
+      "reason": "Requires dedicated Linux root/seccomp scoring environment"
+    },
+    {
+      "test": "tests.test_coding_sandbox_v2::test_confinement_still_blocks_host_files_writes_network_and_children[import subprocess;subprocess.run(['/bin/true'])]",
+      "reason": "Requires dedicated Linux root/seccomp scoring environment"
+    },
+    {
+      "test": "tests.test_coding_sandbox_v2::test_confinement_still_blocks_host_files_writes_network_and_children[open('/proc/1/environ').read()]",
+      "reason": "Requires dedicated Linux root/seccomp scoring environment"
+    },
+    {
+      "test": "tests.test_coding_sandbox_v2::test_child_remains_unprivileged_and_cpu_pinned",
+      "reason": "Requires dedicated Linux root/seccomp scoring environment"
+    },
+    {
+      "test": "tests.test_coding_sandbox_v2::test_address_space_limit_remains_enforced",
+      "reason": "Requires dedicated Linux root/seccomp scoring environment"
+    },
+    {
+      "test": "tests.test_phase2_inspection::test_plan_is_unarmed_and_geometry_uses_explicit_head_dimension",
+      "reason": "optional pinned upstream tokenizer blob is not bundled"
+    }
+  ],
+  "junit_sha256": "abe4a382c404bb34595c6c5c2ada0bde70739502842c8b2735adaedf2ff9ab70",
+  "log_sha256": "1c1d438f66547f81de74732f82ccf7b7d36f59619417851122d3b45ba7ff541b"
+}

@@ -1,0 +1,135 @@
+{
+  "experiment_id": "confirmation_01_20260919T094418Z",
+  "protocol": {
+    "B_history_sampling": "One independently sampled smaller-model reasoning history per task from the same original thinking prompt and cap, then three answer draws from that independent native boundary. B receives no larger-model history.",
+    "H_definition": "Receiver-native original thinking prompt cache plus mapped reasoning suffix at original absolute positions; includes native prompt prefill.",
+    "M_definition": "Translate complete original prompt+reasoning historical cache, no teacher answer prefix.",
+    "P_definition": "Same original public prompt; pinned enable_thinking=False chat template with empty <think> section, no separate reasoning. Prefill ids[:-1] and use ids[-1:] as exact final-template bridge, as v2.",
+    "budgets": {
+      "answer_max_tokens_all_conditions": 4096,
+      "cap_amendment_path": "configs/coding_pilot_v1/cap_amendment_v1.json",
+      "cap_amendment_sha256": "1e893e1c7b8f14398f7bbfbe8777a650b3179f4c3fb08578a4b5ae25642bf2af",
+      "cap_failure": "Preserve capped/early-EOS histories and answers. Never drop, extend selectively or replace a hard task. Oversized original prompt is an explicit protocol failure; do not crop.",
+      "executed_identity_proofs": [
+        "results/coding_pilot_v1/preflight_cap_v1/identity.json",
+        "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/identity.json"
+      ],
+      "max_total_tokens": 40960,
+      "prompt_max_tokens": 8192,
+      "reasoning_max_tokens_both_models": 24576
+    },
+    "cache_isolation": "Immutable history/base states; clone private cache and independent RNG for each condition/seed. Preserve native/native reinjection/splice controls and actual partial-native rounding diagnostics, exact original positions, no alias/mutation, model/runtime/history/checkpoint hashes.",
+    "closing_think_token_id": 151668,
+    "decoding": {
+      "do_sample": true,
+      "min_p": 0.0,
+      "num_beams": 1,
+      "policy": "Same thinking-mode sampling through reasoning and final answer. Do not switch to non-thinking template at the boundary.",
+      "presence_penalty": 0.0,
+      "repetition_penalty": 1.0,
+      "temperature": 0.6,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "eos_token_ids": [
+      151645,
+      151643
+    ],
+    "handoff": "At natural closing-think emission, cache excludes emitted closing token and bridge contains exactly that token. For a capped history, preserve every sampled reasoning token and feed one prespecified closing token. Original absolute positions; no new user turn; free answers contain no source-written final-answer prefix. Preserve natural code in reasoning.",
+    "models": {
+      "receiver": {
+        "dtype": "bfloat16",
+        "frozen": true,
+        "id": "Qwen/Qwen3-8B",
+        "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+      },
+      "source": {
+        "dtype": "bfloat16",
+        "frozen": true,
+        "id": "Qwen/Qwen3-32B",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137"
+      }
+    },
+    "public_prompt_builder": {
+      "chat_template": "apply_chat_template([{\"role\":\"user\",\"content\":exact_prompt}], tokenize=True, add_generation_prompt=True, enable_thinking=True)",
+      "content": "Exact pinned public question_content, plus exact original starter_code when present; no solutions, repairs or new instruction turns.",
+      "contract_prefix": "Solve the following programming problem. Think through the solution, then provide the complete Python 3 code in a single Python code fence.\n\n",
+      "interface_contract": "Implement the provided Python interface. Return the result; do not read stdin.\n<original starter_code>",
+      "path": "scripts/coding_prepare.py",
+      "sha256": "91c497ad11489a449809126ded40e7f1f65c0457afd7f8bb1b9b20b0ece5da87",
+      "stdin_contract": "Write a complete Python program that reads standard input and writes the required output."
+    },
+    "recovery": "Resume exact saved RNG/token progress; immutable completed draws never rerolled. Evicted cache reconstruction is measured setup overhead, not a new reasoning sample.",
+    "runtime": {
+      "TF32": false,
+      "attention": "sdpa",
+      "deterministic_algorithms": true,
+      "dtype": "bfloat16",
+      "hardware_preferred": "NVIDIA H200",
+      "model_parameters_frozen": true,
+      "quantization": false,
+      "tensor_parallel": false,
+      "torch": "2.8.0+cu128",
+      "transformers": "4.57.6"
+    },
+    "source_history_sampling": "One large-model reasoning history per task shared byte-for-byte/token-for-token by A,D,FIXED_M,ROTATING_M,FIXED_H,ROTATING_H and secondary training-seed M/H. A answers from its own native pre-boundary source state; D reconstructs that exact full history natively.",
+    "tokenizer_files": {
+      "receiver": {
+        "config.json": {
+          "bytes": 728,
+          "sha256": "f7c4eadfbbf522470667b797a3c89be2524832d2d599797248dc304fff447c30",
+          "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/config.json"
+        },
+        "generation_config.json": {
+          "bytes": 239,
+          "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+          "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/generation_config.json"
+        },
+        "model.safetensors.index.json": {
+          "bytes": 32878,
+          "sha256": "f9fdbcb91c23971c13ec5d5f2573d2349e8f61f2f049371ec699281748fdb1bc",
+          "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/model.safetensors.index.json"
+        },
+        "tokenizer.json": {
+          "bytes": 11422654,
+          "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+          "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/tokenizer.json"
+        },
+        "tokenizer_config.json": {
+          "bytes": 9732,
+          "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "url": "https://huggingface.co/Qwen/Qwen3-8B/resolve/b968826d9c46dd6066d109eabc6255188de91218/tokenizer_config.json"
+        }
+      },
+      "source": {
+        "config.json": {
+          "bytes": 728,
+          "sha256": "97e295b63283935788fac5e4f8860862a56d4089538cafc93f0431f2ebe483bb",
+          "url": "https://huggingface.co/Qwen/Qwen3-32B/resolve/9216db5781bf21249d130ec9da846c4624c16137/config.json"
+        },
+        "generation_config.json": {
+          "bytes": 239,
+          "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
+          "url": "https://huggingface.co/Qwen/Qwen3-32B/resolve/9216db5781bf21249d130ec9da846c4624c16137/generation_config.json"
+        },
+        "model.safetensors.index.json": {
+          "bytes": 58330,
+          "sha256": "bed42c6c55274bc08a1f616bceb3bcb84b3f02cb6584c573bd18c6519291ecd0",
+          "url": "https://huggingface.co/Qwen/Qwen3-32B/resolve/9216db5781bf21249d130ec9da846c4624c16137/model.safetensors.index.json"
+        },
+        "tokenizer.json": {
+          "bytes": 11422654,
+          "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+          "url": "https://huggingface.co/Qwen/Qwen3-32B/resolve/9216db5781bf21249d130ec9da846c4624c16137/tokenizer.json"
+        },
+        "tokenizer_config.json": {
+          "bytes": 9732,
+          "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
+          "url": "https://huggingface.co/Qwen/Qwen3-32B/resolve/9216db5781bf21249d130ec9da846c4624c16137/tokenizer_config.json"
+        }
+      }
+    }
+  },
+  "schema": 1,
+  "status": "draft_pending_final_proofs"
+}

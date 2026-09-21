@@ -1,0 +1,10 @@
+{
+  "scorer_version": "gearshift_scorer_v2_20260919_01",
+  "policy_sha256": "033c4e7fcdb27796c0744e02638b5301b6be04db235f39f4edf6902fb7b29498",
+  "files": {
+    "gearshift/coding_sandbox.py": "5a2127593bd244c762d7cec63e783a27adc2efa8eb8debbf6bacd428306e687e",
+    "gearshift/coding_sandbox_v2.py": "f884ffb6846fc2fe9dbfd4e8ccefcbdccba6cc9af9a354d9509b164ec6d48182",
+    "scripts/coding_sandbox_child_v2.py": "32420b1a6ef0b1d72a3c3c4b00f54dcd387627d7031e1feffc586299d6cde3a3"
+  },
+  "extraction_and_comparison": "Imported unchanged original extract/equal_stdio."
+}

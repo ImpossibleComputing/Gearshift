@@ -1,0 +1,379 @@
+Run the next Gearshift stage: repair and validate scoring, then test
+the frozen coverage recipes on fresh confirmation tasks. Run
+independent work in parallel. This is an execution request, not
+another plan-only task.
+
+PRIORITY AND AUTHORIZATION
+
+Optimize for elapsed time to an interpretable result, not minimum
+spend. Use capable RunPod servers and substantial parallelism
+whenever that materially shortens the critical path. Do not
+serialize independent jobs merely to economize.
+
+Treat $2,000 as the CUMULATIVE Gearshift SOFT spending target,
+replacing the old $1,000 hard stop and earlier small per-round
+allocations. The latest saved estimate was approximately $516.26
+cumulative, plus continuing storage; reconcile actual resources
+and the ledger before provisioning. Report both this round's
+spending and cumulative spending.
+
+The $2,000 target is a forecast/notification threshold, not a kill
+switch. Routine provisioning, additional workers, retries, and
+engineering repairs within this scope do not require repeated
+approval.
+
+If the forecast exceeds $2,000, notify me with the incremental cost
+and work remaining; do not abruptly terminate healthy in-flight
+jobs or lose progress at that threshold. Finish bounded in-flight
+work and protect artifacts. Seek authorization for a material
+further expansion, not for routine cleanup. Honor any separately
+documented owner-approved hard ceiling; do not infer unlimited
+spending authority from the word “soft.”
+
+Use RunPod directly. The laptop/Studio is a console and optional
+mirror, not a required heartbeat, DNS dependency, or persistent
+SSH connection. Stage inputs and launch self-contained durable
+jobs that survive disconnection. Keep full optimizer/scheduler/RNG
+checkpoints, atomic result transactions, verified backups, and
+automatic idle-GPU cleanup.
+
+1. FREEZE THE RESEARCH QUESTION AND PRESERVE CURRENT STATE
+
+Read COVERAGE_GENERALIZATION_V2_RESULTS.md, its records, and the
+independent v2 audit if present. This prompt includes the essential
+findings; an extra attachment is not required.
+
+The v2 run completed 1,024 additional updates in each arm. On 21
+previously examined validation tasks, with three answer draws
+per task:
+- FIXED pure mapping: 17/63 passes.
+- ROTATING pure mapping: 30/63.
+- FIXED hybrid: 38/63.
+- ROTATING hybrid: 44/63.
+- Native full text replay: 58/63.
+- Prompt-only non-thinking: 29/63.
+
+These are ORIGINAL scorer results. The primary ROTATING-minus-FIXED
+pure-mapping difference was +20.6 percentage points, with a task-
+paired interval of +11.1 to +31.7. This is exploratory validation,
+not fresh confirmation. It does not establish a useful speedup or
+superiority over an independently thinking smaller model.
+
+Commit completed relevant work and preserve:
+  gearshift-progress-01
+  64725974fa55459350d1c9d09037bab64d0c5ec6
+
+Work on a new branch such as research/confirmation-01 from current
+research code. Preserve later fixes; do not reset to the publication
+tag. Never move an existing evidence tag. Local commits are
+authorized; pushing, publication, website deployment, license
+changes, and article edits are not.
+
+Freeze a compact confirmation declaration before inspecting
+confirmation outputs. Record the exact two v2 step-1,024 mapper
+hashes, pinned source/receiver revisions, corpus, prompts,
+decoding, task IDs, seeds, scorer version, comparisons, and analysis.
+Verify actual checkpoint bytes against existing inventories.
+
+Primary question:
+Does ROTATING beat FIXED in pure mapping on fresh tasks?
+
+Secondary questions:
+Does the hybrid beat prompt-only answering and an independently
+thinking smaller model, and how far does it remain below native
+text replay and the larger model?
+
+2. FIX THE EVALUATOR USING SAVED OUTPUTS—NO NEW GENERATION
+
+The audit found a concrete issue on atcoder/abc344_e:
+- Nine saved outputs fail with OSError: [Errno 27] File too large.
+- scripts/coding_sandbox_child.py sets RLIMIT_FSIZE to 2,097,152 bytes.
+- gearshift/coding_sandbox.py separately caps captured stdout at
+  that size.
+- The visible problem permits valid output of approximately 4 MB
+  or more. The harness cannot accommodate every permitted correct
+  answer.
+- This does NOT imply all nine affected programs are correct.
+
+A second issue is execution stability. Identical saved answers
+changed pass/fail across runs:
+- Native D on atcoder/abc339_d at two seeds: pass became timeout.
+- Prompt-only P on atcoder/abc335_c at one seed: timeout became pass.
+
+Do not treat every timeout as spurious or choose the favorable
+historical score.
+
+Repair and test these issues in a dedicated CPU scoring environment:
+- Make bounded child output allowances and parent capture/checking
+  accommodate valid task outputs, with reasonable headroom.
+  Check every capture/serialization layer; do not silently truncate
+  before comparison.
+- Derive resource allowances from published constraints and trusted
+  reference behavior, not candidate identity or which method wins.
+- Add regression tests for valid multi-megabyte output, actual
+  excessive-output termination, and capture completeness.
+- Calibrate CPU and wall-time limits using trusted correct
+  implementations, including difficult public/development inputs.
+  Use consistent CPU allocations, bounded concurrency, and enough
+  RAM; avoid oversubscription or co-locating scoring with heavy
+  GPU-host preprocessing.
+- Preserve isolation, disabled network, secret separation,
+  memory/process limits, and protection against infinite loops
+  and output floods. Raising an invalid output limit is not
+  removing the sandbox.
+- Check timing repeatability on a fixed diagnostic subset. Freeze
+  the scoring/retry policy before final rescoring. Do not keep
+  rerunning a program until it passes or turn genuine algorithmic
+  timeouts into infrastructure retries.
+
+Create a NEW versioned scorer. Preserve original scores and receipts
+unchanged. Rescore all 1,512 saved v2 answers consistently with the
+corrected scorer; never regenerate, edit, rename functions, change
+code-block extraction, or repair their programs.
+
+Report old/new scores, changes by cause, residual instability, and
+recalculated contrasts. An unresolved infrastructure failure is
+missing coverage, not an invented success or model-quality failure.
+
+Do not tune mappers in response to rescoring. If a genuine evaluator
+defect remains, repair it rather than generating a misleading
+confirmation result.
+
+3. CONFIRM ON THE RESERVED 200 FRESH TASKS
+
+Verify the existing reserved 200-task manifest has not been used
+in gradient updates, checkpoint selection, or prior output
+inspection. Check task IDs/content against earlier splits. Do not
+substitute easier tasks, select tasks by model success, or quietly
+relabel exposed cases as fresh. Record any exposure conflict before
+execution.
+
+Use the exact frozen Qwen3-32B/Qwen3-8B revisions, BF16 runtime,
+natural handoff, answer contract, and final FIXED/ROTATING step-1,024
+checkpoints from v2. No additional training for the primary
+comparison. Do not choose update 512 or another checkpoint after
+looking at validation or confirmation scores.
+
+Evaluate these eight conditions on the SAME 200 tasks:
+
+A: Larger model reasons and completes the code itself.
+B: Smaller model reasons independently and completes the code.
+D: Smaller model natively reads the exact large-model prompt/
+   reasoning history, then answers.
+P: Smaller model receives only the original prompt and answers
+   using the pinned non-thinking template.
+FIXED_M: Final FIXED mapper translates the complete historical cache.
+ROTATING_M: Final ROTATING mapper translates the complete cache.
+FIXED_H: Native original-prompt cache plus FIXED-translated reasoning.
+ROTATING_H: Native original-prompt cache plus ROTATING-translated
+            reasoning.
+
+Use three predeclared answer seeds per task/condition. This is
+4,800 answer records, but only 200 task clusters.
+
+Generate one declared large-model reasoning trajectory per task and
+share that exact token history across A/D/M/H. A branches from its
+own native state.
+
+For B, generate its own independent smaller-model reasoning history
+per task, then use the same declared three answer draws. Make the
+shared-history sampling design explicit. Do not deny B reasoning
+or omit its compute cost.
+
+Use the already declared reasoning and answer budgets; do not
+increase them selectively when a condition fails. Preserve capped
+histories and failures instead of replacing hard tasks. Freeze
+source and answer seeds independently of worker order.
+
+Source-written final answers and benchmark solutions must NEVER
+become prefix inputs to mapped/text-handoff generation. Free-running
+answers begin at the actual handoff boundary. Source reasoning may
+naturally contain code; preserve it as generated rather than
+selectively filtering it.
+
+Retain absolute positions, native/native splice checks, isolated
+caches, pinned templates, and exact history/checkpoint identities.
+H pays for native prompt prefill; it is not zero-prefill. P does
+not pay for a source reasoning stage. Keep these distinctions in
+both scores and timing.
+
+Reuse immutable source histories and compatible cache artifacts to
+avoid redundant work. Reconstructing an evicted source cache is
+setup overhead, not a fresh reasoning draw; record it separately.
+Do not reroll completed outputs after a worker failure.
+
+Keep private confirmation tests and reference answers inaccessible
+to training/generation workers. Final scoring uses only the frozen
+scorer and immutable candidate programs. No formula-fence rescue,
+function renaming, favorable-seed selection, or best-of-three
+primary score.
+
+4. MAKE THE PARALLEL EXECUTION REAL
+
+Run CPU evaluator repair/rescoring, GPU input staging, and the
+independent training-seed replication below concurrently wherever
+dependencies permit. Freeze the scientific recipe first; staging
+and generation must not depend on inspecting confirmation scores.
+
+Prefer matching H200 workers for numerical continuity, with
+sufficient dedicated CPU/RAM for preprocessing. Use a multi-GPU
+host, multiple pods, or both—whichever gets results sooner.
+
+Do not introduce a new serving engine, quantization, tensor-parallel
+numerical path, or changed decoding just to advertise throughput.
+
+Start with a brief throughput/memory measurement and allocate
+enough workers to keep the critical path busy. Scale out source
+reasoning across task shards: it is likely more important than
+making only the final answer stage parallel.
+
+Run independent small-model reasoning alongside it. As each task's
+source history commits, fan it out to ready answer workers; do not
+wait for all 200 source histories before starting answer generation.
+
+CPU scoring uses separate resources and must not create timeouts
+through oversubscription. The first confirmation scoring pass
+starts only after the scorer and declaration are frozen and the
+primary generation manifest is sealed.
+
+During generation, report counts and infrastructure status, not
+partial pass-rate leaderboards used to steer the run.
+
+Schedule long histories early or use a work-stealing queue based
+on known input/history length, never observed correctness. Use
+deterministic task/condition/seed identities, leases, atomic commits,
+and deduplication so parallelism cannot silently produce
+replacement draws.
+
+Persist complete resumable states and exact sampler progress.
+Temporary laptop or mirror connectivity loss is not a reason to
+kill healthy workers. Record real failures, use bounded recovery,
+and shut down idle compute after verified backup. Do not use
+busy-waiting GPU pods as job queues.
+
+5. REPLICATE THE TRAINING SEED IN PARALLEL
+
+Run a second paired FIXED/ROTATING training seed alongside
+confirmation when the forecast permits. Do not make the primary
+report wait for this secondary result.
+
+Start both secondary arms from the SAME original update-96
+initializer used in v2, not from the trained 1,024-step weights.
+Retain the exact 104-history corpus, source-written references,
+affine family, optimizer recipe, learning rate, 32 positions/update,
+and 1,024-update endpoint.
+
+Use one new predeclared training/schedule seed, shared appropriately
+within the FIXED/ROTATING pair. Keep answer-sampling seeds unchanged
+for evaluation. Save full resumable checkpoints. Do not choose the
+better training seed or checkpoint using confirmation results.
+
+Evaluate the four secondary mapped/hybrid conditions on the same
+200 confirmation tasks and three answer seeds, reusing the frozen
+source histories and native controls.
+
+This adds 2,400 answers, not 200 additional tasks. Report the two
+training runs separately and their paired contrasts. Two training
+seeds are limited replication conditional on a common initializer/
+corpus, not exhaustive run-to-run uncertainty.
+
+The separate reserved 40-task set remains untouched. A second
+optimization seed is not the same as that task reserve or extra
+answer draws.
+
+If forecasted resources force prioritization, complete scoring
+repair and the original-seed 200-task primary comparison first.
+Report secondary coverage honestly; never expand into a sweep
+of seeds until something wins.
+
+6. ANALYSIS—FREEZE IT BEFORE SCORES
+
+Primary contrast:
+ROTATING_M minus FIXED_M on all 200 tasks, using the original v2
+training pair.
+
+Report absolute success, paired differences, and 95% task-cluster
+bootstrap intervals. Average the three answer draws within each
+task; use identical task resamples across contrasts. No optional
+stopping based on early significance. Do not treat an interval
+containing zero as equivalence.
+
+Predeclare a compact secondary contrast family:
+ROTATING_H versus FIXED_H, D, P, B, and A; plus ROTATING_H versus
+ROTATING_M.
+
+Report multiplicity-adjusted secondary inference alongside
+descriptive differences, or explicitly label unadjusted exploratory
+intervals. Do not search many slices for a positive headline.
+
+Show per-task/seed records, gains/losses, interface compliance,
+syntax/runtime/assertion/timeout/resource outcomes, stopping,
+repetition, and answer length.
+
+Separate algorithmic errors from verified evaluator infrastructure
+failures. Do not silently drop missing cases or count them as wrong
+programs; report coverage and conservative sensitivity when needed.
+
+Report source reasoning, native prefill, mapping/splicing, answer
+generation, and complete per-answer inference cost separately.
+
+Count the full source stage for a single-output deployment estimate;
+do not divide it by three just because evaluation reused it for
+three samples. Report amortized multi-output work separately.
+Likewise, charge B for its own reasoning.
+
+Distinguish fleet experiment wall-clock acceleration from model-level
+latency gains. Reconstructed-cache setup, checkpoint I/O, model
+loading, scoring, and rental costs need their own accounting.
+Never count shorter failed outputs as useful speedups or equate
+P with a thinking baseline.
+
+Explain whether results support:
+- Fresh-task coverage improvement.
+- A useful hybrid intervention.
+- Superiority to independent small-model reasoning.
+- Any quality/cost tradeoff.
+
+H beating P alone does not uniquely prove dependence on the
+particular transferred reasoning. Leave mechanistic claims
+qualified; do not add an architecture experiment or a wrong-history
+sweep to this confirmation run.
+
+7. SAVE AND DELIVER
+
+Commit the corrected scorer, frozen declaration, runner changes,
+and final reports locally at sensible milestones. Preserve the
+first article and publication tag. Do not push or publish.
+
+Export the repaired validation report as soon as it is verified,
+and the full primary confirmation report as soon as the 200-task
+comparison closes; neither should wait for optional secondary work.
+
+Produce:
+  gearshift_confirmation_review.zip
+  CONFIRMATION_RESULTS.md
+  SCORER_REPAIR_RESULTS.md
+
+Include source/tests/configs; frozen declarations; model/corpus/
+task/checkpoint/scorer hashes; raw outputs and token IDs; exact
+source histories and seeds; original and corrected scoring receipts;
+per-task comparisons; statistical code; training-seed replication
+and resume evidence; timing/memory/resource receipts; failures;
+Git identities; and reproduction commands.
+
+Add a file-size/SHA-256 manifest. Tables and plots must regenerate
+from compact records without weights or running candidate code.
+
+Exclude credentials, model weights, large transient caches,
+private hidden tests/reference answers, and environments. Back up
+heavy checkpoints outside Git with verified hashes and retrieval
+paths; do not delete protected volumes just to reduce storage costs.
+
+Return exact absolute paths, ZIP SHA-256, actual task/condition/seed
+coverage, primary and secondary status, original versus corrected
+conclusions, this-round/cumulative spend, and remaining paid
+resources. Distinguish saved resource receipts from live verification.
+
+The objective is a fast, trustworthy answer on fresh problems.
+Use parallelism and the budget to get it—not another training
+sweep, premature victory claim, or infrastructure-perfectness project.

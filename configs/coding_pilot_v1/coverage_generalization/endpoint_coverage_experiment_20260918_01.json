@@ -1,0 +1,44 @@
+{
+  "endpoint": 1024,
+  "forecasts": [
+    {
+      "endpoint": 1024,
+      "training_seconds": 43018.09915649891,
+      "validation_seconds": 842.6923935011728,
+      "evaluation_reserve_seconds": 21600,
+      "bootstrap_and_export_reserve_seconds": 5400,
+      "total_seconds": 70860.79155000008
+    },
+    {
+      "endpoint": 512,
+      "training_seconds": 21509.049578249454,
+      "validation_seconds": 655.4274171675788,
+      "evaluation_reserve_seconds": 21600,
+      "bootstrap_and_export_reserve_seconds": 5400,
+      "total_seconds": 49164.47699541703
+    },
+    {
+      "endpoint": 256,
+      "training_seconds": 10754.524789124727,
+      "validation_seconds": 468.1624408339849,
+      "evaluation_reserve_seconds": 21600,
+      "bootstrap_and_export_reserve_seconds": 5400,
+      "total_seconds": 38222.68722995871
+    },
+    {
+      "endpoint": 128,
+      "training_seconds": 5377.262394562364,
+      "validation_seconds": 280.8974645003909,
+      "evaluation_reserve_seconds": 21600,
+      "bootstrap_and_export_reserve_seconds": 5400,
+      "total_seconds": 32658.159859062755
+    }
+  ],
+  "chosen_before_task_quality_generation": true,
+  "quality_scores_consulted": false,
+  "rule": "Largest common checkpoint fitting 1.5x measured training/validation, plus6h evaluation and90min setup/export.",
+  "preflight_sha256": "89a7dbbc1654777ad0bfcbe01850aa1325eb488f643d582b749d7c3b95047d43",
+  "preflight_result_path": "results/coding_pilot_v1/coverage_preflight_20260918_01/preflight/preflight_result.json",
+  "preflight_result_file_sha256": "3863d57ea48e98c681a1c04d63f79a97264b998f348c15713b4522889661adc8",
+  "preflight_run": "coverage_preflight_20260918_01"
+}

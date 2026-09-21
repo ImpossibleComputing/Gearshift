@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "scorer_version": "gearshift_scorer_v2_20260919_01",
+  "cpu_seconds": 12,
+  "wall_seconds": 46,
+  "address_space_bytes": 4294967296,
+  "stdout_min_bytes": 16777216,
+  "stdout_max_bytes": 67108864,
+  "stdout_expected_multiplier": 4,
+  "stdout_extra_bytes": 1048576,
+  "stderr_limit_bytes": 262144,
+  "discarded_function_stdout_limit_bytes": 16777216,
+  "maximum_infrastructure_retries": 1,
+  "candidate_timeout_retries": 0,
+  "maximum_concurrent_candidates": 8,
+  "policy_status": "frozen",
+  "calibration_receipt_sha256": "571935db47af4aa0b7c8020911451401fd72def044a97b30ae20e619a71ff7fa",
+  "calibration_declaration_sha256": "06e1d90ecb7bea2a1b7e72585b5afb96a87a8d88290168fb96e0e7b1ac7e626c",
+  "physical_cpu_ids": [
+    3,
+    4,
+    5,
+    6,
+    10,
+    13,
+    14,
+    22
+  ],
+  "calibrated_environment": {
+    "platform": "Linux-6.8.0-60-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]",
+    "candidate_python": "Python 3.12.3",
+    "hostname": "c23a3443d306",
+    "allowed_cpus": [
+      3,
+      4,
+      5,
+      6,
+      10,
+      13,
+      14,
+      22,
+      27,
+      28,
+      29,
+      30,
+      34,
+      37,
+      38,
+      46
+    ],
+    "physical_cpus": [
+      3,
+      4,
+      5,
+      6,
+      10,
+      13,
+      14,
+      22
+    ],
+    "cgroup": {
+      "cpu,cpuacct/cpu.cfs_quota_us": "-1",
+      "cpu,cpuacct/cpu.cfs_period_us": "100000",
+      "cpu,cpuacct/cpu.stat": "nr_periods 0\nnr_throttled 0\nthrottled_time 0\nnr_bursts 0\nburst_time 0",
+      "memory/memory.limit_in_bytes": "64000000000",
+      "memory/memory.usage_in_bytes": "695058432",
+      "cpuset/cpuset.cpus": "3-6,10,13-14,22,27-30,34,37-38,46"
+    },
+    "memory_total_kib": 296430636
+  },
+  "maximum_reference_cpu_seconds": 2.236259
+}

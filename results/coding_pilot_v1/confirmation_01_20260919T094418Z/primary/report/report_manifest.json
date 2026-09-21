@@ -1,0 +1,69 @@
+{
+  "experiment_id": "confirmation_01_20260919T094418Z",
+  "cohort": "primary",
+  "source_bindings": {
+    "scoring_plan_path": "results/coding_pilot_v1/confirmation_01_20260919T094418Z/primary/scoring/scoring_plan.json",
+    "scoring_plan_sha256": "3d62a5789f96437d242ce7fe909672883d27d1259b6059ae1ac7a6846eafd8dc",
+    "scoring_plan_identity_sha256": "a21a06592e21d8e8c4a11e08e8319b039157290c231b9629cc3db8366baa5644",
+    "declaration_sha256": "16387d5361c795121929fd9244821f12ee005f9b36b2febddca5d9ef89f7536f",
+    "analysis_plan_sha256": "d9c5de4b93f7841faf6697ecf39dd4f897957745d819f7bda128a658ec9c7023",
+    "scored_manifest_sha256": "d758ae77e5dcabb70cc7886541941bdd8fc27f56b36f37f95c5051bf3c89e6e8",
+    "generation_closure_identity_sha256": "e9f439019ac632f22e8ac8b5eb3d9a222b2b1b3d7afc38abfd01579d2a810187",
+    "generation_closure_file_sha256": "57cb0c840a9480d243143a6887e2dfc267fa50b3936a0b2d50023583c1c76036",
+    "scorer_identity_sha256": "0caed5e16579c2d75f732e816d3bfc2849d3324a2f6948ad7bf08306ba426b84"
+  },
+  "report_script_sha256": "0694f68105c660898d3aadd1f761ebc6ed0843872abf9b0671812e6b45d9af49",
+  "generation_or_candidate_execution_performed": false,
+  "files": [
+    {
+      "path": "REPORT.md",
+      "bytes": 4201,
+      "sha256": "34a3a139e6ca985a7571bafcc30b42c48d5e40536afa539b765cd8fb1e6b1b2d"
+    },
+    {
+      "path": "bootstrap_indices.npz",
+      "bytes": 3200616,
+      "sha256": "b6298ca1bedec350d6868cb1afae9bd4eb3fe919e6a672e2534ad5ea3482771d"
+    },
+    {
+      "path": "conditions.csv",
+      "bytes": 925,
+      "sha256": "6f58b5336fc8ec364d678e106b18a08af506b06d43ff2f58fc17b78229d7df37"
+    },
+    {
+      "path": "histories.csv",
+      "bytes": 79750,
+      "sha256": "38c8b8600b532d767ea6433534f767d572ea078b01533d8453b4df58d627eec9"
+    },
+    {
+      "path": "per_task.csv",
+      "bytes": 71027,
+      "sha256": "ee46eb5dff5e8ade5d324509e1f60fe036774965abf07bd3392a0ee793825f88"
+    },
+    {
+      "path": "per_task_seed.csv",
+      "bytes": 4491113,
+      "sha256": "8a8e932a58373d249e777d94d983224d9d0493ef9c72c032603091c4a74431bb"
+    },
+    {
+      "path": "sampler_overhead.csv",
+      "bytes": 6381733,
+      "sha256": "679b34d9b3a57d9bbfbe318d29f45a4af58fa4c0fd6cab23b77d6ea700c0217e"
+    },
+    {
+      "path": "setup_measurements.csv",
+      "bytes": 176346,
+      "sha256": "0db87b39921f7891a106d0ada0c6866c219acbd7eb984074ccc07b5466801bdc"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 10094331,
+      "sha256": "28a2c72dc955c20adf6e2601bfaafcb5aeb09f4a0a930a282d799fbfc871a7e8"
+    },
+    {
+      "path": "task_gains_losses.csv",
+      "bytes": 70650,
+      "sha256": "0ec551ed19d5124dc6df845dc734c63056afddd09bfa59592d5ce9d18fda1d95"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "experiment_id": "confirmation_01_20260919T094418Z",
+  "role": "secondary_training_seed_replication",
+  "declaration_path": "configs/coding_pilot_v1/confirmation_01/replication_declaration.json",
+  "declaration_sha256": "28507a8ddcc26bb11b64b7deb7d79a86efd2b496601f7ef4eea57c7f1498329d",
+  "result_root": "results/coding_pilot_v1/confirmation_01_20260919T094418Z/replication",
+  "training_seed": 20260919,
+  "target_updates": 1024,
+  "checkpoint_updates": [
+    0,
+    128,
+    256,
+    512,
+    768,
+    1024
+  ],
+  "starting_mapper": {
+    "path": "results/coding_pilot_v1/recovery_train_20260917_04/train/mapper_step_0096.pt",
+    "sha256": "0b9700ffd9cb38c23bcfa1327181b32992b128c6b95078214328382f86b8d68f",
+    "retrieval_path": "/Users/qeetbastudio/Projects/Gearshift-heavy-backups/coverage_generalization_v2_20260918T233720Z/original_selected96/mapper_step_0096.pt",
+    "verification": "Saved prior off-pod backup inventory; worker rehashes actual staged bytes and verifies tensor equality before any update."
+  },
+  "checkpoint_inventory_path": "configs/coding_pilot_v1/confirmation_01/replication_checkpoint_inventory.json",
+  "checkpoint_inventory_sha256": "be8eee6ed1eebf08ee0dfa32d59002a5ee62a1257a272c131b576493c140611e",
+  "required_worker_api": "run_replication(c,arm); c supplies local guard/publish/telemetry and code_commit.",
+  "parallel_arms": [
+    {
+      "arm": "FIXED",
+      "one_visible_H200_required": true
+    },
+    {
+      "arm": "ROTATING",
+      "one_visible_H200_required": true
+    }
+  ],
+  "numerical_implementation": {
+    "gearshift/coding_coverage.py": "0747f5e15915c84a8076403b9492b47005cdeac51d43aaa054611a1aee117d6b",
+    "gearshift/coding_coverage_runtime.py": "da1e784852e2cc1f6955d6dcbf20b75457ad691bd01fe7621be799fd75b027da",
+    "gearshift/coding_coverage_v2_checkpoint.py": "dfef2ef09423903f3b27a9d7346f9fefe96bd0e8b8bffd9ca3afa1b516886327",
+    "scripts/coding_coverage_v2_worker.py": "b69c3b231276b642cf9125fa50524c8a3b41f0ba228cb96b87867452eab58db5",
+    "scripts/coding_coverage_v2_train.py": "49cff90adcff03265c783c14513c0a05062addde881a59c6d22514c8c54b948d",
+    "scripts/coding_coverage_experiment.py": "0e3ed70c212318e40d32893dca1f9af37257c911c22d4b3fa54c9a72a918cf5d",
+    "scripts/coding_partial_corpus.py": "92ba92499a760ea26a0f888c924535d7d143453172f7740d8a9116e3ddc37243"
+  },
+  "hidden_tests_or_confirmation_answers_permitted": false
+}

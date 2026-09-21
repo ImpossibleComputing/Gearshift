@@ -1,0 +1,471 @@
+{
+  "validation": {
+    "atcoder/abc339_d": [
+      {
+        "seed_index": 0,
+        "stream": "answer_small",
+        "answer_seed": 5831611902303553166
+      },
+      {
+        "seed_index": 1,
+        "stream": "coverage_answer_1",
+        "answer_seed": 3988503677446828236
+      },
+      {
+        "seed_index": 2,
+        "stream": "coverage_answer_2",
+        "answer_seed": 460807528985810690
+      }
+    ],
+    "leetcode/3240": [
+      {
+        "seed_index": 0,
+        "stream": "answer_small",
+        "answer_seed": 3756953499567939205
+      },
+      {
+        "seed_index": 1,
+        "stream": "coverage_answer_1",
+        "answer_seed": 4585324289309873365
+      },
+      {
+        "seed_index": 2,
+        "stream": "coverage_answer_2",
+        "answer_seed": 2286616327886296372
+      }
+    ],
+    "leetcode/3347": [
+      {
+        "seed_index": 0,
+        "stream": "answer_small",
+        "answer_seed": 3579513078491172084
+      },
+      {
+        "seed_index": 1,
+        "stream": "coverage_answer_1",
+        "answer_seed": 6828582691210987204
+      },
+      {
+        "seed_index": 2,
+        "stream": "coverage_answer_2",
+        "answer_seed": 4920899800972686729
+      }
+    ],
+    "atcoder/abc335_c": [
+      {
+        "seed_index": 0,
+        "stream": "answer_small",
+        "answer_seed": 4884286862255324606
+      },
+      {
+        "seed_index": 1,
+        "stream": "coverage_answer_1",
+        "answer_seed": 3454038112464012049
+      },
+      {
+        "seed_index": 2,
+        "stream": "coverage_answer_2",
+        "answer_seed": 6175008611122702009
+      }
+    ],
+    "atcoder/abc340_a": [
+      {
+        "seed_index": 0,
+        "stream": "answer_small",
+        "answer_seed": 8839695351781089379
+      },
+      {
+        "seed_index": 1,
+        "stream": "coverage_answer_1",
+        "answer_seed": 518435903020938660
+      },
+      {
+        "seed_index": 2,
+        "stream": "coverage_answer_2",
+        "answer_seed": 3697923431298254144
+      }
+    ],
+    "atcoder/abc347_a": [
+      {
+        "seed_index": 0,
+        "stream": "answer_small",
+        "answer_seed": 3209463425346402903
+      },
+      {
+        "seed_index": 1,
+        "stream": "coverage_answer_1",
+        "answer_seed": 6493717482198725905
+      },
+      {
+        "seed_index": 2,
+        "stream": "coverage_answer_2",
+        "answer_seed": 6748277065300986042
+      }
+    ],
+    "leetcode/3242": [
+      {
+        "seed_index": 0,
+        "stream": "answer_small",
+        "answer_seed": 6173567879063349187
+      },
+      {
+        "seed_index": 1,
+        "stream": "coverage_answer_1",
+        "answer_seed": 3005271282175985943
+      },
+      {
+        "seed_index": 2,
+        "stream": "coverage_answer_2",
+        "answer_seed": 929503306876314645
+      }
+    ],
+    "atcoder/abc336_c": [
+      {
+        "seed_index": 0,
+        "stream": "answer_small",
+        "answer_seed": 6244932337461468374
+      },
+      {
+        "seed_index": 1,
+        "stream": "coverage_answer_1",
+        "answer_seed": 1399992900081434598
+      },
+      {
+        "seed_index": 2,
+        "stream": "coverage_answer_2",
+        "answer_seed": 7806609647093843701
+      }
+    ],
+    "atcoder/abc341_b": [
+      {
+        "seed_index": 0,
+        "stream": "answer_small",
+        "answer_seed": 8273303582689460785
+      },
+      {
+        "seed_index": 1,
+        "stream": "coverage_answer_1",
+        "answer_seed": 8050615560559870368
+      },
+      {
+        "seed_index": 2,
+        "stream": "coverage_answer_2",
+        "answer_seed": 1251490154544584577
+      }
+    ],
+    "leetcode/3261": [
+      {
+        "seed_index": 0,
+        "stream": "answer_small",
+        "answer_seed": 6705388213945430825
+      },
+      {
+        "seed_index": 1,
+        "stream": "coverage_answer_1",
+        "answer_seed": 2902393924799533009
+      },
+      {
+        "seed_index": 2,
+        "stream": "coverage_answer_2",
+        "answer_seed": 4259807385315325497
+      }
+    ],
+    "leetcode/3334": [
+      {
+        "seed_index": 0,
+        "stream": "answer_small",
+        "answer_seed": 1474643040198963080
+      },
+      {
+        "seed_index": 1,
+        "stream": "coverage_answer_1",
+        "answer_seed": 7812743383412406061
+      },
+      {
+        "seed_index": 2,
+        "stream": "coverage_answer_2",
+        "answer_seed": 3089520058842257049
+      }
+    ],
+    "atcoder/abc337_b": [
+      {
+        "seed_index": 0,
+        "stream": "answer_small",
+        "answer_seed": 877870329568168960
+      },
+      {
+        "seed_index": 1,
+        "stream": "coverage_answer_1",
+        "answer_seed": 3072988442832668615
+      },
+      {
+        "seed_index": 2,
+        "stream": "coverage_answer_2",
+        "answer_seed": 33254118913759869
+      }
+    ],
+    "atcoder/abc342_b": [
+      {
+        "seed_index": 0,
+        "stream": "answer_small",
+        "answer_seed": 5751429457331184403
+      },
+      {
+        "seed_index": 1,
+        "stream": "coverage_answer_1",
+        "answer_seed": 3449129524677528258
+      },
+      {
+        "seed_index": 2,
+        "stream": "coverage_answer_2",
+        "answer_seed": 3313256226017596439
+      }
+    ],
+    "leetcode/3297": [
+      {
+        "seed_index": 0,
+        "stream": "answer_small",
+        "answer_seed": 6263533447711698461
+      },
+      {
+        "seed_index": 1,
+        "stream": "coverage_answer_1",
+        "answer_seed": 2989502874080748426
+      },
+      {
+        "seed_index": 2,
+        "stream": "coverage_answer_2",
+        "answer_seed": 5484465086413498996
+      }
+    ],
+    "leetcode/3356": [
+      {
+        "seed_index": 0,
+        "stream": "answer_small",
+        "answer_seed": 667622517125768404
+      },
+      {
+        "seed_index": 1,
+        "stream": "coverage_answer_1",
+        "answer_seed": 7997650563963336012
+      },
+      {
+        "seed_index": 2,
+        "stream": "coverage_answer_2",
+        "answer_seed": 1427452455232341286
+      }
+    ],
+    "atcoder/abc337_d": [
+      {
+        "seed_index": 0,
+        "stream": "answer_small",
+        "answer_seed": 8908328383951090602
+      },
+      {
+        "seed_index": 1,
+        "stream": "coverage_answer_1",
+        "answer_seed": 3904440297965873871
+      },
+      {
+        "seed_index": 2,
+        "stream": "coverage_answer_2",
+        "answer_seed": 6801988475448483769
+      }
+    ],
+    "leetcode/3308": [
+      {
+        "seed_index": 0,
+        "stream": "answer_small",
+        "answer_seed": 2704379297735401979
+      },
+      {
+        "seed_index": 1,
+        "stream": "coverage_answer_1",
+        "answer_seed": 4721051096921325695
+      },
+      {
+        "seed_index": 2,
+        "stream": "coverage_answer_2",
+        "answer_seed": 2954396252465705875
+      }
+    ],
+    "atcoder/abc339_a": [
+      {
+        "seed_index": 0,
+        "stream": "answer_small",
+        "answer_seed": 6957807418233512695
+      },
+      {
+        "seed_index": 1,
+        "stream": "coverage_answer_1",
+        "answer_seed": 4357442283414477975
+      },
+      {
+        "seed_index": 2,
+        "stream": "coverage_answer_2",
+        "answer_seed": 3477451304477441302
+      }
+    ],
+    "atcoder/abc344_e": [
+      {
+        "seed_index": 0,
+        "stream": "answer_small",
+        "answer_seed": 1228558963879745558
+      },
+      {
+        "seed_index": 1,
+        "stream": "coverage_answer_1",
+        "answer_seed": 8387044440802763610
+      },
+      {
+        "seed_index": 2,
+        "stream": "coverage_answer_2",
+        "answer_seed": 5699638866134638248
+      }
+    ],
+    "leetcode/3316": [
+      {
+        "seed_index": 0,
+        "stream": "answer_small",
+        "answer_seed": 8418982727809743246
+      },
+      {
+        "seed_index": 1,
+        "stream": "coverage_answer_1",
+        "answer_seed": 537426361705568278
+      },
+      {
+        "seed_index": 2,
+        "stream": "coverage_answer_2",
+        "answer_seed": 6535835326277403330
+      }
+    ],
+    "leetcode/3317": [
+      {
+        "seed_index": 0,
+        "stream": "answer_small",
+        "answer_seed": 4782774385462729448
+      },
+      {
+        "seed_index": 1,
+        "stream": "coverage_answer_1",
+        "answer_seed": 4259945496425949159
+      },
+      {
+        "seed_index": 2,
+        "stream": "coverage_answer_2",
+        "answer_seed": 8521358963148894896
+      }
+    ]
+  },
+  "seen_training": {
+    "atcoder/abc320_a": [
+      {
+        "seed_index": 0,
+        "stream": "answer_small",
+        "answer_seed": 7796841907254886962
+      },
+      {
+        "seed_index": 1,
+        "stream": "coverage_answer_1",
+        "answer_seed": 2890217011789144070
+      },
+      {
+        "seed_index": 2,
+        "stream": "coverage_answer_2",
+        "answer_seed": 7462243592756149886
+      },
+      {
+        "seed_index": 3,
+        "stream": "coverage_answer_3",
+        "answer_seed": 4780926328740577151
+      },
+      {
+        "seed_index": 4,
+        "stream": "coverage_answer_4",
+        "answer_seed": 9007609948460789770
+      }
+    ],
+    "atcoder/abc333_b": [
+      {
+        "seed_index": 0,
+        "stream": "answer_small",
+        "answer_seed": 4669354711091062550
+      },
+      {
+        "seed_index": 1,
+        "stream": "coverage_answer_1",
+        "answer_seed": 7051585227716078218
+      },
+      {
+        "seed_index": 2,
+        "stream": "coverage_answer_2",
+        "answer_seed": 3548479191413818497
+      },
+      {
+        "seed_index": 3,
+        "stream": "coverage_answer_3",
+        "answer_seed": 5364296067900693999
+      },
+      {
+        "seed_index": 4,
+        "stream": "coverage_answer_4",
+        "answer_seed": 5359364475943554792
+      }
+    ],
+    "leetcode/3114": [
+      {
+        "seed_index": 0,
+        "stream": "answer_small",
+        "answer_seed": 6416745923234547339
+      },
+      {
+        "seed_index": 1,
+        "stream": "coverage_answer_1",
+        "answer_seed": 5471538659587302402
+      },
+      {
+        "seed_index": 2,
+        "stream": "coverage_answer_2",
+        "answer_seed": 5206802940630831661
+      },
+      {
+        "seed_index": 3,
+        "stream": "coverage_answer_3",
+        "answer_seed": 7601997840801210138
+      },
+      {
+        "seed_index": 4,
+        "stream": "coverage_answer_4",
+        "answer_seed": 2339638468581586972
+      }
+    ],
+    "leetcode/3091": [
+      {
+        "seed_index": 0,
+        "stream": "answer_small",
+        "answer_seed": 7062776978438394678
+      },
+      {
+        "seed_index": 1,
+        "stream": "coverage_answer_1",
+        "answer_seed": 4496951349738176044
+      },
+      {
+        "seed_index": 2,
+        "stream": "coverage_answer_2",
+        "answer_seed": 1965300592673827213
+      },
+      {
+        "seed_index": 3,
+        "stream": "coverage_answer_3",
+        "answer_seed": 8316103184357991998
+      },
+      {
+        "seed_index": 4,
+        "stream": "coverage_answer_4",
+        "answer_seed": 4305200374963600203
+      }
+    ]
+  }
+}

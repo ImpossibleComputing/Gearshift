@@ -1,0 +1,35 @@
+{
+  "experiment_id": "coverage_generalization_v2_20260918T233720Z",
+  "created_epoch": 1789774813.3477829,
+  "approved_by_owner_instruction_sha256": "1d5f9dfea50e5ece0c284a02e184e2e1dc2bd093742950d6f7228d4446cf51a7",
+  "declaration_sha256": "ab183c4fe701fb65e95ee3dca4188f1343978d484b514098cdbde343a05593f0",
+  "publication_commit": "64725974fa55459350d1c9d09037bab64d0c5ec6",
+  "baseline": {
+    "epoch": 1789774804.6948779,
+    "upper_usd": 335.93725,
+    "gpu_hours": 58.935701411101554
+  },
+  "gpu_type": "NVIDIA H200",
+  "gpu_count": 4,
+  "lease_hours": 20,
+  "quoted_compute_usd_hour": 18.36,
+  "upper_total_hourly_usd": 22.2,
+  "cleanup_reserve_usd": 40,
+  "worst_reserved_cumulative_usd": 819.93725,
+  "worst_reserved_cumulative_gpu_hours": 138.93570141110155,
+  "hard_total_usd": 1000,
+  "hard_total_gpu_hours": 500,
+  "image_digest": "runpod/pytorch@sha256:0a360022e8de4375af99430f84e8b38951acc397252163a37ceac7204d01be35",
+  "preferred_regions": [
+    "US-GA-2",
+    "US-CA-2",
+    "AP-JP-1"
+  ],
+  "network_volume_gb": 250,
+  "protected_volumes": [
+    "jj2zyi9yrc",
+    "r4q5tbmdb9"
+  ],
+  "provider_scheduled_termination_supported": false,
+  "shutdown_policy": "Independent on-pod immutable lease guard, no network-health kill; terminate own GPU on completion/deadline; retain durable volume until off-pod verified backup. A provider API outage can delay billing cutoff; reserved headroom retained."
+}

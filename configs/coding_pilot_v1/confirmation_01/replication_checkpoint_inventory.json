@@ -1,0 +1,134 @@
+{
+  "experiment_id": "confirmation_01_20260919T094418Z",
+  "replication_id": "replication_seed_20260919",
+  "original_initializer": {
+    "path": "results/coding_pilot_v1/recovery_train_20260917_04/train/mapper_step_0096.pt",
+    "sha256": "0b9700ffd9cb38c23bcfa1327181b32992b128c6b95078214328382f86b8d68f",
+    "retrieval_path": "/Users/qeetbastudio/Projects/Gearshift-heavy-backups/coverage_generalization_v2_20260918T233720Z/original_selected96/mapper_step_0096.pt",
+    "verification": "Saved prior off-pod backup inventory; worker rehashes actual staged bytes and verifies tensor equality before any update."
+  },
+  "expected_outputs": [
+    {
+      "arm": "FIXED",
+      "step": 0,
+      "directory": "results/coding_pilot_v1/confirmation_01_20260919T094418Z/replication/arms/FIXED/checkpoints/step_0000",
+      "mapper_file": "mapper.pt",
+      "full_resumable_file": "full.pt",
+      "manifest_file": "manifest.json",
+      "hash_status": "Generated only after immutable atomic checkpoint commits; never invented in advance."
+    },
+    {
+      "arm": "FIXED",
+      "step": 128,
+      "directory": "results/coding_pilot_v1/confirmation_01_20260919T094418Z/replication/arms/FIXED/checkpoints/step_0128",
+      "mapper_file": "mapper.pt",
+      "full_resumable_file": "full.pt",
+      "manifest_file": "manifest.json",
+      "hash_status": "Generated only after immutable atomic checkpoint commits; never invented in advance."
+    },
+    {
+      "arm": "FIXED",
+      "step": 256,
+      "directory": "results/coding_pilot_v1/confirmation_01_20260919T094418Z/replication/arms/FIXED/checkpoints/step_0256",
+      "mapper_file": "mapper.pt",
+      "full_resumable_file": "full.pt",
+      "manifest_file": "manifest.json",
+      "hash_status": "Generated only after immutable atomic checkpoint commits; never invented in advance."
+    },
+    {
+      "arm": "FIXED",
+      "step": 512,
+      "directory": "results/coding_pilot_v1/confirmation_01_20260919T094418Z/replication/arms/FIXED/checkpoints/step_0512",
+      "mapper_file": "mapper.pt",
+      "full_resumable_file": "full.pt",
+      "manifest_file": "manifest.json",
+      "hash_status": "Generated only after immutable atomic checkpoint commits; never invented in advance."
+    },
+    {
+      "arm": "FIXED",
+      "step": 768,
+      "directory": "results/coding_pilot_v1/confirmation_01_20260919T094418Z/replication/arms/FIXED/checkpoints/step_0768",
+      "mapper_file": "mapper.pt",
+      "full_resumable_file": "full.pt",
+      "manifest_file": "manifest.json",
+      "hash_status": "Generated only after immutable atomic checkpoint commits; never invented in advance."
+    },
+    {
+      "arm": "FIXED",
+      "step": 1024,
+      "directory": "results/coding_pilot_v1/confirmation_01_20260919T094418Z/replication/arms/FIXED/checkpoints/step_1024",
+      "mapper_file": "mapper.pt",
+      "full_resumable_file": "full.pt",
+      "manifest_file": "manifest.json",
+      "hash_status": "Generated only after immutable atomic checkpoint commits; never invented in advance."
+    },
+    {
+      "arm": "ROTATING",
+      "step": 0,
+      "directory": "results/coding_pilot_v1/confirmation_01_20260919T094418Z/replication/arms/ROTATING/checkpoints/step_0000",
+      "mapper_file": "mapper.pt",
+      "full_resumable_file": "full.pt",
+      "manifest_file": "manifest.json",
+      "hash_status": "Generated only after immutable atomic checkpoint commits; never invented in advance."
+    },
+    {
+      "arm": "ROTATING",
+      "step": 128,
+      "directory": "results/coding_pilot_v1/confirmation_01_20260919T094418Z/replication/arms/ROTATING/checkpoints/step_0128",
+      "mapper_file": "mapper.pt",
+      "full_resumable_file": "full.pt",
+      "manifest_file": "manifest.json",
+      "hash_status": "Generated only after immutable atomic checkpoint commits; never invented in advance."
+    },
+    {
+      "arm": "ROTATING",
+      "step": 256,
+      "directory": "results/coding_pilot_v1/confirmation_01_20260919T094418Z/replication/arms/ROTATING/checkpoints/step_0256",
+      "mapper_file": "mapper.pt",
+      "full_resumable_file": "full.pt",
+      "manifest_file": "manifest.json",
+      "hash_status": "Generated only after immutable atomic checkpoint commits; never invented in advance."
+    },
+    {
+      "arm": "ROTATING",
+      "step": 512,
+      "directory": "results/coding_pilot_v1/confirmation_01_20260919T094418Z/replication/arms/ROTATING/checkpoints/step_0512",
+      "mapper_file": "mapper.pt",
+      "full_resumable_file": "full.pt",
+      "manifest_file": "manifest.json",
+      "hash_status": "Generated only after immutable atomic checkpoint commits; never invented in advance."
+    },
+    {
+      "arm": "ROTATING",
+      "step": 768,
+      "directory": "results/coding_pilot_v1/confirmation_01_20260919T094418Z/replication/arms/ROTATING/checkpoints/step_0768",
+      "mapper_file": "mapper.pt",
+      "full_resumable_file": "full.pt",
+      "manifest_file": "manifest.json",
+      "hash_status": "Generated only after immutable atomic checkpoint commits; never invented in advance."
+    },
+    {
+      "arm": "ROTATING",
+      "step": 1024,
+      "directory": "results/coding_pilot_v1/confirmation_01_20260919T094418Z/replication/arms/ROTATING/checkpoints/step_1024",
+      "mapper_file": "mapper.pt",
+      "full_resumable_file": "full.pt",
+      "manifest_file": "manifest.json",
+      "hash_status": "Generated only after immutable atomic checkpoint commits; never invented in advance."
+    }
+  ],
+  "required_full_state": [
+    "mapper",
+    "AdamW",
+    "constant_scheduler",
+    "Python_RNG",
+    "NumPy_RNG",
+    "torch_CPU_RNG",
+    "torch_CUDA_RNG",
+    "schedule_position",
+    "training_log",
+    "code/config/corpus/model_identities"
+  ],
+  "retention": "All six common checkpoints per arm, plus separate actual-model resume-preflight evidence.",
+  "primary_mapper_weights_never_overwritten": true
+}

@@ -1,0 +1,13 @@
+torch==2.14.0
+transformers==4.57.6
+datasets==5.0.1
+accelerate==1.15.0
+safetensors>=0.6
+numpy>=2.0
+scipy>=1.14
+pandas>=2.2
+matplotlib>=3.9
+scikit-learn>=1.5
+psutil>=6
+pytest>=8
+pyyaml>=6

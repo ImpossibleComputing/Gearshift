@@ -1,0 +1,286 @@
+Continue Gearshift with one controlled training-coverage experiment.
+This is an execution request, not just a plan.
+
+QUESTION
+
+Does broader supervision improve behavior on histories outside the
+mapper's training corpus, rather than merely on four repeatedly
+practiced examples?
+
+Keep the first article and its evidence snapshot frozen. This round
+is separate research, not another publication prerequisite.
+
+1. PRESERVE THE CURRENT WORK
+
+Read POST_PROGRESS_01_RESULTS.md and relevant source/configs.
+
+Inspect Git status and commit completed, relevant work not already
+committed. Preserve unrelated user changes. Do not stage credentials,
+weights, large cache/feature tensors, private hidden tests, or
+environments.
+
+Verify, without moving it:
+  gearshift-progress-01
+  -> 64725974fa55459350d1c9d09037bab64d0c5ec6
+
+Continue from the current post-progress research code, retaining its
+numerical checks and memory repairs. Create
+research/coverage-generalization from that current head, or reuse
+a compatible existing branch. Do not reset to the publication tag
+and lose later fixes.
+
+Commit this plan/config before experiments and new results at
+sensible milestones. Local commits are authorized. Pushing,
+publishing, deploying, changing licenses, and moving existing tags
+are not.
+
+2. FIX THE DATA, MODELS, AND STARTING POINT
+
+Use the existing frozen Qwen3-32B source and Qwen3-8B receiver,
+pinned model revisions, BF16 configuration, natural handoff protocol,
+and saved source trajectories.
+
+Do not change model sizes, mapper architecture, prompts, extraction
+rules, or teacher-reference construction in this comparison.
+
+Use the exact existing 104 training histories and 21 validation
+histories. Preserve their manifests and split boundaries. Disclose
+that the available corpus is completion-selected.
+
+The 21 validation histories are held out from gradient updates but
+were previously used for KL-based selection. They are NOT untouched
+confirmation data.
+
+Start BOTH training arms from the original selected update-96 mapper:
+SHA-256:
+0b9700ffd9cb38c23bcfa1327181b32992b128c6b95078214328382f86b8d68f
+
+Do NOT start from the four-case-overfitted checkpoint.
+
+If optimizer state is unavailable, initialize identical fresh
+optimizers for both arms and document the reset.
+
+3. TWO TRAINING ARMS—CHANGE COVERAGE, NOT EVERYTHING ELSE
+
+FIXED:
+Continue the existing functional-distillation objective using the
+original zero-indexed answer windows:
+  0–7, 32–39, 128–135, 512–519.
+
+ROTATING:
+Retain the same objective and source-written reference answers, but
+rotate scored positions across each answer, including actual code
+and termination rather than repeatedly inspecting the same offsets.
+
+A practical default for ROTATING is the first eight valid answer
+positions plus seeded, rotating eight-position windows from the
+remaining answer. Cycle through available windows before repeating
+them. Ensure later code and the actual EOS position are eligible;
+never supervise padding.
+
+Audit coverage of prose, signature, code body, return statements,
+and EOS. Do not assume all answers share the same structure or
+silently redefine this as code-only training.
+
+Use a common task-order schedule, starting weights, optimizer
+configuration, learning-rate schedule, batch/accumulation rules,
+clipping, and reference trajectories.
+
+For each paired update, match the actual number of scored prediction
+positions and normalization. Short answers must not give one arm
+extra weight. Record exactly how invalid or unavailable fixed
+windows are handled.
+
+Process the full historical context and required intervening
+continuation tokens in both arms. No silent context cropping.
+
+Different target locations can require different compute. Report
+both supervised-position counts and measured GPU time; matched
+supervision is not necessarily matched computation.
+
+Target 1,024 additional updates per arm at the existing nominal
+32 scored positions per update, with common checkpoints at
+0, 128, 256, 512, and 1,024.
+
+Use a short training/memory preflight to choose a smaller common
+endpoint if necessary to fit the budget below. Record that choice
+before looking at new task-quality scores. Do not optimize the
+schedules separately after seeing which arm looks better.
+
+The primary comparison is the final common-budget checkpoint,
+not whichever checkpoint obtains the best validation code score.
+Record learning curves without stopping one arm early because
+its loss crosses a favorable threshold.
+
+If engineering failure prevents matched completion, compare the
+last common completed checkpoint and disclose the incomplete
+schedule.
+
+4. MEASURE HELD-OUT BEHAVIOR, NOT JUST THE TRAINING LOSS
+
+At each common checkpoint, measure both:
+- Legacy-window validation KL.
+- A separately fixed broad-coverage validation KL panel.
+
+Use all 21 validation histories and identical panels for both arms
+and the starting checkpoint. Keep sparse and broad metrics separate;
+their numerical magnitudes are not directly interchangeable.
+
+For the starting checkpoint and each arm's final common-budget
+checkpoint, generate free-running answers on ALL 21 validation
+tasks in both forms:
+
+M: Pure translated historical cache.
+H: Native original-prompt cache plus translated reasoning suffix.
+
+Retain matched controls on those SAME validation tasks:
+
+D: Receiver natively reads the complete source history.
+P: Receiver sees only the original prompt and answers without
+   a separate thinking stage.
+
+Use three predeclared answer seeds per task across conditions.
+
+Reuse prior records only when exact task/history/config/seed and
+output identities establish compatibility. The earlier 40-task
+scores are not controls for this different 21-task population.
+
+Use the same saved source reasoning for M/H/D. Free-running
+generation starts from the question, saved reasoning, and valid
+handoff—not a supplied teacher-answer prefix. Teacher answers
+are loss references, not additional evaluation input.
+
+Keep P's valid non-thinking template explicit. Do not confuse it
+with the independently thinking small-model baseline.
+
+Preserve cache surgery, absolute positions, cache isolation,
+native/native splice controls, output contracts, sandbox and
+scorer. Count native prompt work for H: it is partial prefill,
+not zero prefill.
+
+Report execution-shape differences and rerun affected matched
+controls under distinct identities when necessary.
+
+Primary training contrast:
+ROTATING versus FIXED in pure mapping.
+
+Also report:
+- ROTATING versus FIXED under hybrid handoff.
+- Each arm versus its starting checkpoint.
+- Hybrid versus native text replay and prompt-only answering.
+
+Hybrid gains over pure mapping alone do not demonstrate a benefit
+from transferred reasoning.
+
+Report executed hidden-test pass rates, interface compliance,
+parse/runtime/assertion/timeout failures, termination, repetition,
+answer lengths and timing.
+
+Preserve raw outputs and unchanged extraction. Do not repair
+function names or select a later code block to improve primary
+scores.
+
+Hidden tests are confined to scoring, never supplied to generation
+or optimization. Validation results may inform a later research
+decision, but must not change this round's frozen recipe or
+primary checkpoint.
+
+Keep the reserved 200-task and second-seed confirmation sets
+untouched.
+
+5. SMALL SAMPLING CHECK ON THE FOUR-CASE RESULT
+
+Using saved checkpoints, evaluate:
+- The original update-96 mapper.
+- The final four-case-overfitted mapper.
+- Native replay.
+
+Use the same four seen training cases with five predeclared answer
+seeds each. No new training is needed for this check.
+
+This tests whether the observed 1/4-to-3/4 improvement and remaining
+recurrence failure persist across sampled answers.
+
+Label it seen-training-case performance. Do not select the best
+seed, pool seeds as independent tasks, or use these results to
+tune the two primary training arms.
+
+Skip with disclosure if the required checkpoint cannot be recovered
+without disproportionately expensive work.
+
+6. ANALYSIS AND EXECUTION
+
+Three seeds on 21 tasks is still 21 task clusters.
+
+Report task-level mean success across seeds, paired differences,
+and task-clustered uncertainty using identical task resamples
+across contrasts.
+
+Do not report best-of-three success as pass@1 or treat
+nonsignificance as equivalence. Show per-task outcomes and
+separate learning curves from sampled program correctness.
+
+Do not change to native-receiver-generated reference answers in
+this round. That remains a later controlled experiment if needed.
+
+Do not add a new architecture, larger model, broad corpus
+collection, subjective judging, or hyperparameter sweep.
+
+Use existing authorized resources and the REMAINING cumulative
+$1,000 / 500 GPU-hour ceiling—not a new allowance.
+
+The last export estimated $293.61 and 51.532 GPU-hours consumed,
+plus retained storage. Reconcile the current ledger and active
+resources before spending.
+
+Set an internal ceiling of an additional $200 or 32 GPU-hours
+for this round, whichever comes first, including controls and
+evaluation. Reduce the common training endpoint during preflight
+if needed to leave room for evaluation and export.
+
+Routine repairs and reversible scheduling/memory decisions within
+scope do not need repeated approval. Keep the successful
+warning-based memory policy, telemetry, checkpoints, recovery
+identities, generated-code isolation and automatic cleanup.
+
+Do not reinstate historical-peak/free-memory vetoes or repeat
+identical failing jobs indefinitely.
+
+7. RETURN A REVIEW BUNDLE
+
+Create gearshift_coverage_generalization_review.zip containing:
+
+- COVERAGE_GENERALIZATION_RESULTS.md: what actually ran, what
+  improved or failed, uncertainty, deviations, and whether any
+  improvement extends beyond training examples.
+- Git/branch/commit receipts and verification that the publication
+  tag is unchanged.
+- Source, tests, frozen configs and schedules, corpus/model/
+  checkpoint identities, and optimizer-state handling.
+- Exact supervision positions and coverage audits, gradient logs,
+  both validation-loss panels and learning curves.
+- Raw free-running answers and token IDs, source-history identities,
+  answer seeds, unchanged extraction, scoring receipts, per-task
+  results, paired calculations, and the four-case sampling check.
+- Timing, memory, resource/cost receipts, failures, and reproduction
+  commands.
+- A size/SHA-256 manifest and inventories/retrieval instructions
+  for excluded heavy artifacts.
+
+Tables and plots must regenerate from compact records without
+model weights. Exclude credentials, large tensor caches, private
+hidden tests and environments; back up heavy evidence separately.
+
+Commit completed new work locally. Export partial results with a
+concrete blocker if necessary; never label prepared code as
+executed research. Stop idle paid compute after verified backup.
+
+Finish with the ZIP path/hash, commit identities, actual common
+training budget, final validation comparisons, cumulative spend,
+and remaining active resources.
+
+Do not update the first article, move its tag, publish, or push.
+
+The next decision is whether broader coverage recovers useful
+held-out behavior—not whether we can make another training-loss
+curve look better.

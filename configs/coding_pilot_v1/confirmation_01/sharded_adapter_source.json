@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "operational_commit": "0e4c00fc6f89d1c97325bc513fd187a2c1da1525",
+  "files": {
+    "gearshift/coding_coverage_v2_lease.py": "8b994772607d0aff1ce13a7a64bd028dd7766548e94340d61f9f37b72577f4d0",
+    "scripts/coding_confirmation_replication.py": "41b3631d6a844236d0e6ee6a1bd04ff644d8b9d8f3e755e52f6b4dc97f771e34",
+    "scripts/coding_confirmation_replication_stage.py": "9532aba07fab78167b6d4a206e033d11986cca059064eb180fd0a730e8820624",
+    "scripts/coding_confirmation_replication_supervisor.py": "abb217df836a99d429fdfa0044c54720f8fa711de78c498412b4f2c2cb4c2acb",
+    "scripts/coding_confirmation_shard_merge.py": "c18a15e1538298e118970b5f1f1ba66f34c7c729bc37d31291da50b2ef09845a",
+    "scripts/coding_confirmation_sharded_generate.py": "146bc34a4f096c042f6918a2ea0b3f4e2d195ff35ba75ae5da9ce64bbea93809",
+    "scripts/coding_confirmation_sharded_supervisor.py": "f68c831241ab3d85c1e3a153dda4bac57bdc82c55491dbd2ead5245bfa84445d"
+  },
+  "numerical_primary_code_changed": false,
+  "interposition": "claim_job task admission only",
+  "analysis_population_or_seed_changed": false
+}

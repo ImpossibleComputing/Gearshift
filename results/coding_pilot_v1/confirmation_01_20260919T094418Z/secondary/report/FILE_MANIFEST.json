@@ -1,0 +1,46 @@
+{
+  "cohort": "secondary",
+  "training_seed": 20260919,
+  "files": [
+    {
+      "path": "CONFIRMATION_SECONDARY_RESULTS.md",
+      "bytes": 3161,
+      "sha256": "9d4ad8d774be419abdaa3c07f7d7d4e7fe875e6a871deb609163b9b573fc8a8f"
+    },
+    {
+      "path": "gains_losses.csv",
+      "bytes": 64775,
+      "sha256": "5858a462caa6abe65ec762178575b450d5d7d0a9004aae1706b745ac7386864d"
+    },
+    {
+      "path": "joint_bootstrap_indices.json",
+      "bytes": 16980584,
+      "sha256": "9b546fd3f83769caf56626c242719fc0ad11889414a6edc9dd9542572a5975bd"
+    },
+    {
+      "path": "per_draw.csv",
+      "bytes": 2424252,
+      "sha256": "3996cbbc6b7dd873715904b9921d54189ea8b3bf34a76e7fe40924f0dc484204"
+    },
+    {
+      "path": "per_task.csv",
+      "bytes": 116436,
+      "sha256": "b7f1791656c76b774fc69a84dcf73358b9c5ad90334670e8b4413105262b31e2"
+    },
+    {
+      "path": "sampler_overheads.csv",
+      "bytes": 2955503,
+      "sha256": "d0d7e550f7649d26ea0204e500c1acb09d6de1aaa2274f661a199d2169c16bb9"
+    },
+    {
+      "path": "setup_measurements.csv",
+      "bytes": 151543,
+      "sha256": "20cf200e21f1a60a85c08a1a8f597463f01c1f03a35f74209a7788c3917fc487"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 521138,
+      "sha256": "89e6a5ad688383c3d977d586d136bb0aae25ceabf6acb5b73920cda8b31fb2b3"
+    }
+  ]
+}

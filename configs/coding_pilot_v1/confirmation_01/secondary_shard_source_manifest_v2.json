@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "operational_commit": "fa84b3af7fc43fea2a2e6db0efbf13fe9b681bc3",
+  "files": {
+    "scripts/coding_confirmation_secondary_shard_merge_v2.py": "959613f8161eb9f0f462140c0dc7f362b063253feab95ed10d5ffb44fd4427de",
+    "scripts/coding_confirmation_secondary_sharded_generate_v2.py": "fc9bbb751e2d557155b246c1eedce56576793b6a57a3fbc6ed32116a4490062d",
+    "scripts/coding_confirmation_secondary_sharded_supervisor_v2.py": "b6080b6d127f0ff48bcb1a7c73fa39d5d1e1af98d984580b933a506b1510f055"
+  },
+  "interposition": "secondary claim_job admission only",
+  "numerical_secondary_code_changed": false,
+  "scientific_population_or_analysis_changed": false
+}

@@ -1,0 +1,389 @@
+Continue Gearshift with a clean, fast, direct-RunPod coverage/generalization experiment.
+
+This is an execution request. Optimize for WALL-CLOCK TIME, not GPU thrift. Use beefy hardware and parallel work aggressively as long as the conservative cumulative Gearshift spend remains below $1,000. Do not ask for routine approval for provisioning, parallelism, retries, or ordinary engineering changes inside this scope.
+
+The first publication snapshot remains frozen:
+tag: gearshift-progress-01
+commit: 64725974fa55459350d1c9d09037bab64d0c5ec6
+
+Do not move that tag, rewrite historical results, publish, push, deploy, or change repository visibility/license.
+
+CURRENT EVIDENCE
+
+The interrupted coverage experiment evaluated a common checkpoint at 128 additional updates:
+
+* START_M: 17.5% mean task success
+* FIXED_M: 25.4%
+* ROTATING_M: 31.7%
+* ROTATING_M - FIXED_M: +6.3 pp, paired 95% interval [-4.8, +17.5]
+* ROTATING_M - START_M: +14.3 pp, [+6.3, +23.8]
+* START_H: 47.6%
+* FIXED_H: 47.6%
+* ROTATING_H: 55.6%
+* D native full text replay: 95.2%
+* P prompt-only non-thinking: 44.4%
+
+The run targeted 1,024 updates/arm but provider/controller DNS loss interrupted it. Only the 128-update mapper checkpoint was durably available for the primary comparison. Optimizer states were not saved, so exact continuation was impossible.
+
+ROTATING did materially broaden direct supervision by the 128 checkpoint:
+
+* code body: 1,158 scored positions vs 656 FIXED
+* signatures: 96 vs 11
+* returns: 58 vs 6
+* EOS: 13 vs 6
+
+This is encouraging but does not establish ROTATING > FIXED. The purpose of this run is to finish that comparison cleanly.
+
+1. SIMPLIFY THE EXECUTION ARCHITECTURE: RUNPOD DIRECTLY
+
+Use RunPod directly from Codex. Do not make a laptop-resident controller, SSH session, heartbeat, local DNS, or Codex process part of the critical execution path after dispatch.
+
+The laptop is an orchestration console only:
+
+* provision
+* upload/sync immutable inputs
+* start self-contained jobs
+* inspect status
+* fetch results
+* shut resources down
+
+Once launched, each training/evaluation job must continue autonomously if the laptop sleeps, disconnects, loses DNS, or Codex restarts.
+
+Prefer self-contained RunPod worker entrypoints plus durable RunPod storage. Use tmux/systemd/supervisor/container entrypoint or the existing equivalent so shell-session loss does not terminate work.
+
+After setup, make training as network-independent as practical:
+
+* stage model revisions, source histories, configs, code and required packages before the timed experiment
+* do not make continued Internet/DNS availability a condition for training progress
+* treat temporary controller/network loss as a warning, not a reason to kill healthy GPU work
+
+True job failures, nonfinite gradients, failed numerical controls, hard budget limits, corrupted checkpoints, or actual unrecoverable allocation failures should still stop the affected job.
+
+2. PRIORITIZE SPEED
+
+Do not serialize independent work merely to save money.
+
+Use fast appropriate RunPod hardware. Prefer H200s for the primary scientific comparison because the current experiment/runtime is already grounded there. Do not switch the paired training arms to different GPU architectures.
+
+Run FIXED and ROTATING simultaneously on separate equivalent H200-class GPUs/processes.
+
+One training process per GPU is preferred unless the existing model/runtime genuinely requires otherwise. Do not introduce tensor/model parallelism merely for novelty if it changes the numerical path or experiment semantics.
+
+Once checkpoints are frozen, shard independent validation generation/scoring across additional equivalent workers. Use multiple pods/GPUs in parallel when it materially reduces wall-clock time.
+
+It is fine to use a larger multi-GPU host or several pods. Choose the topology that gets results fastest while preserving condition isolation and reproducibility.
+
+Do not wait for one arm's evaluation before beginning the other's. Do not make training wait on expensive code-generation evaluation if checkpoints can be saved and evaluated later in parallel.
+
+COST AUTHORIZATION
+
+The latest conservative cumulative estimate was $335.81 / 58.936 GPU-hours.
+
+The cumulative HARD ceiling remains:
+$1,000 total Gearshift spend
+500 GPU-hours
+
+This is not a request to minimize cost. Spend the remaining budget when doing so materially reduces wall-clock time.
+
+Maintain enough buffer for known storage and cleanup so the conservative ledger does not cross $1,000. Query current RunPod pricing/resources and estimate the worst-case run before launch.
+
+Do not stop to ask permission merely because a faster configuration costs more. Ask only if completing the requested experiment would require exceeding the existing $1,000 cumulative ceiling.
+
+3. CLEAN SCIENTIFIC RESTART
+
+Do NOT resume the interrupted 128-update arm with newly initialized optimizer state and call it a continuation.
+
+Create a new experiment identity, e.g.:
+coverage_generalization_v2_<timestamp>
+
+Start BOTH FIXED and ROTATING cleanly from the same original selected update-96 mapper:
+SHA-256:
+0b9700ffd9cb38c23bcfa1327181b32992b128c6b95078214328382f86b8d68f
+
+Use identical fresh AdamW optimizer/scheduler states and identical initial RNG state/schedule where scientifically appropriate.
+
+Use the exact existing:
+
+* Qwen3-32B source revision
+* Qwen3-8B receiver revision
+* frozen models
+* affine mapper family
+* BF16 runtime
+* natural handoff protocol
+* 104 training histories
+* 21 validation histories
+* source-written teacher references
+* extraction/scoring rules
+
+Do not add new training examples, change mapper architecture, change teacher-reference construction, or alter prompts in the primary comparison.
+
+The 21 validation histories remain held out from gradients but are NOT untouched confirmation because they have already informed prior analysis. Keep the reserved 200-task and second-seed confirmation sets untouched.
+
+4. TRAINING ARMS
+
+FIXED:
+Use the original fixed answer offsets:
+0-7, 32-39, 128-135, 512-519
+with the same declared missing-position handling as the interrupted experiment.
+
+ROTATING:
+Use the already-implemented rotating broader-coverage recipe from the interrupted experiment. Preserve its exact predeclared selection behavior unless a real bug is found.
+
+For both:
+
+* 32 scored positions per paired update
+* identical normalization
+* identical task-order schedule
+* identical learning-rate schedule
+* identical clipping/batching/accumulation
+* full historical prefix and required intervening continuation processing
+* no silent context cropping
+* hidden tests never enter optimization
+
+Target:
+1,024 additional updates per arm
+
+Save common checkpoints at:
+0, 128, 256, 512, 768, 1024
+
+The PRIMARY comparison is the 1,024 common checkpoint.
+
+Do not stop early because one arm's KL looks good or one arm appears ahead.
+
+If an actual engineering failure makes 1,024 impossible within the hard cumulative budget, evaluate the last common fully durable checkpoint and explain why. Do not voluntarily shorten the schedule just to economize.
+
+5. CHECKPOINTING MUST BE COMPLETE AND RESUMABLE
+
+At every durable training checkpoint save, hash and verify:
+
+* mapper weights
+* optimizer state
+* LR scheduler state
+* update number
+* RNG states needed for exact continuation
+* data/task schedule position
+* scaler/mixed-precision state if applicable
+* configuration and code commit
+* corpus/model identities
+* enough state to resume the next update without changing the training trajectory
+
+Test checkpoint resume EARLY:
+
+* after a small number of updates, stop/reload in a controlled preflight
+* verify the resumed next update matches the uninterrupted control within the appropriate numerical envelope
+
+Do not discover at update 900 that optimizer/RNG state is missing.
+
+Write checkpoints atomically: temporary path -> fsync/verify -> rename/commit. Preserve at least the most recent two good checkpoints per arm.
+
+Durable RunPod volume is required. Mirror checkpoint manifests/results to the Studio/local backup when reachable, but loss of that mirror connection must not stop training.
+
+6. VALIDATION LOSS
+
+For checkpoints 0, 128, 256, 512, 768 and 1024, compute on all 21 validation histories:
+
+* legacy-window teacher-forced KL
+* the same fixed broad-coverage validation KL panel used in the interrupted experiment
+
+Keep those two metrics separate.
+
+These measurements may be performed asynchronously from copied immutable checkpoints so they do not block training.
+
+Do not select the primary checkpoint by validation KL; 1,024 is primary.
+
+7. FREE-RUNNING GENERALIZATION EVALUATION
+
+At minimum evaluate free-running code at:
+checkpoint 0
+checkpoint 128
+checkpoint 512
+checkpoint 1024
+
+If parallel capacity makes it cheap, also evaluate 256 and 768.
+
+For FIXED and ROTATING evaluate both:
+M = pure mapped historical cache
+H = native receiver prompt cache + mapped reasoning suffix
+
+Controls on the same 21 validation histories:
+D = native receiver prefill of the complete source history
+P = original prompt only, valid non-thinking template
+
+Use the same three predeclared answer seeds per task across conditions.
+
+Use the exact saved source reasoning for M/H/D.
+
+Teacher answers are loss references only. Do not prefix free-running evaluation with teacher-answer tokens.
+
+Keep:
+
+* cache isolation
+* absolute positions
+* native/native splice controls
+* unchanged extraction
+* unchanged hidden-test sandbox
+* no output repairs
+* no function renaming
+* no best-block rescue
+
+Parallelize evaluation heavily. These are independent task/seed jobs once a checkpoint is immutable.
+
+A good fast topology is acceptable, for example:
+
+* two H200s training FIXED and ROTATING concurrently
+* additional H200 workers consuming immutable evaluation checkpoints/tasks in parallel
+  but choose the fastest sound topology available.
+
+8. PRIMARY ANALYSIS
+
+Primary question:
+At the clean 1,024-update common checkpoint, does ROTATING improve held-out free-running behavior relative to FIXED?
+
+Primary condition:
+ROTATING_M versus FIXED_M
+
+Also report:
+
+* each arm versus START_M
+* ROTATING_H versus FIXED_H
+* each H versus P
+* each H versus D
+* M versus H within each mapper
+* learning curves across common checkpoints
+
+Use the 21 task IDs as clusters. Average the three predeclared draws within task before task-level inference.
+
+Report:
+
+* passed draws
+* mean task success
+* paired task-level differences
+* identical-resample task-cluster bootstrap intervals
+* per-task/seed outcomes
+* entrypoint/interface compliance
+* syntax/runtime/assertion/timeout categories
+* EOS/cap
+* repetition
+* answer lengths
+* timing/token accounting
+
+Do not treat 63 draws as independent tasks.
+Do not report best-of-three as pass@1.
+Do not interpret "interval includes zero" as equivalence.
+
+Also report training coverage at each common checkpoint:
+
+* total scored positions
+* unique task/position pairs
+* prose
+* signature
+* code body
+* return
+* EOS
+* answer-position distribution
+
+9. KEEP THE PREVIOUS FOUR-CASE RESULT AS A SIDE DIAGNOSTIC
+
+Do not retrain the four-case mapper in this run.
+
+The prior five-seed seen-case result remains:
+
+* START_M: 40%
+* four-case fitted M: 75%
+* native D: 100%
+
+It is seen-training-case evidence only.
+
+If useful, you may compare the NEW 1,024-step FIXED and ROTATING general models on those same four cases with the same five declared seeds, but do not tune from those outcomes and do not let this delay the primary validation result.
+
+10. ENGINEERING / SCIENTIFIC CONTROLS
+
+Retain the actual-model path checks already established.
+
+Do not rerun expensive numerical checks unnecessarily unless:
+
+* code touching the path changed
+* results fail controls
+* or a new discrepancy appears
+
+Keep warning-based memory telemetry. Do not reinstate arbitrary historical peak/free-memory kill switches.
+
+Run generated code isolated from network/secrets/unrestricted host access.
+
+Preserve all failure attempts and job identities.
+
+If a worker dies:
+
+* restart from the last verified full checkpoint
+* do not silently reroll completed answers
+* preserve the failed attempt and reason
+
+Routine retries, pod replacements, faster server choices, extra evaluation workers, staging, and cleanup inside budget are authorized.
+
+11. GIT / PUBLICATION BOUNDARY
+
+Verify gearshift-progress-01 is unchanged.
+
+Work only on the post-publication research branch or a new coverage-generalization-v2 branch.
+
+Commit:
+
+* robust RunPod-direct runner
+* full resumable checkpoint changes
+* frozen configs
+* experiment manifests
+* completed results and reports
+
+Do not move publication tags.
+Do not edit the first article merely because this experiment finishes.
+Do not push or publish.
+
+12. DELIVERABLE
+
+Create:
+gearshift_coverage_generalization_v2_review.zip
+
+Include:
+
+* COVERAGE_GENERALIZATION_V2_RESULTS.md
+* exact experiment topology and RunPod resource receipts
+* Git SHAs
+* configs/schedules
+* mapper/corpus/model identities
+* checkpoint/resume verification
+* optimizer/scheduler/RNG checkpoint evidence
+* training steps/coverage/gradient logs
+* both validation-KL panels
+* raw free-running answer records/token IDs/seeds
+* score receipts and per-task outcomes
+* bootstrap calculations
+* timing/memory/cost telemetry
+* failures/retries
+* reproduction commands
+* file-size/SHA-256 manifest
+* inventories and retrieval paths for excluded heavy artifacts
+
+Exclude:
+
+* credentials
+* model weights
+* private hidden tests
+* environments
+* large transient KV caches from the review ZIP
+
+Back up heavy mapper/checkpoint artifacts separately and include exact hashes/paths.
+
+At completion:
+
+* stop all idle paid GPU resources after verified backup
+* report active remaining resources/storage
+* report cumulative conservative spend and GPU-hours
+* provide ZIP path and SHA-256
+* report current branch and commit
+* state clearly whether the full 1,024/1,024 clean paired run completed
+
+Most importantly, return the answer to:
+
+"After a clean full-budget paired run, does broader rotating supervision produce better held-out free-running code behavior than continuing the old fixed-window supervision?"
+
+Optimize for getting that answer quickly.

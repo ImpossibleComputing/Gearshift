@@ -1,0 +1,104 @@
+{
+  "schema": "gearshift.sparse_repair.decision_review.v1",
+  "evidence_input_sha256": "7cea22cd891b2604ee106750d0d1a6f51b2d95e82838726e28a50d1d5e00b920",
+  "declaration_sha256": "2fd04f4e3a20f8c38f4193582ef704ffff3d3cb28aba8f212711fa8329e13c9c",
+  "analyst": "Codex Studio primary analyst; independent score-binding, timing and economics reviews retained",
+  "reviewed_at_utc": "2026-09-21T12:00:16.968747+00:00",
+  "questions": [
+    {
+      "id": "sparse_native_access",
+      "verdict": "supported",
+      "rationale": "Yes, locally: N_5, N_10 and N_25 each passed 33/36 draws (91.7%), the same observed pass count as D, while retaining only the declared per-layer/KV-head reasoning fraction at each step. Native 5% is therefore a useful quality intervention on this screen, not a measured sparse speedup.",
+      "limitations": [
+        "Only 12 previously inspected development task clusters, with 3 draws each; matching counts and observed paired outcomes do not establish equivalence or future quality preservation.",
+        "Native state was built in full, selected using current-query native-key scans, and consumed by masked dense attention. Native entries encode earlier-token dependencies; these results do not show cheap sparse construction."
+      ],
+      "evidence_refs": [
+        "/statistics/conditions/D",
+        "/statistics/conditions/N_5",
+        "/statistics/conditions/N_10",
+        "/statistics/conditions/N_25",
+        "/coverage"
+      ]
+    },
+    {
+      "id": "sparse_mapped_state",
+      "verdict": "not_supported",
+      "rationale": "No: M_5 and M_10 passed 21/36 (58.3%), and M_25 passed 23/36 (63.9%), versus 33/36 for their native counterparts. Paired native-minus-mapped gains were 33.3, 33.3 and 27.8 percentage points. Matched-query local probes independently show substantially larger sparse-mapped attention-output error. State fidelity, rather than sparsity alone, is the leading local research issue.",
+      "limitations": [
+        "Free-running N/M queries and masks can diverge: they share a selector rule, not necessarily identical selected indices. The full-answer contrasts do not isolate one error source as cleanly as the matched-query probes.",
+        "This does not establish that a more accurate mapper would be economical or that all translators fail."
+      ],
+      "evidence_refs": [
+        "/statistics/conditions/M_5",
+        "/statistics/conditions/M_10",
+        "/statistics/conditions/M_25",
+        "/statistics/contrasts/N_5-M_5",
+        "/statistics/contrasts/N_10-M_10",
+        "/statistics/contrasts/N_25-M_25",
+        "/local_probe_summary"
+      ]
+    },
+    {
+      "id": "targeted_repair",
+      "verdict": "mixed",
+      "rationale": "Accurate small repairs rescued the observed mapped-background deficit, but special attention targeting was not validated. R_5, R_10 and R_25 each passed 33/36 versus H 21/36. The primary R_10\u2212H gain was +33.3 pp (exploratory task-cluster 95% interval+11.1 to+58.3 pp), with 5 tasks improved and none worse. R_random also passed 33/36 and matched R_10 on every paired outcome. R_recent passed 29/36; R_10\u2212recent was +11.1 pp, with interval 0 to+27.8 pp.",
+      "limitations": [
+        "Random repair was tested at 10%, not 5%; the 5% result must not be called better than matched-budget random 5% repair, which was not measured.",
+        "The degenerate [0, 0] bootstrap interval for R_10\u2212random reflects identical outcomes in these 12 sampled clusters, not proof of population equivalence. All intervals are exploratory and unadjusted.",
+        "Full repair is bit-exact against matched native/native splice, not guaranteed identical to independently prefilling D: one calibration context had a real 0.75 maximum-logit cross-shape discrepancy."
+      ],
+      "evidence_refs": [
+        "/statistics/conditions/H",
+        "/statistics/conditions/R_5",
+        "/statistics/conditions/R_10",
+        "/statistics/conditions/R_25",
+        "/statistics/conditions/R_random",
+        "/statistics/conditions/R_recent",
+        "/statistics/contrasts/R_10-H",
+        "/statistics/contrasts/R_10-R_random",
+        "/statistics/contrasts/R_10-R_recent",
+        "/calibration_cases"
+      ]
+    },
+    {
+      "id": "complete_answer_working_set",
+      "verdict": "not_supported",
+      "rationale": "No small complete-answer working set was demonstrated for this dynamic oracle. R_10 selected about 10.01% per step but touched an equal-draw average of 77.67% of native reasoning (layer,KV-head,position) pairs over a complete answer (range 65.00\u201387.35%). R_5 still touched 65.11% on average. Random 10% reached 100%; recency stayed near 10.01% but had lower observed pass count. Per-step sparsity is real bookkeeping; it is not an equivalent reduction in total state construction, transfer, residency or page traffic.",
+      "limitations": [
+        "The cumulative union is what this selector actually touched, not a proven minimum required set. Discarded crash-tail work in the single resumed draw may be incompletely measured.",
+        "Page footprints assume hypothetical 16-position layouts, not measured allocation or HBM traffic; full native/mapped backing, original prompt and each run's own answer history remain additional costs."
+      ],
+      "evidence_refs": [
+        "/condition_diagnostics/R_10/instantaneous_reasoning_fraction",
+        "/condition_diagnostics/R_10/cumulative_reasoning_fraction",
+        "/condition_diagnostics/R_5/cumulative_reasoning_fraction",
+        "/condition_diagnostics/R_random/cumulative_reasoning_fraction",
+        "/condition_diagnostics/R_recent/cumulative_reasoning_fraction",
+        "/condition_diagnostics/R_10/cumulative_per_head_page_bytes_estimated",
+        "/condition_diagnostics/R_10/cumulative_all_heads_shared_page_bytes_estimated"
+      ]
+    },
+    {
+      "id": "next_investment",
+      "verdict": "no_further_work",
+      "rationale": "Do not scale this full-native-oracle repair/faithful-prefill-replacement regime into a serving system on these results. The quality rescue is real within the sampled screen, but attention targeting did not beat random, the complete-answer union is large, and implemented R_10 draw time averaged 91.63 s versus H 32.74 s and D 27.04 s. Independently, a perfect/free faithful converter saves only 1.468 s, or 0.202%, of recorded source-inclusive D time on the original 200-task population. If a separately authorized scientific follow-up is pursued, local translation fidelity is the component implicated by N\u2212M; this screen does not yet justify a production selector, selective reconstruction engine or training sweep.",
+      "limitations": [
+        "This is a local deployment-investment recommendation, not a universal impossibility claim or a rejection of all sparse attention research.",
+        "The 0.202% reference removes only receiver prefill; it does not bound architectures that change source reasoning or answer decoding. Such changes, including compact text or genuinely cheaper sparse decode, would require separate measured quality/cost evidence.",
+        "New-screen draw walls are diagnostic timings with different output lengths and scopes, not matched-length serving latency; they must not be mixed with the old source-inclusive economic population. No follow-on experiment has been launched.",
+        "Operational evidence gap: all 504 score records, the scored manifest and the stopped-worker proof were collected and verified, but the final CPU release/archive-hash control receipts were missed after SSH collection ended. Later authenticated provider inventory independently established zero running compute. See MAC_STUDIO_HANDOFF_STATUS.md and preflight/diagnostic_completion.json; no candidate was restarted for cleanup metadata."
+      ],
+      "evidence_refs": [
+        "/statistics/contrasts/R_10-R_random",
+        "/statistics/contrasts/N_10-M_10",
+        "/condition_diagnostics/R_10/cumulative_reasoning_fraction",
+        "/condition_diagnostics/R_10/actual_attempt_whole_draw_seconds",
+        "/condition_diagnostics/H/actual_attempt_whole_draw_seconds",
+        "/condition_diagnostics/D/actual_attempt_whole_draw_seconds",
+        "/supplements/economics~1summary.json/comparisons/D",
+        "/supplements/economics~1summary.json/perfect"
+      ]
+    }
+  ]
+}

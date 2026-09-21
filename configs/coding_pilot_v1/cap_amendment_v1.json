@@ -1,0 +1,54 @@
+{
+  "namespace": "preflight_cap_v1",
+  "status": "declared_not_executed",
+  "declared_epoch": 1789528347.036053,
+  "parent_namespace": "preflight_v5",
+  "basis": "The frozen pilot plan permits one increase when either reasoner caps on more than ten percent of the forty development tasks.",
+  "trigger_observed": {
+    "completed_tasks": 24,
+    "total_tasks": 40,
+    "passes": {
+      "A": 20,
+      "B": 17,
+      "D": 21
+    },
+    "preflight_remaining_seconds": 334219.07184410095,
+    "observed_baseline_seconds_including_parent": 22607.60009598732,
+    "reused_parent_tasks": 6,
+    "remaining_baseline_forecast_seconds": 15071.73339732488,
+    "forecast_exceeds_preflight": false,
+    "source_cap_count": 5,
+    "small_cap_count": 2
+  },
+  "plan_sha256": "10a80b232c5bd1e2ea37c63310d48db6d12ce910f7ab7fbc4f1e7b0c1e77dcb2",
+  "pilot_config_sha256": "713f44be1fbf83b0315e5b97ce6e61c687653741b7754b6455357ca44f735059",
+  "original_full_cohort_must_finish_first": true,
+  "original_reasoning_cap": 16384,
+  "new_reasoning_cap": 24576,
+  "applies_to": [
+    "source_reasoning",
+    "small_reasoning"
+  ],
+  "answer_cap_unchanged": 4096,
+  "prompt_cap_unchanged": 8192,
+  "total_context_limit_unchanged": 40960,
+  "native_control_maximum_prefix": 32768,
+  "unchanged": [
+    "models and revisions",
+    "frozen BF16 weights",
+    "sampling and stream seeds",
+    "forty fixed task IDs and order",
+    "code extraction and executed scoring",
+    "quality and cap gates"
+  ],
+  "repeat_rule": "Repeat A/B/D for every task where either original reasoner capped, irrespective of pass/fail. Retain every original task and output in the parent namespace.",
+  "reuse_rule": "When neither reasoner capped, carry all completed outputs verbatim with the original measurement identity; the larger cap cannot alter a trajectory already terminated below it.",
+  "replay_rule": "All saved reasoning token prefixes must match exactly. Capped streams may extend; uncapped completed streams and answers whose conditioning did not change must reproduce exactly. Stop on divergence or shortened prefixes; no replacement draw.",
+  "new_identity_required": true,
+  "new_sampling_draws_allowed": false,
+  "second_cap_increase_allowed": false,
+  "final_gates": "Require all forty cases; stop before training if either reasoner still caps on more than four cases or any baseline quality gate fails.",
+  "actual_gpu_execution_started": false,
+  "execution_requires_current_budget_and_native_memory_controls": true,
+  "budget_receipt_sha256": "b20f5a9efa9ac1d3c3efd305652ee2d61a1f52263f8bfeec189ca94938e6738a"
+}

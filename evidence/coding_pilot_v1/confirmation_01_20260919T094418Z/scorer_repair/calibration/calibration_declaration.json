@@ -1,0 +1,84 @@
+{
+  "sources": {
+    "abc344_e": {
+      "problem": "https://atcoder.jp/contests/abc344/tasks/abc344_e",
+      "editorial": "https://atcoder.jp/contests/abc344/editorial/9503",
+      "constraints": "N,Q <= 200000; distinct positive values <= 10^9. At most 400000 final integers; conservative canonical bound 4400000 bytes. Valid whitespace can exceed 4 MiB. Linked-list updates are linear overall."
+    },
+    "abc335_c": {
+      "problem": "https://atcoder.jp/contests/abc335/tasks/abc335_c",
+      "editorial": "https://atcoder.jp/contests/abc335/editorial/9293",
+      "constraints": "N <= 10^6; Q <= 200000. Reverse position history supports constant-time moves/queries; no per-move full-body shift."
+    },
+    "abc339_d": {
+      "problem": "https://atcoder.jp/contests/abc339/tasks/abc339_d",
+      "editorial": "https://atcoder.jp/contests/abc339/editorial/9273",
+      "constraints": "2 <= N <= 60. Breadth-first search over paired positions has O(N^4) states."
+    }
+  },
+  "references_sha256": {
+    "abc344_e": "43692b2e07d8622634e7b06fc888ba3f4e77a0c7e3d35bf91370e12448c254e4",
+    "abc335_c": "1d23f64057d6f2387726863243a2edcb64a302a9715dcc6f211e5dc58c723f8a",
+    "abc339_d": "49a9c4c53678f6ae905328f0c36746abb787c7c0365421255499cf9b4dbc03a0"
+  },
+  "repetitions": 3,
+  "workers": 8,
+  "cpu_ids": [
+    3,
+    4,
+    5,
+    6,
+    10,
+    13,
+    14,
+    22
+  ],
+  "frozen_formula": "cpu_seconds=max(12,ceil(3*max(correct_reference_CPU_seconds))); wall_seconds=3*cpu_seconds+10.",
+  "limits_basis": "At most 4 GiB address space; stdout minimum16 MiB, four times trusted expected UTF-8 size plus1 MiB, hard maximum64 MiB. Complete capture; no stdout truncation.",
+  "candidate_timeouts_retried": false,
+  "fixed_infrastructure_retries": 1,
+  "created_epoch": 1789811860.093523,
+  "environment": {
+    "platform": "Linux-6.8.0-60-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]",
+    "candidate_python": "Python 3.12.3",
+    "hostname": "c23a3443d306",
+    "allowed_cpus": [
+      3,
+      4,
+      5,
+      6,
+      10,
+      13,
+      14,
+      22,
+      27,
+      28,
+      29,
+      30,
+      34,
+      37,
+      38,
+      46
+    ],
+    "physical_cpus": [
+      3,
+      4,
+      5,
+      6,
+      10,
+      13,
+      14,
+      22
+    ],
+    "cgroup": {
+      "cpu,cpuacct/cpu.cfs_quota_us": "-1",
+      "cpu,cpuacct/cpu.cfs_period_us": "100000",
+      "cpu,cpuacct/cpu.stat": "nr_periods 0\nnr_throttled 0\nthrottled_time 0\nnr_bursts 0\nburst_time 0",
+      "memory/memory.limit_in_bytes": "64000000000",
+      "memory/memory.usage_in_bytes": "695058432",
+      "cpuset/cpuset.cpus": "3-6,10,13-14,22,27-30,34,37-38,46"
+    },
+    "memory_total_kib": 296430636
+  }
+}

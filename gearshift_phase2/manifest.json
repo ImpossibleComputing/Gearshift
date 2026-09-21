@@ -1,0 +1,26 @@
+{
+  "CODEX_PHASE2.md": {
+    "bytes": 19566,
+    "sha256": "cbb36eebfe5914b55974c871969f0c74ecf100e0eefb6e266149e286f799b46e"
+  },
+  "EVIDENCE_NOTES.md": {
+    "bytes": 3739,
+    "sha256": "b81b774266cf59a54fefa7e3f6a769acee76730eb9c35f40968315f72b236bfb"
+  },
+  "EXPERIMENT_MATRIX.md": {
+    "bytes": 8520,
+    "sha256": "2795d2df64adbb1a6ce4f664498a6c016ea184264d6cbc6711bd87bce3d384dd"
+  },
+  "JUDGING.md": {
+    "bytes": 5176,
+    "sha256": "c34e7bf3c3187124754334efa81a43286c318108d9c15a2c6de01fd95db07ecc"
+  },
+  "README.md": {
+    "bytes": 1400,
+    "sha256": "af4c50dd8d313b711c342bed11013d2e00394f12d10f7bb68ad3ece58792430a"
+  },
+  "precision_illustration.json": {
+    "bytes": 1069,
+    "sha256": "8007b1f79fb2fa54ce0c8c47a09f6a4010879880815a5ec864046c319e842c35"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "answer_draws_per_task_condition": 3,
+  "bootstrap": {
+    "index_generation": "integers(0, task_count, size=(10000, task_count)), one persisted matrix shared by every contrast and both training-seed reports",
+    "method": "paired percentile",
+    "multiplicity_note": "Bonferroni-adjusted percentile bootstrap intervals provide approximate familywise inference for the predeclared six secondary contrasts; also show ordinary 95% descriptive intervals. No additional primary tests or posthoc slicing.",
+    "primary_and_descriptive_interval_quantiles": [
+      0.025,
+      0.975
+    ],
+    "quantile_method": "linear",
+    "resamples": 10000,
+    "rng": "numpy.random.Generator(numpy.random.PCG64(20260919))",
+    "secondary_bonferroni_alpha": 0.008333333333333333,
+    "secondary_family_size": 6,
+    "secondary_familywise_interval_quantiles": [
+      0.004166666666666667,
+      0.9958333333333333
+    ],
+    "seed": 20260919,
+    "task_order": "Resolved frozen task manifest order",
+    "unit": "original task cluster, retaining all conditions and seeds together"
+  },
+  "claims": [
+    "fresh_task_coverage_improvement",
+    "useful_hybrid_intervention",
+    "comparison_to_independent_small_model_reasoning",
+    "quality_cost_tradeoff"
+  ],
+  "condition_mean": "Within each task average its three predeclared binary answer outcomes, then average task means with equal task weights. Not best-of-three.",
+  "decision": "The primary supports an improvement only when the paired 95% interval lower endpoint exceeds zero. An interval containing zero is inconclusive, not equivalence. No optional stopping.",
+  "endpoint": 1024,
+  "experiment_id": "confirmation_01_20260919T094418Z",
+  "mechanism_limit": "H beating P alone does not isolate the causal contribution of the particular transferred reasoning.",
+  "missingness": {
+    "algorithmic_syntax_runtime_assertion_timeout_output_resource_failure": "Score per frozen scorer policy and report cause. A resource outcome is a model failure only when the scorer is valid for task constraints.",
+    "bootstrap_sensitivity": "Apply the same frozen joint bootstrap indices to each lower/upper per-task contrast vector; label sensitivity intervals, not observed complete-data inference.",
+    "contrast_lower_bound": "Replace missing positive-arm outcomes by0 and missing negative-arm outcomes by1, preserving all observed outcomes.",
+    "contrast_upper_bound": "Replace missing positive-arm outcomes by1 and missing negative-arm outcomes by0, preserving all observed outcomes.",
+    "primary_if_any_missing": "Do not present complete-case estimate as the all-task primary. Retain full cohort/three-draw denominators and report extreme-case outcome and paired-contrast sensitivity bounds. Label point estimation/inference incomplete.",
+    "verified_infrastructure_failure": "Missing, never invented pass or fail. Report every missing task/condition/seed and coverage."
+  },
+  "primary_contrast": [
+    "ROTATING_M",
+    "FIXED_M"
+  ],
+  "primary_training_seed": 20260915,
+  "required_breakdowns": [
+    "per_task_seed_outcomes",
+    "task_gains_losses_ties",
+    "interface_compliance",
+    "syntax_runtime_assertion_timeout_resource_outcomes",
+    "missing_infrastructure_coverage",
+    "EOS_cap_early_EOS",
+    "repetition",
+    "answer_token_length"
+  ],
+  "schema": 1,
+  "secondary_contrasts": [
+    [
+      "ROTATING_H",
+      "FIXED_H"
+    ],
+    [
+      "ROTATING_H",
+      "D"
+    ],
+    [
+      "ROTATING_H",
+      "P"
+    ],
+    [
+      "ROTATING_H",
+      "B"
+    ],
+    [
+      "ROTATING_H",
+      "A"
+    ],
+    [
+      "ROTATING_H",
+      "ROTATING_M"
+    ]
+  ],
+  "status": "draft_methods_fixed_task_population_pending_owner_resolution",
+  "task_count": null,
+  "timing": {
+    "cost_reporting": "Round spending and cumulative spending; distinguish live resource verification from saved receipts.",
+    "multi_output_amortization": "Report separately for reuse of one frozen history across three sampled answers.",
+    "quality_cost": "Do not call shorter failed answers useful speedups; separate fleet parallelism from per-answer model latency.",
+    "separate_stages": [
+      "source_prompt_prefill",
+      "source_reasoning",
+      "B_prompt_prefill",
+      "B_reasoning",
+      "receiver_native_prefill",
+      "mapping",
+      "splicing",
+      "bridge",
+      "answer_generation",
+      "reconstructed_cache_setup",
+      "checkpoint_IO",
+      "model_loading",
+      "CPU_scoring",
+      "fleet_elapsed",
+      "rental_cost"
+    ],
+    "single_output_deployment": "Charge full source reasoning stage to each source-history condition; B pays its full independent smaller-model reasoning. H pays receiver-native prompt prefill. P has no source reasoning. Do not divide source cost by three. Avoid double-counting bridge already inside answer_seconds."
+  },
+  "training_replication": {
+    "contrast": [
+      "ROTATING_M",
+      "FIXED_M"
+    ],
+    "four_conditions": [
+      "FIXED_M",
+      "ROTATING_M",
+      "FIXED_H",
+      "ROTATING_H"
+    ],
+    "pool_or_choose_best_seed": false,
+    "report_separately": true,
+    "secondary_interpretation": "Limited replication conditional on a common initializer/corpus; do not treat two training seeds as broad run-to-run uncertainty. Replication contrast and H-minus-M/H-minus-H are labeled exploratory, separate from the original-seed six-contrast inference family.",
+    "seed": 20260919
+  }
+}

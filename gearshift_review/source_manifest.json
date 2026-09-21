@@ -1,0 +1,23 @@
+{
+  "source_file_sha256": {
+    "gearshift/refinement.py": "a1600f4a52e14416bdd78c17fa38454f870e332e844e3ce6368b372a250fea0b",
+    "gearshift/data.py": "273fb9a88b84476a748b0275c5db490a838f0cea06768a57ed2a7f017fc0ba96",
+    "gearshift/mapping.py": "7ec0241b1cd269641e078c44de45f5f709a654b72d7255a7c01be27b9c4e2604",
+    "gearshift/reasoning.py": "369d1e972503795859084f4ee501e119b48caa870c23560bd47f58520241a864",
+    "gearshift/evaluation.py": "208c6c32a2a6cb3c394479266cd4d21b57a82ae931b737e0147350a1e5818607",
+    "gearshift/runner.py": "e6ff6b2e4b79cd1686e089117ca6aa3b4c1795743f486491d0bde19f1b3b8890",
+    "gearshift/controls.py": "a05f8a7519f347696bb7b625a9a4c0fb6e9a527ab76e42d7d074f81b21cd8a01",
+    "gearshift/__init__.py": "6a57cd08f2261a5141f056f3a43ca50315ac7479f9f83bb52f6f0b7c3105274a",
+    "gearshift/core.py": "a7ac9a0ff82a055d1e40ff195a52c541a96c31dfd5522b133b4572f00bbfac5c",
+    "gearshift/functional_training.py": "6c4ee0ee05221569e10e89c01c702721739835d7b85d698ccd62079e043641c0",
+    "scripts/write_report.py": "d9655742d6216f74eb740c01616880bff5fb44ef933c0c36867255c17e52a9f4",
+    "scripts/run.py": "b1814b8a3bc67ac01f4fd8fd8181c0b15d52b49fb311e8fc9ce8d81beefe0f17",
+    "scripts/summarize_results.py": "7e1215cc0736124a5462613b5c52ad2e7bde1bd8a84aa68281b92f65b6aee61b",
+    "scripts/run_pair.py": "b3b178bccf30e6f8a2f8d888a0cebd7baf73cb6aae1611dbc70f0bc9915d0700",
+    "scripts/plot_results.py": "48973e4810bf44aa616fa947e617f1b91459c821faf66d4bf1c563649ad57166",
+    "scripts/audit_stopping.py": "4dc07060c1e908bada87b493326022ce01e645afb0cf01368b7ca138dfe3803e",
+    "tests/test_core.py": "2390ef6376b54f4eb21bf11281e3c47f480e37d050a16506b61ff07b0395fd7b"
+  },
+  "limited_credential_pattern_scan_hits": [],
+  "note": "A limited pattern scan is not a security audit or certification."
+}

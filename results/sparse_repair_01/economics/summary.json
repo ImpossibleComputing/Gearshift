@@ -1,0 +1,110 @@
+{
+  "comparisons": {
+    "A": {
+      "quality_difference_percentage_points": 0.666666666666671,
+      "saving_percent_of_baseline": 2.3347265644293764,
+      "saving_seconds_mean": 17.343055790756672
+    },
+    "B": {
+      "quality_difference_percentage_points": 9.999999999999998,
+      "saving_percent_of_baseline": -45.80893663909431,
+      "saving_seconds_mean": -227.92703167229155
+    },
+    "D": {
+      "quality_difference_percentage_points": 0.0,
+      "saving_percent_of_baseline": 0.2019292201891689,
+      "saving_seconds_mean": 1.467934876512736
+    },
+    "ROTATING_H": {
+      "quality_difference_percentage_points": 26.833333333333336,
+      "saving_percent_of_baseline": 2.717595207362829,
+      "saving_seconds_mean": 20.26656925082517
+    }
+  },
+  "dollar_savings_or_serving_speedup_measured": false,
+  "draws_per_condition": 600,
+  "experiment_id": "confirmation_01_20260919T094418Z",
+  "input_sha256": "9825e94334cb9ddf5d78dc2d4c899bae569349cbd45b69b28cd1813942b7d158",
+  "observed_conditions": {
+    "A": {
+      "draws": 600,
+      "mean_answer_tokens": 776.615,
+      "mean_seconds": {
+        "answer_seconds": 46.16375412827047,
+        "cache_clone_seconds": 0.022042854278891657,
+        "mapping_seconds": 0.0,
+        "native_prefill_seconds": 0.0,
+        "reasoning_seconds": 696.6444793755492,
+        "single_output_inference_seconds": 742.8302763580984,
+        "splice_seconds": 0.0
+      },
+      "pass_rate": 0.6433333333333333,
+      "passed": 386
+    },
+    "B": {
+      "draws": 600,
+      "mean_answer_tokens": 753.43,
+      "mean_seconds": {
+        "answer_seconds": 26.991243064245985,
+        "cache_clone_seconds": 0.011612202057149261,
+        "mapping_seconds": 0.0,
+        "native_prefill_seconds": 0.0,
+        "reasoning_seconds": 470.55733362874713,
+        "single_output_inference_seconds": 497.56018889505026,
+        "splice_seconds": 0.0
+      },
+      "pass_rate": 0.55,
+      "passed": 330
+    },
+    "D": {
+      "draws": 600,
+      "mean_answer_tokens": 789.0333333333333,
+      "mean_seconds": {
+        "answer_seconds": 28.83312314896301,
+        "cache_clone_seconds": 0.009618042829679326,
+        "mapping_seconds": 0.0,
+        "native_prefill_seconds": 1.467934876512736,
+        "reasoning_seconds": 696.6444793755492,
+        "single_output_inference_seconds": 726.9551554438546,
+        "splice_seconds": 0.0
+      },
+      "pass_rate": 0.65,
+      "passed": 390
+    },
+    "ROTATING_H": {
+      "draws": 600,
+      "mean_answer_tokens": 1346.1683333333333,
+      "mean_seconds": {
+        "answer_seconds": 48.94410557927409,
+        "cache_clone_seconds": 0.008246705774605895,
+        "mapping_seconds": 0.08378040631767363,
+        "native_prefill_seconds": 0.06415429154178127,
+        "reasoning_seconds": 696.6444793755492,
+        "single_output_inference_seconds": 745.753789818167,
+        "splice_seconds": 0.009023459709715098
+      },
+      "pass_rate": 0.38166666666666665,
+      "passed": 229
+    }
+  },
+  "perfect": {
+    "mean_seconds": 725.4872205673419,
+    "pass_rate": 0.65,
+    "passed": 390,
+    "total_removed_prefill_seconds_charged_across_draws": 880.7609259076416
+  },
+  "scope": "HYPOTHETICAL free faithful receiver-prefill replacement only",
+  "source_bindings": {
+    "analysis_plan_sha256": "d9c5de4b93f7841faf6697ecf39dd4f897957745d819f7bda128a658ec9c7023",
+    "declaration_sha256": "16387d5361c795121929fd9244821f12ee005f9b36b2febddca5d9ef89f7536f",
+    "generation_closure_file_sha256": "57cb0c840a9480d243143a6887e2dfc267fa50b3936a0b2d50023583c1c76036",
+    "generation_closure_identity_sha256": "e9f439019ac632f22e8ac8b5eb3d9a222b2b1b3d7afc38abfd01579d2a810187",
+    "scored_manifest_sha256": "d758ae77e5dcabb70cc7886541941bdd8fc27f56b36f37f95c5051bf3c89e6e8",
+    "scorer_identity_sha256": "0caed5e16579c2d75f732e816d3bfc2849d3324a2f6948ad7bf08306ba426b84",
+    "scoring_plan_identity_sha256": "a21a06592e21d8e8c4a11e08e8319b039157290c231b9629cc3db8366baa5644",
+    "scoring_plan_path": "results/coding_pilot_v1/confirmation_01_20260919T094418Z/primary/scoring/scoring_plan.json",
+    "scoring_plan_sha256": "3d62a5789f96437d242ce7fe909672883d27d1259b6059ae1ac7a6846eafd8dc"
+  },
+  "tasks": 200,
+  "timing_is_stage_sum_not_measured_end_to_end_latency": true
+}

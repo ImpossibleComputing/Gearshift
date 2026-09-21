@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "adapter_commit": "91890f3ae05844f5fc1261ee014e3070068276ab",
+  "files": {
+    "gearshift/coding_coverage_v2_lease.py": "8b994772607d0aff1ce13a7a64bd028dd7766548e94340d61f9f37b72577f4d0",
+    "scripts/coding_confirmation_replication.py": "41b3631d6a844236d0e6ee6a1bd04ff644d8b9d8f3e755e52f6b4dc97f771e34",
+    "scripts/coding_confirmation_replication_stage.py": "9532aba07fab78167b6d4a206e033d11986cca059064eb180fd0a730e8820624",
+    "scripts/coding_confirmation_replication_supervisor.py": "abb217df836a99d429fdfa0044c54720f8fa711de78c498412b4f2c2cb4c2acb",
+    "scripts/coding_confirmation_secondary_generate.py": "90641893158466773537932e005eaa9fa30a5d4d292ba632bc04cdb9fc35c4ab",
+    "scripts/coding_confirmation_secondary_report.py": "8e6e33ef9e5adc8d4d2b1ac3b3d002398db66ce677ce378c3b84f7c43637b050",
+    "scripts/coding_confirmation_secondary_score.py": "45ed58a26e67d56d75535e91a7cca083cf4f3a970e9eac7f74e099fa0d047c26",
+    "scripts/coding_confirmation_secondary_supervisor.py": "319f7c067dc0d804ea860f0c8c25fb49be3a0356a5aadb7dc76bc495a80ae9ed"
+  }
+}

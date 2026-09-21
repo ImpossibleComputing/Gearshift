@@ -1,0 +1,24 @@
+{
+  "first_party_license": "Apache-2.0",
+  "files": {
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE": "31fb0bb976d06b96e3c5a627e8523bf118f02e7043f114a2e3c21e6e3af5d3eb",
+    "THIRD_PARTY_NOTICES.md": "dbfa72453d8bf09281179c54619f52a15c9c99917d8262d35d86920782d639c7",
+    "third_party/HumanEvalPlus_RELEASE_LICENSE.txt": "b0b08821a8c2b49e0f296b0b498c17d6e19b0439d1e4dd9cdb5f37712993c8a7",
+    "third_party/HumanEval_LICENSE.txt": "bcba3de214851cce46ed5af42d6698044616eeace887c3231bc7a20474ab639e",
+    "third_party/README.md": "b30f441b72c1347f8e305be5fd40c79fff647b7b52d758f1b5bcba32c7ad51d6",
+    "third_party/Qwen3-32B_LICENSE.txt": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+    "third_party/Qwen3-8B_LICENSE.txt": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+    "third_party/GSM8K_LICENSE.txt": "86bbb73e855821d7c401912fd4bf82e34313e6e3b6fd6f909f2b6cc9e209a53b",
+    "third_party/EvalPlus_LICENSE.txt": "fcc1f77fe5443b21bfc4dfcc3d66f7654f599b91582df771850e5e876986a103"
+  },
+  "bundled_HumanEval_records": 164,
+  "LiveCodeBench_problem_material_bundled": false,
+  "other_payloads_omitted": [
+    "WikiText samples",
+    "GSM8K samples",
+    "raw coding answers and histories",
+    "model weights and tokenizer vocabulary"
+  ],
+  "scope": "First-party source plus separately noticed HumanEval+ and Qwen config metadata. Dependency licenses not replaced; no vendored package trees."
+}

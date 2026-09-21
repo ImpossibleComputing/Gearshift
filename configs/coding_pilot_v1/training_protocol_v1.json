@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "status": "declared_before_training_generation",
+  "namespace": "coding_pilot_v1",
+  "teacher_tokens": "One source-native A answer on the exact source reasoning prefix, source_reasoning and answer_large task streams, max4096 answer tokens, retain EOS/caps/errors with no quality filtering.",
+  "teacher_distributions": "Frozen native receiver conditioned on the exact source prompt, reasoning, closing-think bridge and source answer tokens. No hidden labels or tests.",
+  "ordinary_continuation": "For each actual answer window, include every preceding teacher-forced answer token in both source and native receiver caches, map at the window start, differentiate receiver predictions at the original absolute positions.",
+  "natural_handoff_boundary": "Map the entire saved prefix once before closing-think; differentiate through every intervening closing/answer token to the declared prediction positions.",
+  "history_recomputation": "Complete saved source prefix is recomputed in512-token chunks for both frozen models. No cropping, position resets, new user turn, task replacement, resampling, or post-EOS fabrication.",
+  "offsets": [0, 32, 128, 512],
+  "predictions_per_window_per_update": 8,
+  "gradient_predictions_per_update": 32,
+  "short_answer_policy": "Keep exact anchors. Each of four buckets walks the same seeded full-cohort task permutation; valid positions contribute and the next fixed history supplies missing positions. Accumulate gradients with one history in memory. No duplicate task-position within an update; no shifted windows/padding/post-EOS positions. Stop if fewer than eight distinct positions exist globally in a declared window.",
+  "schedule": "Identical objective-independent schedule and exact initial weights for the two first-seed objectives. Retain all histories and audit per-task missing windows and examples per update.",
+  "validation": "Common full-boundary native-receiver KL at all actual positions within the declared windows for both objectives. Equal mean over32 validation tasks; report prediction counts and unavailable positions. No candidate-specific validation objective.",
+  "initialization": {"training_histories":128,"paired_positions_max":64,"position_selection":"Unique rounded linspace over the complete prefix","alignment":"Nearest normalized depth","keys":"Inverse source and receiver RoPE before affine ridge fit; receiver RoPE at unchanged absolute positions after mapping","ridge":0.01,"bias_penalized":false,"statistics_dtype":"float64","mapper_dtype":"float32"},
+  "optimizer": {"name":"AdamW","learning_rate":0.00001,"weight_decay":0,"gradient_clip":1,"microbatch_histories":1},
+  "bounds": {"updates":2048,"gpu_wall_seconds":10800,"validation_checkpoint_every":128,"minimum_updates_for_plateau_and_nomination":256,"patience":4,"relative_kl_improvement":0.005,"cache_disk_lru_bytes":34359738368},
+  "checkpoint_selection": "At most two validated checkpoints with step>=256 per objective, ordered by common validation KL then earlier step. At most four first-seed candidates enter all40 development cases; select passes, then source-inclusive latency, then earlier step. Hard-capped training below256 has no eligible candidate.",
+  "checkpoint_resume": "Immutable mapper-only checkpoints are backed up. Exact optimizer resumption is not implemented; a partial worker cannot silently restart.",
+  "seeds": {"headline":20260915,"selected_recipe_replication":20260916},
+  "execution_gates": ["Verified full fixed development baseline/cap gates", "Actual full40960-context32-prediction gradient memory gate", "Fresh native controls through32768 on everyworker", "Current hash-bound approval/allocation/deadline", "Exact fixed visible task membership, code and history identities"]
+}

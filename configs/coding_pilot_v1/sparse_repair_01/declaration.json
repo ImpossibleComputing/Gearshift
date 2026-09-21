@@ -1,0 +1,1796 @@
+{
+  "answer_draws_per_screen_task_condition": 3,
+  "calibration_seeds": {
+    "atcoder/abc362_d": 7856726982096008536,
+    "atcoder/abc363_e": 862644838881176717,
+    "leetcode/3379": 4489479126671483948,
+    "leetcode/3484": 6794919437625246846
+  },
+  "calibration_task_count": 4,
+  "calibration_tasks": [
+    {
+      "historical_reasoning_positions": 1283,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3379/source_history.json",
+      "history_sha256": "1846cde540d4a7cafbf6e047a6740be52a23e73c8c413eabed381c817f08c88a",
+      "natural_boundary": true,
+      "prompt_tokens": 344,
+      "rank_sha256": "3acaccc109d27535cc8172a9a387b37042e92171660e3bfbf09a1fdba3884a67",
+      "reasoning_capped": false,
+      "role": "calibration",
+      "selection_rank": 0,
+      "stratum": 0,
+      "task_id": "leetcode/3379",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "49455df12d21cf2bd3dbc7fedd2e2b538a8999e214fc6e67c1ddd26756488af3",
+        "prompt_ids": "452195971fb9d6756481688ee57ff07c47a8b422581d96fcc5ae81aabc8a9cc9",
+        "reasoning_ids": "b0c35abdfe4652888e75e16013256753b87f45cdabbff50dd88df0358b1c8992"
+      }
+    },
+    {
+      "historical_reasoning_positions": 3367,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3484/source_history.json",
+      "history_sha256": "122276ee431fcb85547b9cf9168f6b67e2c1217796d212f2718bfe02d92aebf1",
+      "natural_boundary": true,
+      "prompt_tokens": 270,
+      "rank_sha256": "05995283e3e8362d4079e85c612982b0958f0ff783d1f8915494dece82395061",
+      "reasoning_capped": false,
+      "role": "calibration",
+      "selection_rank": 0,
+      "stratum": 1,
+      "task_id": "leetcode/3484",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "e97fea1f0148be23f9d6787eaa18261d2b91702db7799b5125c7f135abaea122",
+        "prompt_ids": "ecab3bf57b6a53cfc4f95f5e90a1118f383161e1443661a8179fd09e1c519761",
+        "reasoning_ids": "ab667e7a447fbd7ba41be36fdba671a9b1b529e21127fc63655d4508afb12bae"
+      }
+    },
+    {
+      "historical_reasoning_positions": 8143,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc362_d/source_history.json",
+      "history_sha256": "cba3b69aa11ab15841ec80befcb144d81fc2ab7ff37ed639e89184028c69b08d",
+      "natural_boundary": true,
+      "prompt_tokens": 916,
+      "rank_sha256": "076ddafc8c5ecebc9a0717d7de7b972fbb84521f79d5f9255ba31eca490e3934",
+      "reasoning_capped": false,
+      "role": "calibration",
+      "selection_rank": 0,
+      "stratum": 2,
+      "task_id": "atcoder/abc362_d",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "facaf45699fbdf7f5887b7c5692f1d4e252a2e90eddf363322e5461e2103a8db",
+        "prompt_ids": "2b81797ed5d2d88b1a8873f17e41cc7f80ddadc0ee371eaf7a0cfe05ff65b8b6",
+        "reasoning_ids": "7867a4f3891cb91d59d1d2d28f78b2f71d03221f198b92316c7a08b4ce263a98"
+      }
+    },
+    {
+      "historical_reasoning_positions": 19970,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc363_e/source_history.json",
+      "history_sha256": "f972dd05af333918cdd3233fdf00d86c55cc1fd766c37fc202fddc556df6a73f",
+      "natural_boundary": true,
+      "prompt_tokens": 849,
+      "rank_sha256": "2323850bb2999b93d055b31f51f8f9a10db008d43d64354c305be5f53779b02d",
+      "reasoning_capped": false,
+      "role": "calibration",
+      "selection_rank": 0,
+      "stratum": 3,
+      "task_id": "atcoder/abc363_e",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "7c60b0c1e053eec80fdb3a45f3428d34e24c1f296e37a3055d0d643c67dacdd8",
+        "prompt_ids": "460a012ca9ff27042a83f34146ff25ff4882032a31e38d66a4efac66cba7750a",
+        "reasoning_ids": "ffed8e5a3cde9620e9e4827ebc1a33959a1d3fe75a6f5fdb7f357fa863e4d9c1"
+      }
+    }
+  ],
+  "conditions": [
+    {
+      "fraction": 1.0,
+      "mode": "native",
+      "name": "D",
+      "selector": "all"
+    },
+    {
+      "fraction": 1.0,
+      "mode": "mapped",
+      "name": "H",
+      "selector": "all"
+    },
+    {
+      "fraction": 0.0,
+      "mode": "prompt_only",
+      "name": "P",
+      "selector": "none"
+    },
+    {
+      "fraction": 0.05,
+      "mode": "native_sparse",
+      "name": "N_5",
+      "selector": "native_attention_mass"
+    },
+    {
+      "fraction": 0.05,
+      "mode": "mapped_sparse",
+      "name": "M_5",
+      "selector": "native_attention_mass"
+    },
+    {
+      "fraction": 0.05,
+      "mode": "repair",
+      "name": "R_5",
+      "selector": "native_attention_mass"
+    },
+    {
+      "fraction": 0.1,
+      "mode": "native_sparse",
+      "name": "N_10",
+      "selector": "native_attention_mass"
+    },
+    {
+      "fraction": 0.1,
+      "mode": "mapped_sparse",
+      "name": "M_10",
+      "selector": "native_attention_mass"
+    },
+    {
+      "fraction": 0.1,
+      "mode": "repair",
+      "name": "R_10",
+      "selector": "native_attention_mass"
+    },
+    {
+      "fraction": 0.25,
+      "mode": "native_sparse",
+      "name": "N_25",
+      "selector": "native_attention_mass"
+    },
+    {
+      "fraction": 0.25,
+      "mode": "mapped_sparse",
+      "name": "M_25",
+      "selector": "native_attention_mass"
+    },
+    {
+      "fraction": 0.25,
+      "mode": "repair",
+      "name": "R_25",
+      "selector": "native_attention_mass"
+    },
+    {
+      "fraction": 0.1,
+      "mode": "repair",
+      "name": "R_random",
+      "selector": "random"
+    },
+    {
+      "fraction": 0.1,
+      "mode": "repair",
+      "name": "R_recent",
+      "selector": "recent"
+    }
+  ],
+  "cost_accounting": {
+    "cumulative_union": "track exact unique layer/KVhead/reasoning-position pairs at every step, including non-traced steps",
+    "dense_mask_warning": "dense masked SDPA is a quality intervention, not sparse latency or bytes-read savings",
+    "memory": "include source/native/mapped backing, native prompt/answer states, masks/indices, temporaries; distinguish measured from estimated bytes",
+    "page_estimate": "report16-token bookkeeping pages under independent per-head and all-head-interleaved layouts, not measured allocator or HBM transactions",
+    "selected_index_trace_KV_heads": [
+      0,
+      7
+    ],
+    "selected_index_trace_layers": [
+      0,
+      17,
+      35
+    ],
+    "selected_index_trace_scope": "fixed bounded subset for bulky index lists only; ALL layer/head pair counts, instantaneous budgets, page estimates and cumulative unions retained every step",
+    "selected_index_trace_steps": [
+      0,
+      1,
+      16,
+      64,
+      256,
+      1024,
+      4095
+    ],
+    "stages": [
+      "native_cache_construction",
+      "source_cache_reconstruction",
+      "mapper",
+      "native_key_scan",
+      "selection",
+      "gather",
+      "replacement",
+      "attention",
+      "generation",
+      "CPU_scoring",
+      "transfer"
+    ],
+    "timing": "whole-answer implemented walltime plus component times; tracing-disabled equivalent-semantics repeats where practical"
+  },
+  "execution_gates": [
+    "STUDIO_READY prerequisites verified",
+    "single orchestration owner verified",
+    "hard remaining authorization and storage ledger verified",
+    "this declaration plus implementation committed before screen",
+    "four-case calibration and controls pass",
+    "oracle overhead profile fits bounded screen"
+  ],
+  "experiment_id": "sparse_repair_01",
+  "forbidden": [
+    "training",
+    "new reasoning samples",
+    "confirmation selector tuning",
+    "condition search after outcomes",
+    "new architecture sweep",
+    "website edits",
+    "publication",
+    "tag movement"
+  ],
+  "inputs": {
+    "artifact_audit_path": "results/sparse_repair_01/artifact_audit.json",
+    "artifact_audit_sha256": "b300cbde452da75571a441734afae3f09d92a37e2cef9e790fcfd35b51024666",
+    "development_membership": {
+      "bytes": 136262,
+      "exists": true,
+      "path": "configs/coding_pilot_v1/draft_membership.json",
+      "sha256": "482a0c8c42c5b23f3e937f08892794557c8a68bf08f8b650f63453c3210cb8db"
+    },
+    "history_identity_source": {
+      "bytes": 176996,
+      "exists": true,
+      "path": "configs/coding_pilot_v1/recovery_20260917/recovery_dev_20260917_02.json",
+      "sha256": "144345c06e30e100244600beedad8b409074f5f5cdf4ee4eac816d7ade0afcfd"
+    },
+    "private_development_input_sha256": "51843183c4b58f74bf995c656fda0f7e788f4913c3d9dc6d7947d22efe1089ae",
+    "private_tests_read_by_freezer": false,
+    "protocol_path": "configs/coding_pilot_v1/confirmation_01/protocol.json",
+    "protocol_sha256": "b9d28fdacec13e3d1eb9d97e9923e8063c2ea94b62b3d6e5496e8c5486b250ff",
+    "public_development_inputs": {
+      "bytes": 306765,
+      "exists": true,
+      "expected_sha256": "f092d41eebd8e889344c71939cf46e67153aad92350bd2be12a9466776b7786a",
+      "match": true,
+      "path": "/Users/qeetbastudio/projects/Gearshift-Old/data/coding_pilot_v1/visible/development.json",
+      "sha256": "f092d41eebd8e889344c71939cf46e67153aad92350bd2be12a9466776b7786a"
+    }
+  },
+  "local_probe_positions": [
+    0,
+    32,
+    128
+  ],
+  "local_probes": {
+    "early_stop": "if EOS precedes fixed probe, record missing position; do not extend or replace task",
+    "metrics": [
+      "retained_native_attention_mass",
+      "attention_output_relative_L2",
+      "attention_output_max_abs",
+      "next_token_KL_native_to_treatment",
+      "next_token_total_variation",
+      "next_token_top1_agreement"
+    ],
+    "query": "identical native Q for local N/M/R attention-output comparisons; identical prefix for model-distribution comparisons",
+    "source": "calibration D's own free-running prefix, maximum129 tokens; teacher-forced only for matched-query diagnostics"
+  },
+  "mapper": {
+    "arm": "ROTATING",
+    "sha256": "0e3caa7111ad8861f8e68e361ade6732e4dca5e587ca4f1ed8ba072a7ca9e386",
+    "step": 1024,
+    "training_seed": 20260915
+  },
+  "metrics": {
+    "also": [
+      "per_task_paired_draw_changes",
+      "all_answer_lengths",
+      "EOS/cap",
+      "instantaneous_pairs",
+      "cumulative_unique_pairs",
+      "per_layer_head_union",
+      "logical_rows",
+      "physical_pages_or_estimate",
+      "full_backing_and_prompt_answer_bytes"
+    ],
+    "cluster_intervals": {
+      "interpretation": "exploratory task-cluster descriptive intervals, not equivalence or generalization",
+      "quantile_method": "linear",
+      "quantiles": [
+        0.025,
+        0.975
+      ],
+      "resamples": 10000,
+      "rng": "numpy.random.Generator(numpy.random.PCG64(20260921))",
+      "seed": 20260921
+    },
+    "outcomes": [
+      "pass",
+      "interface",
+      "syntax",
+      "runtime",
+      "assertion",
+      "timeout",
+      "infrastructure_missing"
+    ],
+    "primary_engineering_contrast": "R_10 minus H passed-draw mean, paired within task",
+    "secondary": [
+      "all14 condition rates",
+      "full5/10/25percent curve",
+      "R_10 versus R_random/R_recent",
+      "N_p versus M_p"
+    ],
+    "unit": "12 task clusters, each3 fixed draws; retain every task and native failures"
+  },
+  "numerical_controls": {
+    "altered_execution_shape_only": {
+      "max_KL_native_to_control": 0.0001,
+      "max_abs_logit_difference": 0.125,
+      "top1_equal": true
+    },
+    "policy": "measure and report rounding with same-path reference; no post-output tolerance widening; block screen on failed controls",
+    "prompt_rounding": "independent native prompt prefill may differ; retain matched native/native splice reference rather than mislabel it exact full prefill",
+    "required": [
+      "unmodified hook versus deployed dense",
+      "full-selection native versus dense native",
+      "zero repair versus existing native-prompt/mapped-reasoning hybrid",
+      "full repair versus matched native/native splice",
+      "no aliases/mutation/repeated_or_skipped_tokens/position_drift"
+    ],
+    "same_execution_shape": {
+      "max_abs_logit_difference": 0.0,
+      "top1_equal": true,
+      "torch_equal_logits": true
+    }
+  },
+  "population": [
+    {
+      "historical_reasoning_positions": 1283,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3379/source_history.json",
+      "history_sha256": "1846cde540d4a7cafbf6e047a6740be52a23e73c8c413eabed381c817f08c88a",
+      "natural_boundary": true,
+      "prompt_tokens": 344,
+      "rank_sha256": "3acaccc109d27535cc8172a9a387b37042e92171660e3bfbf09a1fdba3884a67",
+      "reasoning_capped": false,
+      "role": "calibration",
+      "selection_rank": 0,
+      "stratum": 0,
+      "task_id": "leetcode/3379",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "49455df12d21cf2bd3dbc7fedd2e2b538a8999e214fc6e67c1ddd26756488af3",
+        "prompt_ids": "452195971fb9d6756481688ee57ff07c47a8b422581d96fcc5ae81aabc8a9cc9",
+        "reasoning_ids": "b0c35abdfe4652888e75e16013256753b87f45cdabbff50dd88df0358b1c8992"
+      }
+    },
+    {
+      "historical_reasoning_positions": 3060,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3384/source_history.json",
+      "history_sha256": "58ad410b9075b4108534832fc9dab84edec807da40fea4bd179cac0724ec9517",
+      "natural_boundary": true,
+      "prompt_tokens": 409,
+      "rank_sha256": "3bc193354603d42d780360b598de7012e6c74b444e29fd55143169019fef794f",
+      "reasoning_capped": false,
+      "role": "screen",
+      "selection_rank": 1,
+      "stratum": 0,
+      "task_id": "leetcode/3384",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "85b9e0ddc738858c270529d1df470d65d8e62fa739274f8b3d6f16a754802f55",
+        "prompt_ids": "d9b0daa477ad93dfcdafb554183e287d558ba835f389a2c5a78aed31664509e7",
+        "reasoning_ids": "be6e6c7587652b550419507b615f2011004bc50135f743498704b8ecaa8298ac"
+      }
+    },
+    {
+      "historical_reasoning_positions": 1164,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3412/source_history.json",
+      "history_sha256": "b8396dab8ddab218e26bf7a286c737f4ec2bc3407fe6e036e350db52d21c3117",
+      "natural_boundary": true,
+      "prompt_tokens": 430,
+      "rank_sha256": "4a9c8b4086aa134b5db001822cbf120e58f028c10a966de04c7d9776f3494afc",
+      "reasoning_capped": false,
+      "role": "screen",
+      "selection_rank": 2,
+      "stratum": 0,
+      "task_id": "leetcode/3412",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "66e81a18102c2c423c75a2a30b124d45fa6ca5478fab10b53792014a573c4fd4",
+        "prompt_ids": "981d25ab2035a0b07aabeb3cb3c8f2c9823f8572b87b12559a803f9a9cd99bb9",
+        "reasoning_ids": "ac3bb00fc47b2a6cc82d0d073f5215722dd89b501f3e5a4f73a69ba17ac71cdf"
+      }
+    },
+    {
+      "historical_reasoning_positions": 1276,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3428/source_history.json",
+      "history_sha256": "87c08105f1d6cd149b73bf2f0b39c6608f85a9df8cf54c6f7eba20b3bd12bdf7",
+      "natural_boundary": true,
+      "prompt_tokens": 253,
+      "rank_sha256": "925f6f2cb6b870121c99990be1f92d4502a8e52ef429539373008b91ba5d2f86",
+      "reasoning_capped": false,
+      "role": "screen",
+      "selection_rank": 3,
+      "stratum": 0,
+      "task_id": "leetcode/3428",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "71d5f90a009bfd2905d854239e5f662766ddb8df8daf17ab8d880ed9bb3edcd2",
+        "prompt_ids": "cdf46f4ee74a6824162f619fdfe823d0f08957c13df9234f343cc0c58b02c19d",
+        "reasoning_ids": "991a97b84f89c5e719711356f60cf695ae67b5f730d66257fd1d2d6232dde922"
+      }
+    },
+    {
+      "historical_reasoning_positions": 1002,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc349_a/source_history.json",
+      "history_sha256": "d7c964da9974ba455aa07d897f7d9903d4a0d4592f03b96ffb4276ef2b72b217",
+      "natural_boundary": true,
+      "prompt_tokens": 578,
+      "rank_sha256": "a268a9a3446b6892c4b1a616f7897f9f3813010cd35ac727d8b7a24dd0300d3d",
+      "reasoning_capped": false,
+      "role": "not_selected",
+      "selection_rank": 4,
+      "stratum": 0,
+      "task_id": "atcoder/abc349_a",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "a75ef4c3c115eb99b8af01b5291cf7a39a44f57096868362945d2e79c05e355b",
+        "prompt_ids": "7011c314dee6660256d0ccc68fd1098d95f0c65a4e7c5a2816886a3dce6a9cce",
+        "reasoning_ids": "b71ad5c303c0a166ea5bad2a942bfec39f183e6f85af040a1bb86358c06bb1e4"
+      }
+    },
+    {
+      "historical_reasoning_positions": 1787,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc356_a/source_history.json",
+      "history_sha256": "d1afa04e1899bd3755c498f17f6e23fa25a0cccb889059cf63e63aa6bf0bca9a",
+      "natural_boundary": true,
+      "prompt_tokens": 368,
+      "rank_sha256": "a40ec15efeadfe3c7c50eb06279c86ada42d137aedeca7728b7625fbd7ba86ce",
+      "reasoning_capped": false,
+      "role": "not_selected",
+      "selection_rank": 5,
+      "stratum": 0,
+      "task_id": "atcoder/abc356_a",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "6ea70232b60b27c2eec2ff9b36d62d0d4fd97d743f0f72fca93633048dc97be7",
+        "prompt_ids": "dec163fca9137e78e91cbf835142ef9dfb0ea6a46ccf2432bfcb78afcb6814c0",
+        "reasoning_ids": "9383fac73f84d9ccfe2c81fa480a645785ec439698b160ad21cd805732e05fa9"
+      }
+    },
+    {
+      "historical_reasoning_positions": 2885,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3450/source_history.json",
+      "history_sha256": "e533d2f1cff6c37684bba92cb6e56c011af00acdcc9967c396b96d72c979f410",
+      "natural_boundary": true,
+      "prompt_tokens": 522,
+      "rank_sha256": "a67e0f029d7dbdb91a1923f7e57c9f4f7fe28a539223ed7c11aa0b0a695c3e02",
+      "reasoning_capped": false,
+      "role": "not_selected",
+      "selection_rank": 6,
+      "stratum": 0,
+      "task_id": "leetcode/3450",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "28f93307e4f3509507639b7dc4880a68946b209dd82af496c874972ac7c47c6d",
+        "prompt_ids": "e9938a11105387f3377229bacceb8b411caf486ff747774766b0877f4e9dfde1",
+        "reasoning_ids": "323ebacf3fdf6d1b5b4345ff88d9da4a97674f737b4f00a1d71dc786947dbc34"
+      }
+    },
+    {
+      "historical_reasoning_positions": 2968,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3430/source_history.json",
+      "history_sha256": "be0a89ca483f7ac885a805eeb6c2006e75d37ee0c61be76f0b7aef2a2c9311e5",
+      "natural_boundary": true,
+      "prompt_tokens": 341,
+      "rank_sha256": "c93265109e551ef830ef0506676710b7bf7d16059ec3006d560c561a47f18737",
+      "reasoning_capped": false,
+      "role": "not_selected",
+      "selection_rank": 7,
+      "stratum": 0,
+      "task_id": "leetcode/3430",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "59f7a30333c9597cca82cba644f362beafa9e68ba6e39040cd5de4204ba385f7",
+        "prompt_ids": "99885bfd957ca15db163a4d5359ebebcdd1aae6f71a7c9ad70da93082eb9443e",
+        "reasoning_ids": "436cf012e8ed66112fa8921a8ec6ff120fd0a74bf2bfeb48ff8e8fe79855d2ac"
+      }
+    },
+    {
+      "historical_reasoning_positions": 1604,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc359_a/source_history.json",
+      "history_sha256": "24533054e68c34e4950f10207f26aaaa91a0d981a155b9923448989c8e2e5fc5",
+      "natural_boundary": true,
+      "prompt_tokens": 368,
+      "rank_sha256": "e27147532ce9e73a7ad54f3002d303a34f724c4cbed0954e7b9c2fb89d3928e8",
+      "reasoning_capped": false,
+      "role": "not_selected",
+      "selection_rank": 8,
+      "stratum": 0,
+      "task_id": "atcoder/abc359_a",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "dd0337057b6f0388fb912e568dc25c0c6b8883b79923173c265b2581473102ae",
+        "prompt_ids": "fcf2efea2d52a809eefc9befb11c5a2dd5119abda2fc42b0a6a6a9728ba00ecb",
+        "reasoning_ids": "a563809f016ba4fc69c2575c7d603d214ea90085ab3f4d1685434169e7e2cab7"
+      }
+    },
+    {
+      "historical_reasoning_positions": 2150,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc358_b/source_history.json",
+      "history_sha256": "02a4e46c4218eb62296e5c2c86475ee0ad3a90b87c3850488755da91949d4e13",
+      "natural_boundary": true,
+      "prompt_tokens": 820,
+      "rank_sha256": "fbe6b20167f5e830db400555887e0ecf0462a3a999e33ffbee6fd5298a9f8bec",
+      "reasoning_capped": false,
+      "role": "not_selected",
+      "selection_rank": 9,
+      "stratum": 0,
+      "task_id": "atcoder/abc358_b",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "d6034d0f1aa345496f18bc2c768d15bd92dc1ff470fa878055c9b481e61864ba",
+        "prompt_ids": "db96ce45f0be5381461980e0c93928f4d5de9253111547dffcc0b64c4ca35059",
+        "reasoning_ids": "7dd4ea3ecc7cbc1da3bab05ad0f22ed5cf11ccb2337f0d62b0b8239e936521b4"
+      }
+    },
+    {
+      "historical_reasoning_positions": 3367,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3484/source_history.json",
+      "history_sha256": "122276ee431fcb85547b9cf9168f6b67e2c1217796d212f2718bfe02d92aebf1",
+      "natural_boundary": true,
+      "prompt_tokens": 270,
+      "rank_sha256": "05995283e3e8362d4079e85c612982b0958f0ff783d1f8915494dece82395061",
+      "reasoning_capped": false,
+      "role": "calibration",
+      "selection_rank": 0,
+      "stratum": 1,
+      "task_id": "leetcode/3484",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "e97fea1f0148be23f9d6787eaa18261d2b91702db7799b5125c7f135abaea122",
+        "prompt_ids": "ecab3bf57b6a53cfc4f95f5e90a1118f383161e1443661a8179fd09e1c519761",
+        "reasoning_ids": "ab667e7a447fbd7ba41be36fdba671a9b1b529e21127fc63655d4508afb12bae"
+      }
+    },
+    {
+      "historical_reasoning_positions": 3099,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3461/source_history.json",
+      "history_sha256": "d963043437e76feec9739d0cf26a468ce32b60471845a85453212bd70fe7d513",
+      "natural_boundary": true,
+      "prompt_tokens": 272,
+      "rank_sha256": "078245b986ebe7a14c34c6cdb8a31b5e9d7fa15554e68af63a0d8f737e11353c",
+      "reasoning_capped": false,
+      "role": "screen",
+      "selection_rank": 1,
+      "stratum": 1,
+      "task_id": "leetcode/3461",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "efc0b476d9e0860298c022cce11b53e5697e3d7f7668bb8708becb7df12d627d",
+        "prompt_ids": "05fd727b3650460748711a2f2aadf898331cc9d780be6ff42f3c71996e917dbe",
+        "reasoning_ids": "8afdb760f689f50eaa0a685938d9ee59e2b740ff9a489b63dde4c8362369fc28"
+      }
+    },
+    {
+      "historical_reasoning_positions": 6141,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc353_e/source_history.json",
+      "history_sha256": "5549b55d629cd4b52f77c56ad843149b5cb7af2843eaf5ce93b408e83c590239",
+      "natural_boundary": true,
+      "prompt_tokens": 380,
+      "rank_sha256": "0a4e7d938c0c293ddc137f2645e2803dd0089958b68e4e9d5608c462405662e3",
+      "reasoning_capped": false,
+      "role": "screen",
+      "selection_rank": 2,
+      "stratum": 1,
+      "task_id": "atcoder/abc353_e",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "c28f895198ed521d28dee9fea081668e3d97236f0bc6da463e911934e9975b1e",
+        "prompt_ids": "2feaa9bcbfc05d26dad86b6228590a1f7f0eaa5ea4e0a80f66803083337c339f",
+        "reasoning_ids": "7d91309b8b14264f42bfd5e3d135bcdd733f2b439d6188cbdb3a15a55a692bf8"
+      }
+    },
+    {
+      "historical_reasoning_positions": 7927,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3464/source_history.json",
+      "history_sha256": "2f9a9c8086e278d26ba14e43bcb7453358351b9ed3639a2cd8b95e42b7be2a45",
+      "natural_boundary": true,
+      "prompt_tokens": 603,
+      "rank_sha256": "25ae65f303845eb88558ca9cdd37383d86528b6113bc8643b23108910250342f",
+      "reasoning_capped": false,
+      "role": "screen",
+      "selection_rank": 3,
+      "stratum": 1,
+      "task_id": "leetcode/3464",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "dc8344f8dfd3c54cebce65b2212d1b3c62655e7ff2b8a423b149e34a8c6b4dbd",
+        "prompt_ids": "9aa7c0e2dba3f8085e899ea569c46b6ab2a69bbb3c7a092c2675b5d7aa577c8c",
+        "reasoning_ids": "bcf2a94c27428b57fac4065fee2152e857e81cad9734d34e2f0a19d50080cda6"
+      }
+    },
+    {
+      "historical_reasoning_positions": 5202,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc357_c/source_history.json",
+      "history_sha256": "7599d1e1552d9c33152759e1ff79295f935be934de47ae8310e6ab42726e8dfc",
+      "natural_boundary": true,
+      "prompt_tokens": 430,
+      "rank_sha256": "4ad77d80d309cbce95e26a3d9fe6658507fb6ee51133418fcf92372dce08779f",
+      "reasoning_capped": false,
+      "role": "not_selected",
+      "selection_rank": 4,
+      "stratum": 1,
+      "task_id": "atcoder/abc357_c",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "ee181914396e66e15561881d90afb44700eeedebae63299d33ca024d3ae141df",
+        "prompt_ids": "2c1dfb68c88661eca6289fbcd7774dcd546260baccbfb251a4dbe32628747165",
+        "reasoning_ids": "3f1d4ac0495f9bd821260c84dc932307b8b148fb577bd14fc2820176c6c85830"
+      }
+    },
+    {
+      "historical_reasoning_positions": 5614,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc362_c/source_history.json",
+      "history_sha256": "aeb2fedfff5876e69c920a0d348723a1f559b97f79e15fd3355f063f00109ba6",
+      "natural_boundary": true,
+      "prompt_tokens": 500,
+      "rank_sha256": "6481a94e0990a21c25ead33730f62afb1eaa785238c2d793796589719029a896",
+      "reasoning_capped": false,
+      "role": "not_selected",
+      "selection_rank": 5,
+      "stratum": 1,
+      "task_id": "atcoder/abc362_c",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "8ca3112300e9ac9d7b95a8eb40e8e65de77895c2f5e0a05dafe26e1c1f152601",
+        "prompt_ids": "0788a99a3ce6324c7184e5dcf3452262eba0fab833fe5205b1ff8f6d7843a41a",
+        "reasoning_ids": "66c7937c9ee258721cd490fe86b1834c9c4e1d83e6587ff367bd517cbe3085d4"
+      }
+    },
+    {
+      "historical_reasoning_positions": 5118,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3453/source_history.json",
+      "history_sha256": "709ee5a30e6c601b2869b7019cb694f55d5d6c4f25378c1d875c00c3c94a56aa",
+      "natural_boundary": true,
+      "prompt_tokens": 230,
+      "rank_sha256": "9d5f1b4e2d694af2ab1ce6e80811b39d7b65321ec672a26a9796150c781971d7",
+      "reasoning_capped": false,
+      "role": "not_selected",
+      "selection_rank": 6,
+      "stratum": 1,
+      "task_id": "leetcode/3453",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "bd5a6a828582d03456219ca188b8d072077eab87feebd0b6b9a6133cb3da2236",
+        "prompt_ids": "e1b1fa0ffc3196cbaf07ea9a5c52030f2aae267a91e9d17412192d4c893ef453",
+        "reasoning_ids": "090cb6aeb22b0fc6e8d0ce898e9757b30d32a365bc9c138bdd328250ef4851d8"
+      }
+    },
+    {
+      "historical_reasoning_positions": 7836,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc357_d/source_history.json",
+      "history_sha256": "4c262f59ca8d54bbdc0de63c91834a4fadc8d6fa160c39b29779ae7c743c25e6",
+      "natural_boundary": true,
+      "prompt_tokens": 376,
+      "rank_sha256": "f339cebc0f1c8128d040ac51fdffda191bb5985068b8422b919e4a42cb120470",
+      "reasoning_capped": false,
+      "role": "not_selected",
+      "selection_rank": 7,
+      "stratum": 1,
+      "task_id": "atcoder/abc357_d",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "ba3185d5aedb2114025c960b3edc80723bb5a2624da36013ac6c4c1a76e529fc",
+        "prompt_ids": "0bf22b4925079fa1c26ae380bb919f613a5cbc2c7b377b8f3e2eb4a40a913808",
+        "reasoning_ids": "c95e5c0ad72fdefc269730ca5e5efe5b89190376da1ddd98030c5cd352da6b03"
+      }
+    },
+    {
+      "historical_reasoning_positions": 3244,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3511/source_history.json",
+      "history_sha256": "05302148098532c8af935339784da4c2372840289994f8d271a9737228ff7fda",
+      "natural_boundary": true,
+      "prompt_tokens": 309,
+      "rank_sha256": "f932766bf854e15bc39cb5852c945c6b075cdc0543b10c3b23fd0b033c65951a",
+      "reasoning_capped": false,
+      "role": "not_selected",
+      "selection_rank": 8,
+      "stratum": 1,
+      "task_id": "leetcode/3511",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "1f8e4c9407e68adead08848eed8451465c1e5c3c3b510f913e01d90833c34c86",
+        "prompt_ids": "78be510665fce22bd1cc284b8bea63995131cb1ddb38e0084c4b87b4435f4ae7",
+        "reasoning_ids": "0e671dfd9be44cdd9cec5929a424e5034baec64e7dfcb06578f1c048d661e2bd"
+      }
+    },
+    {
+      "historical_reasoning_positions": 6332,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3462/source_history.json",
+      "history_sha256": "d4b878fe09d42bbd28ce680b888330c3c2d9d96c8692a3a8e231105e5c2ac36a",
+      "natural_boundary": true,
+      "prompt_tokens": 398,
+      "rank_sha256": "fd722a0e8118347f2f3e12c300ee6310c99b9a0fc29ea179dec5090789fb98c4",
+      "reasoning_capped": false,
+      "role": "not_selected",
+      "selection_rank": 9,
+      "stratum": 1,
+      "task_id": "leetcode/3462",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "a358b628d16a224afe85ff2d32618565e589038e41d84a8c57b1757b0c1bfce1",
+        "prompt_ids": "e5eb5b674ad591bb3281ceb0c139b77edf047aed1bd49279a0220697b799daa0",
+        "reasoning_ids": "5a8e9f3ff278f0dc046a9ba4edd8954b25b6704de4377942c90fd6c8dc204150"
+      }
+    },
+    {
+      "historical_reasoning_positions": 8143,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc362_d/source_history.json",
+      "history_sha256": "cba3b69aa11ab15841ec80befcb144d81fc2ab7ff37ed639e89184028c69b08d",
+      "natural_boundary": true,
+      "prompt_tokens": 916,
+      "rank_sha256": "076ddafc8c5ecebc9a0717d7de7b972fbb84521f79d5f9255ba31eca490e3934",
+      "reasoning_capped": false,
+      "role": "calibration",
+      "selection_rank": 0,
+      "stratum": 2,
+      "task_id": "atcoder/abc362_d",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "facaf45699fbdf7f5887b7c5692f1d4e252a2e90eddf363322e5461e2103a8db",
+        "prompt_ids": "2b81797ed5d2d88b1a8873f17e41cc7f80ddadc0ee371eaf7a0cfe05ff65b8b6",
+        "reasoning_ids": "7867a4f3891cb91d59d1d2d28f78b2f71d03221f198b92316c7a08b4ce263a98"
+      }
+    },
+    {
+      "historical_reasoning_positions": 11249,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3413/source_history.json",
+      "history_sha256": "6568c51ea584381c0ba4cc017a389b417ac4a4adba38d6eb3e4eb0f33bdc7064",
+      "natural_boundary": true,
+      "prompt_tokens": 677,
+      "rank_sha256": "17fe70c2fd6e36d179309322280b64ea38bb0d877b992ee4c3d46269ea85e0fd",
+      "reasoning_capped": false,
+      "role": "screen",
+      "selection_rank": 1,
+      "stratum": 2,
+      "task_id": "leetcode/3413",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "982a3fa671a3dc2fe1e473e40cf77e2db0aa1e58b31951ac51517151375a207c",
+        "prompt_ids": "b937dc8b56e8825c3e7127bedfb8f7d952f07450a92b11f89695a12d1a2450b2",
+        "reasoning_ids": "94f799a14db5578d476e1f9eb7fca5d75d0a64322d65aa59622d6795317073e4"
+      }
+    },
+    {
+      "historical_reasoning_positions": 12293,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3482/source_history.json",
+      "history_sha256": "3cac2352ea07af1ed639c82ba5ceb77005ae40ab60aca2dc2c89fb69aee5a984",
+      "natural_boundary": true,
+      "prompt_tokens": 459,
+      "rank_sha256": "7f30edd3629a4d7595d5be65cb8379fec5214366fda11364e918df1d03932ed3",
+      "reasoning_capped": false,
+      "role": "screen",
+      "selection_rank": 2,
+      "stratum": 2,
+      "task_id": "leetcode/3482",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "20b690c4b1b3f82fcb536c34a4a1c5299abca9bf31900d398028bd905444eb24",
+        "prompt_ids": "5cecefc855f3cbf8ccee52d29f2a8db3aff9f39432276955e0df025b5c36f74c",
+        "reasoning_ids": "372eba5cae4c9f9520a953ede98c00fc4bfa435290188319365a35c5bfcf78cf"
+      }
+    },
+    {
+      "historical_reasoning_positions": 8889,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc364_d/source_history.json",
+      "history_sha256": "9dd2e66de5b8101765fe10e597184a0e580446de8240f145adf04fabf518d94b",
+      "natural_boundary": true,
+      "prompt_tokens": 610,
+      "rank_sha256": "81f01c28e809730bd1201ca4117e834edbf23c57e0939148e2b222b7bd2c63e9",
+      "reasoning_capped": false,
+      "role": "screen",
+      "selection_rank": 3,
+      "stratum": 2,
+      "task_id": "atcoder/abc364_d",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "f527d57602fcbb333f4c484d4b648b0e4c49b7155102b9ef3640dc00807737b9",
+        "prompt_ids": "d9d77a95ce62be2135f56d1c6e93bf2991044bc73918d84050d91406ed60a5fa",
+        "reasoning_ids": "facc468bcbdc781bec2ed601a0c755e75eecf0e10f74cb03236e4ea9685420c2"
+      }
+    },
+    {
+      "historical_reasoning_positions": 12975,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc362_e/source_history.json",
+      "history_sha256": "063bb9483b29e85f1e95b5fd8fe54ddc7162c1a53c6f7b64311335b59c914ce4",
+      "natural_boundary": true,
+      "prompt_tokens": 467,
+      "rank_sha256": "93e60768fb1647da3f1de9b61e69b7893c1a2585a5082c0513d01a560cc7c281",
+      "reasoning_capped": false,
+      "role": "not_selected",
+      "selection_rank": 4,
+      "stratum": 2,
+      "task_id": "atcoder/abc362_e",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "0b72ab88b38aed088f49afb1fab0e3f8a73225d1a3f64b1140bc1e919b6f128a",
+        "prompt_ids": "30d9078ce81bcead2d8e8af35680b814be36a69783f068fc4ffe122ac03a077f",
+        "reasoning_ids": "bc054458ff3a0669ec73cfd93ccd0eeb265f5738750e0260212d056bc0d99ea7"
+      }
+    },
+    {
+      "historical_reasoning_positions": 9259,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc349_d/source_history.json",
+      "history_sha256": "69d8319ca5a11621451684da1a234db37f7d39a5dbb6582d93f45f11ec0eceaf",
+      "natural_boundary": true,
+      "prompt_tokens": 1088,
+      "rank_sha256": "a3ed04d220919dc6eedf018f4fe91ac8c30a8e0b0a44714dc4c380225a7857c8",
+      "reasoning_capped": false,
+      "role": "not_selected",
+      "selection_rank": 5,
+      "stratum": 2,
+      "task_id": "atcoder/abc349_d",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "8d60e16924c4229cc3a84e6b8f17c853620b55afec05ad4886a2cdac41d90184",
+        "prompt_ids": "73c54e208c6422f2d302363f8b5ea1f880435db387ae12df10c7ae3a473773bd",
+        "reasoning_ids": "6da748f174d207142f21a187285912c151dcaa4f0c79f87cc5767eea9a0192d8"
+      }
+    },
+    {
+      "historical_reasoning_positions": 9188,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc352_e/source_history.json",
+      "history_sha256": "ce36e5564680f2a98b8b93638a392f89a3222bccfe1ff89fb8020c919d5c3da2",
+      "natural_boundary": true,
+      "prompt_tokens": 778,
+      "rank_sha256": "a6cb183d663f32fef5dfd2519383dcb2d7383b748cbdd8e62d0deb049b02dbef",
+      "reasoning_capped": false,
+      "role": "not_selected",
+      "selection_rank": 6,
+      "stratum": 2,
+      "task_id": "atcoder/abc352_e",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "828d5acfd439a5581a76b3f1c4858e31888f3db9a336ddbdf93bdc1f77df5e1e",
+        "prompt_ids": "3acfd9c534a40f3835bf8f19d071c73e2d90abf69bc370f161c78570dee9166a",
+        "reasoning_ids": "96590248ff6de44b7b1a91ed0e8214c9efea18bfe3cfce0ab5de75898e8ad6eb"
+      }
+    },
+    {
+      "historical_reasoning_positions": 11762,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc348_e/source_history.json",
+      "history_sha256": "e15053c9166e19b2231a4acab41e1a9de0e3dd194c9193682b9c5dab8997f73f",
+      "natural_boundary": true,
+      "prompt_tokens": 584,
+      "rank_sha256": "acdce18059d5c6159e74b71474b5860fb083cf2fb3c95e7692012080453a4ead",
+      "reasoning_capped": false,
+      "role": "not_selected",
+      "selection_rank": 7,
+      "stratum": 2,
+      "task_id": "atcoder/abc348_e",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "879fbda6db4d5df4772ec9b63f33bcec6d28b3595c513ec34f11c57e2a884906",
+        "prompt_ids": "3672d5cd1530f4b6e3ef20dfea9cf5cefd8b1005060b0a56e5acd4db88014e77",
+        "reasoning_ids": "9ad458d1f404c85e5f2ee18dff6217aaea7107c1e796169685cdf0a55d139f7b"
+      }
+    },
+    {
+      "historical_reasoning_positions": 8744,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3466/source_history.json",
+      "history_sha256": "1f6e72716e83230b88d62bc96241543ab91d9262a03c87b5e827f64bbc0b876d",
+      "natural_boundary": true,
+      "prompt_tokens": 281,
+      "rank_sha256": "cabda90a97ae333263cedfe6effd73766cddbba2e3160aeb29afc2f34904117d",
+      "reasoning_capped": false,
+      "role": "not_selected",
+      "selection_rank": 8,
+      "stratum": 2,
+      "task_id": "leetcode/3466",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "86030a52b7000fed0f08ed65d5692bf4e1d2ad1dc0fe7479fc3337526db29e2c",
+        "prompt_ids": "58cb534a4cc9587ccca5161ea735254f6777afd1d7dbf8a843bc21e273e04347",
+        "reasoning_ids": "e39a05470e79735b6efc1d90ead88b35e01c5f4f334a17b3c8aae07ef6743c3d"
+      }
+    },
+    {
+      "historical_reasoning_positions": 9982,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc358_e/source_history.json",
+      "history_sha256": "09543f3722a1f3c7ee69da2e3bdf4ae0d13c2b9f5729efc8f8e158f381762f93",
+      "natural_boundary": true,
+      "prompt_tokens": 606,
+      "rank_sha256": "e29b5f20b576ff3b87084052e52a94825672d0c60dd594937ef41e95d2b519f0",
+      "reasoning_capped": false,
+      "role": "not_selected",
+      "selection_rank": 9,
+      "stratum": 2,
+      "task_id": "atcoder/abc358_e",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "bdf3255517b9aba9eeb40c6ea41e5b4d5c9ec602da2b375973ae3d63e183c16b",
+        "prompt_ids": "f49aaf15bee47d551d8eab69f543bb8a3ca5c1a05ffa029cd7d9c8f06d3eb7c3",
+        "reasoning_ids": "6f5cf5b391fe4db1c209ef09538cb4e97dc5375e87a0a343678fab03d3f3be55"
+      }
+    },
+    {
+      "historical_reasoning_positions": 19970,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc363_e/source_history.json",
+      "history_sha256": "f972dd05af333918cdd3233fdf00d86c55cc1fd766c37fc202fddc556df6a73f",
+      "natural_boundary": true,
+      "prompt_tokens": 849,
+      "rank_sha256": "2323850bb2999b93d055b31f51f8f9a10db008d43d64354c305be5f53779b02d",
+      "reasoning_capped": false,
+      "role": "calibration",
+      "selection_rank": 0,
+      "stratum": 3,
+      "task_id": "atcoder/abc363_e",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "7c60b0c1e053eec80fdb3a45f3428d34e24c1f296e37a3055d0d643c67dacdd8",
+        "prompt_ids": "460a012ca9ff27042a83f34146ff25ff4882032a31e38d66a4efac66cba7750a",
+        "reasoning_ids": "ffed8e5a3cde9620e9e4827ebc1a33959a1d3fe75a6f5fdb7f357fa863e4d9c1"
+      }
+    },
+    {
+      "historical_reasoning_positions": 18778,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3455/source_history.json",
+      "history_sha256": "2c03077393d2a1d6a5fe79a4a9d7bff8f4bb1ecccfb5f6945a0f3e80767b0606",
+      "natural_boundary": true,
+      "prompt_tokens": 322,
+      "rank_sha256": "417feb5792819d18b447716fb0d47f44267a5a947ce6937a952a4516e0861ff3",
+      "reasoning_capped": false,
+      "role": "screen",
+      "selection_rank": 1,
+      "stratum": 3,
+      "task_id": "leetcode/3455",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "bd1fb872dc628790f3f744572a6a346f4fa0250d8713fb707163d7216ff2c478",
+        "prompt_ids": "d662fd16a07eae3e29609858d5f27cfb045d98c6fce991bbdd22d3f319a888c1",
+        "reasoning_ids": "05218dc5158a57a36997a05aac391203678d411f49aae736ef1dcc216a6a1599"
+      }
+    },
+    {
+      "historical_reasoning_positions": 24576,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3454/source_history.json",
+      "history_sha256": "65cb852dbf980be5eaf664a32459cebba368a646f699137d4f45774dd098626b",
+      "natural_boundary": false,
+      "prompt_tokens": 410,
+      "rank_sha256": "52caf1615995bf709cc3e90a2d0bd6292251f20652b3d7183357a2fae0938129",
+      "reasoning_capped": true,
+      "role": "screen",
+      "selection_rank": 2,
+      "stratum": 3,
+      "task_id": "leetcode/3454",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "1741c1e1e2dc10ac691be782239452699b0f1d7fd75e6871aea77c112ff544a8",
+        "prompt_ids": "500accf92bb8b19da0e14f54cd308cf79330debbd44342685b3c3a53319ab3d1",
+        "reasoning_ids": "8d1246b6381de117dd81a02f79d327f6938d61a97a261df8d9cb678e69d4214b"
+      }
+    },
+    {
+      "historical_reasoning_positions": 17646,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc360_c/source_history.json",
+      "history_sha256": "fa425a989905cfbc738e29ddacff3fe149815ddc30a3c68b7f4499fcd30520cf",
+      "natural_boundary": true,
+      "prompt_tokens": 526,
+      "rank_sha256": "54e9c90259582483c3316ddfee7dc04eaa1b51e37f8f4496429ae0948d414a5b",
+      "reasoning_capped": false,
+      "role": "screen",
+      "selection_rank": 3,
+      "stratum": 3,
+      "task_id": "atcoder/abc360_c",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "9c15c2f38f7006f141b07cad981b25fa15968147e1ab2dda9b788457ebf8002a",
+        "prompt_ids": "759ed319626a4f4cddcb332616ec12612b3fd762677b68b206e2e53e5102e804",
+        "reasoning_ids": "f229cf1244d1c48db6f91398e500c912c1f5125514720945c87a36e90c402144"
+      }
+    },
+    {
+      "historical_reasoning_positions": 15003,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc359_d/source_history.json",
+      "history_sha256": "c2939c92361ae7c316ab3224621db3c5891d36333a92c3f976ae405138fa0156",
+      "natural_boundary": true,
+      "prompt_tokens": 514,
+      "rank_sha256": "5d408861bc6d65952c90ddc294062baf8f9d9ecdc232e4725db1561d657a0847",
+      "reasoning_capped": false,
+      "role": "not_selected",
+      "selection_rank": 4,
+      "stratum": 3,
+      "task_id": "atcoder/abc359_d",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "3eb33841cb12591e5ed4c8a2c9d48151343a5e00fad1be46e21447780e4652f7",
+        "prompt_ids": "dd3973e18465709be666a7c9cbe0a10348a20efc1888cc1171ac354c60dfef5b",
+        "reasoning_ids": "06582b02169eab75e24ab1c3a48391e55c59cf98c40e3403f8370761832a4a37"
+      }
+    },
+    {
+      "historical_reasoning_positions": 18444,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc351_d/source_history.json",
+      "history_sha256": "66bba1aca24888604ed1179d5958d4b0800e572c8018138fc1d9c51e3922d949",
+      "natural_boundary": true,
+      "prompt_tokens": 725,
+      "rank_sha256": "6153212fb50f5c7a2801db8de372c1f93fd452c611733e9741d7897cb722c860",
+      "reasoning_capped": false,
+      "role": "not_selected",
+      "selection_rank": 5,
+      "stratum": 3,
+      "task_id": "atcoder/abc351_d",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "d411f87e4973f6323712b3670c8e5ab8b7c973a2b5a5fc48b9c2e2bd5c321010",
+        "prompt_ids": "4c3957ff3c9d93c45e36b03e1dfcc1a280dffc314cdaa771e943134f5abcc19a",
+        "reasoning_ids": "a4f56d874d1542b5ff510261414ba2e4cbdda1459a61eca8cddabf388b4ec5e2"
+      }
+    },
+    {
+      "historical_reasoning_positions": 24576,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc351_f/source_history.json",
+      "history_sha256": "88557bde52b8d11618fa2f2c011605ef1e27f2d1fdfa35789f0c031c21163741",
+      "natural_boundary": false,
+      "prompt_tokens": 403,
+      "rank_sha256": "6763f2b4239a9f757d1458f0e46df1d7ca4a5a84781aae7eedd8be7407f45072",
+      "reasoning_capped": true,
+      "role": "not_selected",
+      "selection_rank": 6,
+      "stratum": 3,
+      "task_id": "atcoder/abc351_f",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "f556c70eacb7680d35ded20e561bf01339c1dc0b94118213cb38dab88fa99fae",
+        "prompt_ids": "cbed5b180630ea68a89f75c2300c96da16e363eabb0033fbb8a353bc573d9014",
+        "reasoning_ids": "3776d9007bf037662bf4552bb571ba8ca2d978235b03a41d7e2748822b1d3867"
+      }
+    },
+    {
+      "historical_reasoning_positions": 19127,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc364_e/source_history.json",
+      "history_sha256": "ed143492ac4c9d9f7843db6b687b43076d936c44d3da10f501c5cc3a99b11be2",
+      "natural_boundary": true,
+      "prompt_tokens": 635,
+      "rank_sha256": "a00108a035ce862c27839a3ae76e104f5d2d8d88742344aa3f244b5626402f91",
+      "reasoning_capped": false,
+      "role": "not_selected",
+      "selection_rank": 7,
+      "stratum": 3,
+      "task_id": "atcoder/abc364_e",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "7e7a9cbf91146eb541b2d54a926f84709e82b7aa22b8b9acfd7f63357ebdeef9",
+        "prompt_ids": "e28807283ec443ef5b6ed94e00550025c6885408fd115e913df82a9e7a5d2228",
+        "reasoning_ids": "5585d48865dde13f927c5a9da5359a01288534d9df0a6159a31e769fe5ca9f5f"
+      }
+    },
+    {
+      "historical_reasoning_positions": 22973,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3478/source_history.json",
+      "history_sha256": "ee4283a5d68e4ea56aadaef7ce6a7fce07c1834a7132a573c766c582397b8970",
+      "natural_boundary": true,
+      "prompt_tokens": 471,
+      "rank_sha256": "d00009b4acc8620a4e11a474ce441ac3495ddd8fcfa847d923840e4bed2161b1",
+      "reasoning_capped": false,
+      "role": "not_selected",
+      "selection_rank": 8,
+      "stratum": 3,
+      "task_id": "leetcode/3478",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "571989d3dddbb71e7fde313d369535d8ed87da04ce6587802653506577560c1f",
+        "prompt_ids": "44a8d71eddf49ddc76ffbbf952579b6f10b64d09099054d6ab9917cf634eb505",
+        "reasoning_ids": "fd98a8cf2da0e17b2141d0acdf86e85e5901188a93137a72661740fd32fab03b"
+      }
+    },
+    {
+      "historical_reasoning_positions": 24341,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc359_e/source_history.json",
+      "history_sha256": "09bb27e4209763644b3f5098fc7726bb6547b1f9f14f5401fd1775d6e3cd1c56",
+      "natural_boundary": true,
+      "prompt_tokens": 839,
+      "rank_sha256": "d006c8743a3265627adb325663507e1cfabb0fa54aec48533a244a24ea2303cf",
+      "reasoning_capped": false,
+      "role": "not_selected",
+      "selection_rank": 9,
+      "stratum": 3,
+      "task_id": "atcoder/abc359_e",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "2aca90416bade270919982e42ae1e6f7f16d0c612541c1ee189929886f4bcb3e",
+        "prompt_ids": "03e97d92d802d4929ffb29d0f6a39e2e23e6a2eed5a881fa59d8d71646d0996e",
+        "reasoning_ids": "6f385fe0ae28232df2ccbe288548b731e10e0fbffcabcf1f6b1a5080170bb970"
+      }
+    }
+  ],
+  "protocol": {
+    "H_definition": "Receiver-native original thinking prompt cache plus mapped reasoning suffix at original absolute positions; includes native prompt prefill.",
+    "P_definition": "Same original public prompt; pinned enable_thinking=False chat template with empty <think> section, no separate reasoning. Prefill ids[:-1] and use ids[-1:] as exact final-template bridge, as v2.",
+    "budgets": {
+      "answer_max_tokens_all_conditions": 4096,
+      "cap_amendment_path": "configs/coding_pilot_v1/cap_amendment_v1.json",
+      "cap_amendment_sha256": "1e893e1c7b8f14398f7bbfbe8777a650b3179f4c3fb08578a4b5ae25642bf2af",
+      "cap_failure": "Preserve capped/early-EOS histories and answers. Never drop, extend selectively or replace a hard task. Oversized original prompt is an explicit protocol failure; do not crop.",
+      "executed_identity_proofs": [
+        "results/coding_pilot_v1/preflight_cap_v1/identity.json",
+        "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/identity.json"
+      ],
+      "max_total_tokens": 40960,
+      "prompt_max_tokens": 8192,
+      "reasoning_max_tokens_both_models": 24576
+    },
+    "cache_isolation": "Immutable history/base states; clone private cache and independent RNG for each condition/seed. Preserve native/native reinjection/splice controls and actual partial-native rounding diagnostics, exact original positions, no alias/mutation, model/runtime/history/checkpoint hashes.",
+    "closing_think_token_id": 151668,
+    "decoding": {
+      "do_sample": true,
+      "min_p": 0.0,
+      "num_beams": 1,
+      "policy": "Same thinking-mode sampling through reasoning and final answer. Do not switch to non-thinking template at the boundary.",
+      "presence_penalty": 0.0,
+      "repetition_penalty": 1.0,
+      "temperature": 0.6,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "eos_token_ids": [
+      151645,
+      151643
+    ],
+    "handoff": "At natural closing-think emission, cache excludes emitted closing token and bridge contains exactly that token. For a capped history, preserve every sampled reasoning token and feed one prespecified closing token. Original absolute positions; no new user turn; free answers contain no source-written final-answer prefix. Preserve natural code in reasoning.",
+    "models": {
+      "receiver": {
+        "dtype": "bfloat16",
+        "frozen": true,
+        "id": "Qwen/Qwen3-8B",
+        "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+      },
+      "source": {
+        "dtype": "bfloat16",
+        "frozen": true,
+        "id": "Qwen/Qwen3-32B",
+        "revision": "9216db5781bf21249d130ec9da846c4624c16137"
+      }
+    },
+    "runtime": {
+      "TF32": false,
+      "attention": "sdpa",
+      "deterministic_algorithms": true,
+      "dtype": "bfloat16",
+      "hardware_preferred": "NVIDIA H200",
+      "model_parameters_frozen": true,
+      "quantization": false,
+      "tensor_parallel": false,
+      "torch": "2.8.0+cu128",
+      "transformers": "4.57.6"
+    }
+  },
+  "publication_commit": "64725974fa55459350d1c9d09037bab64d0c5ec6",
+  "publication_tag": "gearshift-progress-01",
+  "resource_estimate": {
+    "conditional_compute_usd_at_rate_ceiling": 275,
+    "conditional_total_gpu_hours_at_rate_ceiling": 50,
+    "cumulative_soft_target_usd": 2000,
+    "existing_jobs": "do not cancel healthy unrelated/secondary work or duplicate scheduler",
+    "hard_cap": "must independently verify owner amendment and remaining ledger",
+    "incremental_CPU_transfer_storage_backup_allowance_usd": 25,
+    "incremental_planning_range_usd": [
+      250,
+      300
+    ],
+    "not_a_new_authorization": true,
+    "profile_rule": "project504 full answers from calibrated actual oracle overhead/length; stop dispatch and report concrete blocker if disproportionate, notify if material expansion needed; never silently change sparsity",
+    "provisional_gpu_rate_ceiling_usd_per_hour": 5.5,
+    "telemetry": "warning-based memory, atomic progress, bounded recovery and verified backup",
+    "useful_parallelism": "independent task/condition groups on small compatible fleet after calibration; reuse immutable caches safely"
+  },
+  "sample_rule": {
+    "length_definition": "len(prefix_ids)-len(prompt_ids), excluding natural closing-think bridge",
+    "pass_fail_outcomes_or_generated_answer_content_used": false,
+    "population": "original40development",
+    "seed": 20260921,
+    "selection": "rank0 calibration; ranks1,2,3 screen; others retained in population audit",
+    "sort": [
+      "historical_reasoning_positions ASC",
+      "task_id ASC"
+    ],
+    "strata": "four consecutive groups of 10",
+    "within_stratum_rank": "SHA256 UTF8(sparse_repair_01|20260921|task_id) ascending hex; tie task_id"
+  },
+  "schema": "gearshift.sparse_repair.declaration.v1",
+  "scope": "Exploratory diagnosis on already-inspected development tasks; not confirmation or a deployable speedup.",
+  "scorer": {
+    "calibration_receipt": {
+      "bytes": 84710,
+      "exists": true,
+      "expected_sha256": "571935db47af4aa0b7c8020911451401fd72def044a97b30ae20e619a71ff7fa",
+      "match": true,
+      "path": "evidence/coding_pilot_v1/confirmation_01_20260919T094418Z/scorer_repair/calibration/calibration_receipt.json",
+      "sha256": "571935db47af4aa0b7c8020911451401fd72def044a97b30ae20e619a71ff7fa"
+    },
+    "core_implementation": [
+      {
+        "bytes": 3951,
+        "exists": true,
+        "expected_sha256": "5a2127593bd244c762d7cec63e783a27adc2efa8eb8debbf6bacd428306e687e",
+        "match": true,
+        "path": "gearshift/coding_sandbox.py",
+        "sha256": "5a2127593bd244c762d7cec63e783a27adc2efa8eb8debbf6bacd428306e687e"
+      },
+      {
+        "bytes": 12723,
+        "exists": true,
+        "expected_sha256": "f884ffb6846fc2fe9dbfd4e8ccefcbdccba6cc9af9a354d9509b164ec6d48182",
+        "match": true,
+        "path": "gearshift/coding_sandbox_v2.py",
+        "sha256": "f884ffb6846fc2fe9dbfd4e8ccefcbdccba6cc9af9a354d9509b164ec6d48182"
+      },
+      {
+        "bytes": 5996,
+        "exists": true,
+        "expected_sha256": "32420b1a6ef0b1d72a3c3c4b00f54dcd387627d7031e1feffc586299d6cde3a3",
+        "match": true,
+        "path": "scripts/coding_sandbox_child_v2.py",
+        "sha256": "32420b1a6ef0b1d72a3c3c4b00f54dcd387627d7031e1feffc586299d6cde3a3"
+      }
+    ],
+    "frozen_policy": {
+      "bytes": 1808,
+      "exists": true,
+      "expected_sha256": "cb5cb0199a92908dd9e71153589cf3792fc15dd93c101b8655c67d639977290f",
+      "match": true,
+      "path": "evidence/coding_pilot_v1/confirmation_01_20260919T094418Z/scorer_repair/calibration/frozen_policy.json",
+      "sha256": "cb5cb0199a92908dd9e71153589cf3792fc15dd93c101b8655c67d639977290f"
+    },
+    "identity_receipt": {
+      "bytes": 564,
+      "exists": true,
+      "path": "evidence/coding_pilot_v1/confirmation_01_20260919T094418Z/scorer_repair/calibration/scorer_identity.json",
+      "sha256": "ed6e99f5839186711f8b6428631ca89c74fdbdda33774c987bdf6b144cdc1736"
+    },
+    "runtime_note": "Pinned corrected scorer is Linux chroot/unprivileged UID/syscall allowlist, not the earlier Phase2 macOS grader. Requires existing isolated CPU environment or validated recreation. Mac Studio is not a silent candidate-scoring substitute. CPU environment availability must be checked by provider controller.",
+    "version": "gearshift_scorer_v2_20260919_01"
+  },
+  "screen_answer_records": 504,
+  "screen_task_count": 12,
+  "screen_tasks": [
+    {
+      "historical_reasoning_positions": 3060,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3384/source_history.json",
+      "history_sha256": "58ad410b9075b4108534832fc9dab84edec807da40fea4bd179cac0724ec9517",
+      "natural_boundary": true,
+      "prompt_tokens": 409,
+      "rank_sha256": "3bc193354603d42d780360b598de7012e6c74b444e29fd55143169019fef794f",
+      "reasoning_capped": false,
+      "role": "screen",
+      "selection_rank": 1,
+      "stratum": 0,
+      "task_id": "leetcode/3384",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "85b9e0ddc738858c270529d1df470d65d8e62fa739274f8b3d6f16a754802f55",
+        "prompt_ids": "d9b0daa477ad93dfcdafb554183e287d558ba835f389a2c5a78aed31664509e7",
+        "reasoning_ids": "be6e6c7587652b550419507b615f2011004bc50135f743498704b8ecaa8298ac"
+      }
+    },
+    {
+      "historical_reasoning_positions": 1164,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3412/source_history.json",
+      "history_sha256": "b8396dab8ddab218e26bf7a286c737f4ec2bc3407fe6e036e350db52d21c3117",
+      "natural_boundary": true,
+      "prompt_tokens": 430,
+      "rank_sha256": "4a9c8b4086aa134b5db001822cbf120e58f028c10a966de04c7d9776f3494afc",
+      "reasoning_capped": false,
+      "role": "screen",
+      "selection_rank": 2,
+      "stratum": 0,
+      "task_id": "leetcode/3412",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "66e81a18102c2c423c75a2a30b124d45fa6ca5478fab10b53792014a573c4fd4",
+        "prompt_ids": "981d25ab2035a0b07aabeb3cb3c8f2c9823f8572b87b12559a803f9a9cd99bb9",
+        "reasoning_ids": "ac3bb00fc47b2a6cc82d0d073f5215722dd89b501f3e5a4f73a69ba17ac71cdf"
+      }
+    },
+    {
+      "historical_reasoning_positions": 1276,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3428/source_history.json",
+      "history_sha256": "87c08105f1d6cd149b73bf2f0b39c6608f85a9df8cf54c6f7eba20b3bd12bdf7",
+      "natural_boundary": true,
+      "prompt_tokens": 253,
+      "rank_sha256": "925f6f2cb6b870121c99990be1f92d4502a8e52ef429539373008b91ba5d2f86",
+      "reasoning_capped": false,
+      "role": "screen",
+      "selection_rank": 3,
+      "stratum": 0,
+      "task_id": "leetcode/3428",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "71d5f90a009bfd2905d854239e5f662766ddb8df8daf17ab8d880ed9bb3edcd2",
+        "prompt_ids": "cdf46f4ee74a6824162f619fdfe823d0f08957c13df9234f343cc0c58b02c19d",
+        "reasoning_ids": "991a97b84f89c5e719711356f60cf695ae67b5f730d66257fd1d2d6232dde922"
+      }
+    },
+    {
+      "historical_reasoning_positions": 3099,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3461/source_history.json",
+      "history_sha256": "d963043437e76feec9739d0cf26a468ce32b60471845a85453212bd70fe7d513",
+      "natural_boundary": true,
+      "prompt_tokens": 272,
+      "rank_sha256": "078245b986ebe7a14c34c6cdb8a31b5e9d7fa15554e68af63a0d8f737e11353c",
+      "reasoning_capped": false,
+      "role": "screen",
+      "selection_rank": 1,
+      "stratum": 1,
+      "task_id": "leetcode/3461",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "efc0b476d9e0860298c022cce11b53e5697e3d7f7668bb8708becb7df12d627d",
+        "prompt_ids": "05fd727b3650460748711a2f2aadf898331cc9d780be6ff42f3c71996e917dbe",
+        "reasoning_ids": "8afdb760f689f50eaa0a685938d9ee59e2b740ff9a489b63dde4c8362369fc28"
+      }
+    },
+    {
+      "historical_reasoning_positions": 6141,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc353_e/source_history.json",
+      "history_sha256": "5549b55d629cd4b52f77c56ad843149b5cb7af2843eaf5ce93b408e83c590239",
+      "natural_boundary": true,
+      "prompt_tokens": 380,
+      "rank_sha256": "0a4e7d938c0c293ddc137f2645e2803dd0089958b68e4e9d5608c462405662e3",
+      "reasoning_capped": false,
+      "role": "screen",
+      "selection_rank": 2,
+      "stratum": 1,
+      "task_id": "atcoder/abc353_e",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "c28f895198ed521d28dee9fea081668e3d97236f0bc6da463e911934e9975b1e",
+        "prompt_ids": "2feaa9bcbfc05d26dad86b6228590a1f7f0eaa5ea4e0a80f66803083337c339f",
+        "reasoning_ids": "7d91309b8b14264f42bfd5e3d135bcdd733f2b439d6188cbdb3a15a55a692bf8"
+      }
+    },
+    {
+      "historical_reasoning_positions": 7927,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3464/source_history.json",
+      "history_sha256": "2f9a9c8086e278d26ba14e43bcb7453358351b9ed3639a2cd8b95e42b7be2a45",
+      "natural_boundary": true,
+      "prompt_tokens": 603,
+      "rank_sha256": "25ae65f303845eb88558ca9cdd37383d86528b6113bc8643b23108910250342f",
+      "reasoning_capped": false,
+      "role": "screen",
+      "selection_rank": 3,
+      "stratum": 1,
+      "task_id": "leetcode/3464",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "dc8344f8dfd3c54cebce65b2212d1b3c62655e7ff2b8a423b149e34a8c6b4dbd",
+        "prompt_ids": "9aa7c0e2dba3f8085e899ea569c46b6ab2a69bbb3c7a092c2675b5d7aa577c8c",
+        "reasoning_ids": "bcf2a94c27428b57fac4065fee2152e857e81cad9734d34e2f0a19d50080cda6"
+      }
+    },
+    {
+      "historical_reasoning_positions": 11249,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3413/source_history.json",
+      "history_sha256": "6568c51ea584381c0ba4cc017a389b417ac4a4adba38d6eb3e4eb0f33bdc7064",
+      "natural_boundary": true,
+      "prompt_tokens": 677,
+      "rank_sha256": "17fe70c2fd6e36d179309322280b64ea38bb0d877b992ee4c3d46269ea85e0fd",
+      "reasoning_capped": false,
+      "role": "screen",
+      "selection_rank": 1,
+      "stratum": 2,
+      "task_id": "leetcode/3413",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "982a3fa671a3dc2fe1e473e40cf77e2db0aa1e58b31951ac51517151375a207c",
+        "prompt_ids": "b937dc8b56e8825c3e7127bedfb8f7d952f07450a92b11f89695a12d1a2450b2",
+        "reasoning_ids": "94f799a14db5578d476e1f9eb7fca5d75d0a64322d65aa59622d6795317073e4"
+      }
+    },
+    {
+      "historical_reasoning_positions": 12293,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3482/source_history.json",
+      "history_sha256": "3cac2352ea07af1ed639c82ba5ceb77005ae40ab60aca2dc2c89fb69aee5a984",
+      "natural_boundary": true,
+      "prompt_tokens": 459,
+      "rank_sha256": "7f30edd3629a4d7595d5be65cb8379fec5214366fda11364e918df1d03932ed3",
+      "reasoning_capped": false,
+      "role": "screen",
+      "selection_rank": 2,
+      "stratum": 2,
+      "task_id": "leetcode/3482",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "20b690c4b1b3f82fcb536c34a4a1c5299abca9bf31900d398028bd905444eb24",
+        "prompt_ids": "5cecefc855f3cbf8ccee52d29f2a8db3aff9f39432276955e0df025b5c36f74c",
+        "reasoning_ids": "372eba5cae4c9f9520a953ede98c00fc4bfa435290188319365a35c5bfcf78cf"
+      }
+    },
+    {
+      "historical_reasoning_positions": 8889,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc364_d/source_history.json",
+      "history_sha256": "9dd2e66de5b8101765fe10e597184a0e580446de8240f145adf04fabf518d94b",
+      "natural_boundary": true,
+      "prompt_tokens": 610,
+      "rank_sha256": "81f01c28e809730bd1201ca4117e834edbf23c57e0939148e2b222b7bd2c63e9",
+      "reasoning_capped": false,
+      "role": "screen",
+      "selection_rank": 3,
+      "stratum": 2,
+      "task_id": "atcoder/abc364_d",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "f527d57602fcbb333f4c484d4b648b0e4c49b7155102b9ef3640dc00807737b9",
+        "prompt_ids": "d9d77a95ce62be2135f56d1c6e93bf2991044bc73918d84050d91406ed60a5fa",
+        "reasoning_ids": "facc468bcbdc781bec2ed601a0c755e75eecf0e10f74cb03236e4ea9685420c2"
+      }
+    },
+    {
+      "historical_reasoning_positions": 18778,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3455/source_history.json",
+      "history_sha256": "2c03077393d2a1d6a5fe79a4a9d7bff8f4bb1ecccfb5f6945a0f3e80767b0606",
+      "natural_boundary": true,
+      "prompt_tokens": 322,
+      "rank_sha256": "417feb5792819d18b447716fb0d47f44267a5a947ce6937a952a4516e0861ff3",
+      "reasoning_capped": false,
+      "role": "screen",
+      "selection_rank": 1,
+      "stratum": 3,
+      "task_id": "leetcode/3455",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "bd1fb872dc628790f3f744572a6a346f4fa0250d8713fb707163d7216ff2c478",
+        "prompt_ids": "d662fd16a07eae3e29609858d5f27cfb045d98c6fce991bbdd22d3f319a888c1",
+        "reasoning_ids": "05218dc5158a57a36997a05aac391203678d411f49aae736ef1dcc216a6a1599"
+      }
+    },
+    {
+      "historical_reasoning_positions": 24576,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/leetcode__3454/source_history.json",
+      "history_sha256": "65cb852dbf980be5eaf664a32459cebba368a646f699137d4f45774dd098626b",
+      "natural_boundary": false,
+      "prompt_tokens": 410,
+      "rank_sha256": "52caf1615995bf709cc3e90a2d0bd6292251f20652b3d7183357a2fae0938129",
+      "reasoning_capped": true,
+      "role": "screen",
+      "selection_rank": 2,
+      "stratum": 3,
+      "task_id": "leetcode/3454",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "1741c1e1e2dc10ac691be782239452699b0f1d7fd75e6871aea77c112ff544a8",
+        "prompt_ids": "500accf92bb8b19da0e14f54cd308cf79330debbd44342685b3c3a53319ab3d1",
+        "reasoning_ids": "8d1246b6381de117dd81a02f79d327f6938d61a97a261df8d9cb678e69d4214b"
+      }
+    },
+    {
+      "historical_reasoning_positions": 17646,
+      "history_path": "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/tasks/atcoder__abc360_c/source_history.json",
+      "history_sha256": "fa425a989905cfbc738e29ddacff3fe149815ddc30a3c68b7f4499fcd30520cf",
+      "natural_boundary": true,
+      "prompt_tokens": 526,
+      "rank_sha256": "54e9c90259582483c3316ddfee7dc04eaa1b51e37f8f4496429ae0948d414a5b",
+      "reasoning_capped": false,
+      "role": "screen",
+      "selection_rank": 3,
+      "stratum": 3,
+      "task_id": "atcoder/abc360_c",
+      "token_field_hashes": {
+        "bridge_ids": "b7aa536ce15c411059ccba1237fce0c12523cf09578f11c93ebfeec27ea408c9",
+        "prefix_ids": "9c15c2f38f7006f141b07cad981b25fa15968147e1ab2dda9b788457ebf8002a",
+        "prompt_ids": "759ed319626a4f4cddcb332616ec12612b3fd762677b68b206e2e53e5102e804",
+        "reasoning_ids": "f229cf1244d1c48db6f91398e500c912c1f5125514720945c87a36e90c402144"
+      }
+    }
+  ],
+  "seed_derivation": "Existing confirmation seed_for: first8 SHA256(coding_pilot_v1|task_id|0|stream), big-endian modulo2**63; distinct streams identify the3 draws; worker order excluded.",
+  "seeds": {
+    "atcoder/abc353_e": [
+      {
+        "answer_seed": 4100189991818265234,
+        "seed_index": 0,
+        "stream": "answer_small"
+      },
+      {
+        "answer_seed": 3837234575433884361,
+        "seed_index": 1,
+        "stream": "coverage_answer_1"
+      },
+      {
+        "answer_seed": 385117070235142045,
+        "seed_index": 2,
+        "stream": "coverage_answer_2"
+      }
+    ],
+    "atcoder/abc360_c": [
+      {
+        "answer_seed": 5306430280946710500,
+        "seed_index": 0,
+        "stream": "answer_small"
+      },
+      {
+        "answer_seed": 6504871899080771846,
+        "seed_index": 1,
+        "stream": "coverage_answer_1"
+      },
+      {
+        "answer_seed": 648789824129934029,
+        "seed_index": 2,
+        "stream": "coverage_answer_2"
+      }
+    ],
+    "atcoder/abc362_d": [
+      {
+        "answer_seed": 8604930191942166068,
+        "seed_index": 0,
+        "stream": "answer_small"
+      },
+      {
+        "answer_seed": 2396036934440807872,
+        "seed_index": 1,
+        "stream": "coverage_answer_1"
+      },
+      {
+        "answer_seed": 5583460310356535011,
+        "seed_index": 2,
+        "stream": "coverage_answer_2"
+      }
+    ],
+    "atcoder/abc363_e": [
+      {
+        "answer_seed": 7376544491347221873,
+        "seed_index": 0,
+        "stream": "answer_small"
+      },
+      {
+        "answer_seed": 571280288264023027,
+        "seed_index": 1,
+        "stream": "coverage_answer_1"
+      },
+      {
+        "answer_seed": 8298976037131536643,
+        "seed_index": 2,
+        "stream": "coverage_answer_2"
+      }
+    ],
+    "atcoder/abc364_d": [
+      {
+        "answer_seed": 3957289397247326799,
+        "seed_index": 0,
+        "stream": "answer_small"
+      },
+      {
+        "answer_seed": 3406858833891580695,
+        "seed_index": 1,
+        "stream": "coverage_answer_1"
+      },
+      {
+        "answer_seed": 5033767701207498375,
+        "seed_index": 2,
+        "stream": "coverage_answer_2"
+      }
+    ],
+    "leetcode/3379": [
+      {
+        "answer_seed": 8215457956254005475,
+        "seed_index": 0,
+        "stream": "answer_small"
+      },
+      {
+        "answer_seed": 703594151698189308,
+        "seed_index": 1,
+        "stream": "coverage_answer_1"
+      },
+      {
+        "answer_seed": 7903211547420702320,
+        "seed_index": 2,
+        "stream": "coverage_answer_2"
+      }
+    ],
+    "leetcode/3384": [
+      {
+        "answer_seed": 5979639452384365620,
+        "seed_index": 0,
+        "stream": "answer_small"
+      },
+      {
+        "answer_seed": 3312117555691144829,
+        "seed_index": 1,
+        "stream": "coverage_answer_1"
+      },
+      {
+        "answer_seed": 2978849242331083603,
+        "seed_index": 2,
+        "stream": "coverage_answer_2"
+      }
+    ],
+    "leetcode/3412": [
+      {
+        "answer_seed": 2264550110854180389,
+        "seed_index": 0,
+        "stream": "answer_small"
+      },
+      {
+        "answer_seed": 8197431281497732229,
+        "seed_index": 1,
+        "stream": "coverage_answer_1"
+      },
+      {
+        "answer_seed": 1716059414453862830,
+        "seed_index": 2,
+        "stream": "coverage_answer_2"
+      }
+    ],
+    "leetcode/3413": [
+      {
+        "answer_seed": 4794180978060116420,
+        "seed_index": 0,
+        "stream": "answer_small"
+      },
+      {
+        "answer_seed": 1953172902130444262,
+        "seed_index": 1,
+        "stream": "coverage_answer_1"
+      },
+      {
+        "answer_seed": 983463794338401773,
+        "seed_index": 2,
+        "stream": "coverage_answer_2"
+      }
+    ],
+    "leetcode/3428": [
+      {
+        "answer_seed": 7264144918385767110,
+        "seed_index": 0,
+        "stream": "answer_small"
+      },
+      {
+        "answer_seed": 3169712278942358784,
+        "seed_index": 1,
+        "stream": "coverage_answer_1"
+      },
+      {
+        "answer_seed": 524972747643004107,
+        "seed_index": 2,
+        "stream": "coverage_answer_2"
+      }
+    ],
+    "leetcode/3454": [
+      {
+        "answer_seed": 7163112490223207946,
+        "seed_index": 0,
+        "stream": "answer_small"
+      },
+      {
+        "answer_seed": 3504905631762351840,
+        "seed_index": 1,
+        "stream": "coverage_answer_1"
+      },
+      {
+        "answer_seed": 9078730695478604525,
+        "seed_index": 2,
+        "stream": "coverage_answer_2"
+      }
+    ],
+    "leetcode/3455": [
+      {
+        "answer_seed": 844314227987894576,
+        "seed_index": 0,
+        "stream": "answer_small"
+      },
+      {
+        "answer_seed": 4650381584489136499,
+        "seed_index": 1,
+        "stream": "coverage_answer_1"
+      },
+      {
+        "answer_seed": 4355767766311303662,
+        "seed_index": 2,
+        "stream": "coverage_answer_2"
+      }
+    ],
+    "leetcode/3461": [
+      {
+        "answer_seed": 8472975181406928386,
+        "seed_index": 0,
+        "stream": "answer_small"
+      },
+      {
+        "answer_seed": 5542013506486933294,
+        "seed_index": 1,
+        "stream": "coverage_answer_1"
+      },
+      {
+        "answer_seed": 1389966465461380554,
+        "seed_index": 2,
+        "stream": "coverage_answer_2"
+      }
+    ],
+    "leetcode/3464": [
+      {
+        "answer_seed": 3175356333976597312,
+        "seed_index": 0,
+        "stream": "answer_small"
+      },
+      {
+        "answer_seed": 97251814608524890,
+        "seed_index": 1,
+        "stream": "coverage_answer_1"
+      },
+      {
+        "answer_seed": 2616355177082399180,
+        "seed_index": 2,
+        "stream": "coverage_answer_2"
+      }
+    ],
+    "leetcode/3482": [
+      {
+        "answer_seed": 4510082082598761191,
+        "seed_index": 0,
+        "stream": "answer_small"
+      },
+      {
+        "answer_seed": 76715159299353647,
+        "seed_index": 1,
+        "stream": "coverage_answer_1"
+      },
+      {
+        "answer_seed": 3091637621316654540,
+        "seed_index": 2,
+        "stream": "coverage_answer_2"
+      }
+    ],
+    "leetcode/3484": [
+      {
+        "answer_seed": 9145914874559120166,
+        "seed_index": 0,
+        "stream": "answer_small"
+      },
+      {
+        "answer_seed": 4437947367265987406,
+        "seed_index": 1,
+        "stream": "coverage_answer_1"
+      },
+      {
+        "answer_seed": 5620323085386419336,
+        "seed_index": 2,
+        "stream": "coverage_answer_2"
+      }
+    ]
+  },
+  "selector": {
+    "N_M": "mask unselected reasoning and renormalize actual arm attention over retained entries",
+    "R": "immutable mapped reasoning background plus current native replacements; recompute actual repaired attention, never reuse oracle weights or permanently accumulate repairs",
+    "budget": "k=ceil(p*historical_reasoning_positions), identical k per layer/KV-head group; complete K/V pairs",
+    "comparison": "N/M/R share scoring rule; only identical queries imply identical selected positions",
+    "label": "ORACLE-ASSISTED",
+    "normalization": "native prompt/reasoning plus this treatment's own current/generated answer positions; causal mask; never future tokens",
+    "outside_budget": "entire original native prompt, current token and own answer states stay present",
+    "position_policy": "retain original absolute positions/RoPE; no token packing or shifting",
+    "random": "seed from first8 big-endian bytes SHA256 compact JSON(['sparse-repair-01-random-v1',task_id,draw_seed,layer,step,kv_head]) modulo2**63; CPU torch.Generator randperm under pinned runtime; exact same k, sorted ascending selected positions",
+    "ranking": "descending FP32 native mass; stable ties lower original absolute position",
+    "recent": "k highest original reasoning positions at every layer/group",
+    "scope": "each current query, attention layer and KV-head group independently",
+    "score": "native historical keys with current treatment query; sum native attention probabilities across query heads sharing KV head"
+  },
+  "status": "FROZEN_SCIENTIFIC_DECLARATION_EXECUTION_GATED",
+  "task_ids": [
+    "leetcode/3379",
+    "leetcode/3484",
+    "atcoder/abc362_d",
+    "atcoder/abc363_e",
+    "leetcode/3384",
+    "leetcode/3412",
+    "leetcode/3428",
+    "leetcode/3461",
+    "atcoder/abc353_e",
+    "leetcode/3464",
+    "leetcode/3413",
+    "leetcode/3482",
+    "atcoder/abc364_d",
+    "leetcode/3455",
+    "leetcode/3454",
+    "atcoder/abc360_c"
+  ]
+}

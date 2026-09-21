@@ -1,0 +1,33 @@
+{
+  "amendment_id": "recovery_20260917_partial_v1",
+  "recorded_at": "2026-09-17T13:54:50.205017+00:00",
+  "instruction_sha256": "b58a0fa8ad600cc07b5e03c67a98d7be19ddf74f25ea3b5c8934aa42348bb9e1",
+  "base_commit": "9bc2ecf7ab8ee378f091eabea79455685b020ec5",
+  "cumulative_usd_ceiling": 1000,
+  "cumulative_gpu_hour_ceiling": 500,
+  "supersedes": [
+    "85-percent historical peak and 10GiB free are warnings in instrumented recovery",
+    "all 160 histories no longer prerequisite for separately versioned partial-corpus exploration",
+    "progress article need not await confirmation"
+  ],
+  "preserves": [
+    "original experiments and files",
+    "model revisions/tasks/sampling/token budgets for saved-trajectory reproduction",
+    "split boundaries",
+    "hidden-test sandbox separation",
+    "reserved confirmation and second-seed sets untouched",
+    "no subjective judging restart",
+    "no publication/push/license choice"
+  ],
+  "deliverables": [
+    "publication/GEARSHIFT_PROGRESS_01.md before another long GPU job",
+    "first interpretable mapped 40-task development comparison or evidence-backed blocker",
+    "gearshift_recovery_review.zip"
+  ],
+  "recovery_order": [
+    "saved-record article",
+    "one instrumented failing trajectory",
+    "fixed partial-corpus affine initialization and bounded functional training",
+    "development-only comparison and export"
+  ]
+}
