@@ -137,3 +137,17 @@ def test_public_raw_field_gate():
  assert forbidden({'prompt_ids': [1,2]})
  assert forbidden({'nested':list(range(24))})
  assert not forbidden({'task_id':'synthetic','source_token_index':24,'sha256':'0'*64,'ci95':[0,1]})
+
+def test_generation_seal_idempotent_but_immutable(tmp_path):
+ from scripts.early_handoff_worker import seal
+ tasks=[f'synthetic_{i}' for i in range(40)]
+ for task in tasks:
+  for c in CONDITIONS:
+   for draw in range(3):
+    for name in ['complete.json','answer.json']:
+     write(tmp_path/'raw'/task/c/f'answer_{draw}'/name,{'synthetic':True})
+ d={'population':{'task_ids':tasks}}
+ seal(tmp_path,d);original=(tmp_path/'control/generation_seal.json').read_bytes()
+ seal(tmp_path,d);assert (tmp_path/'control/generation_seal.json').read_bytes()==original
+ write(tmp_path/'raw'/task/'SMALL_ONLY/answer_0/answer.json',{'synthetic':False})
+ with pytest.raises(ValueError):seal(tmp_path,d)

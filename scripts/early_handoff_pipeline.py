@@ -15,7 +15,7 @@ def main():
  commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
  if subprocess.check_output(['git','status','--porcelain'],cwd=ROOT,text=True).strip():raise RuntimeError('Commit and review implementation before generation')
  if subprocess.check_output(['git','branch','--show-current'],cwd=ROOT,text=True).strip()!='research/early-handoff-01':raise RuntimeError('Wrong branch')
- child=None;started=time.time();env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1',HF_HUB_OFFLINE='1',TRANSFORMERS_OFFLINE='1')
+ child=None;started=time.time();attempt=control/f'pipeline_attempt_{time.time_ns()}.json';env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1',HF_HUB_OFFLINE='1',TRANSFORMERS_OFFLINE='1')
  def stop(signum,frame):
   if child is not None and child.poll() is None:child.terminate()
   raise InterruptedError('Pipeline interrupted; partial evidence retained')
@@ -25,14 +25,14 @@ def main():
  stages=[('generation',[sys.executable,'scripts/early_handoff_worker.py','all','--storage',str(a.storage)]),('scoring',docker),('analysis',[sys.executable,'scripts/early_handoff_report.py','--storage',str(a.storage)])]
  try:
   for stage,cmd in stages:
-   state.update(stage=stage,stage_started_epoch=time.time(),status='running');write(control/'pipeline_status.json',state)
+   state.update(stage=stage,stage_started_epoch=time.time(),status='running');write(control/'pipeline_status.json',state);write(attempt,state)
    with (control/f'pipeline_{stage}.log').open('ab',buffering=0) as log:
     child=subprocess.Popen(cmd,cwd=ROOT,env=env,stdout=log,stderr=subprocess.STDOUT,stdin=subprocess.DEVNULL)
-    state['child_pid']=child.pid;write(control/'pipeline_status.json',state);code=child.wait()
+    state['child_pid']=child.pid;write(control/'pipeline_status.json',state);write(attempt,state);code=child.wait()
    if code:raise RuntimeError(f'{stage} failed with exit code {code}; no automatic experimental retry')
-  state.update(status='analysis_complete_review_required',completed_epoch=time.time());write(control/'pipeline_status.json',state)
+  state.update(status='analysis_complete_review_required',completed_epoch=time.time());write(control/'pipeline_status.json',state);write(attempt,state)
  except BaseException as exc:
-  state.update(status='stopped',incident_type=type(exc).__name__,incident=str(exc),stopped_epoch=time.time());write(control/'pipeline_status.json',state);raise
+  state.update(status='stopped',incident_type=type(exc).__name__,incident=str(exc),stopped_epoch=time.time());write(control/'pipeline_status.json',state);write(attempt,state);raise
  finally:
   if child is not None and child.poll() is None:
    child.terminate()

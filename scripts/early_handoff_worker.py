@@ -185,6 +185,7 @@ def preflight(backend,storage):
 
 
 def seal(storage,d):
+ if len(d['population']['task_ids'])*len(CONDITIONS)*3!=840:raise ValueError('Frozen population must contain all 840 answers')
  files=[]
  for task in d['population']['task_ids']:
   for condition in CONDITIONS:
@@ -192,7 +193,13 @@ def seal(storage,d):
     for name in ['complete.json','answer.json']:
      p=storage/'raw'/task.replace('/','__')/condition/f'answer_{draw}'/name
      files.append({'path':str(p.relative_to(storage)),'sha256':sha(p),'bytes':p.stat().st_size})
- write(storage/'control/generation_seal.json',{'expected_answers':840,'all_generation_complete':True,'declaration_sha256':sha(ROOT/'configs/early_handoff_01/declaration.json'),'files':files,'epoch':time.time()},immutable=True)
+ payload={'expected_answers':840,'all_generation_complete':True,'declaration_sha256':sha(ROOT/'configs/early_handoff_01/declaration.json'),'files':files}
+ path=storage/'control/generation_seal.json'
+ if path.exists():
+  existing=read(path)
+  if {k:v for k,v in existing.items() if k!='epoch'}!=payload:raise ValueError('Existing generation seal differs')
+  return
+ write(path,{**payload,'epoch':time.time()},immutable=True)
 
 
 def main():

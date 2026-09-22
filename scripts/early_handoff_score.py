@@ -45,6 +45,10 @@ def main():
  # Quality failures are never retried; scorer-internal verified infrastructure has
  # exactly the original single retry. No quality result is read by generation.
  with concurrent.futures.ThreadPoolExecutor(max_workers=a.workers) as pool:records=list(pool.map(job,jobs))
- write(a.storage/'control/scoring_complete.json',{'answers':len(records),'missing':sum(r['score'].get('missing',False) for r in records),'passed':sum(r['score'].get('passed') is True for r in records),'scorer_identity':scorer_identity(policy),'policy_file_sha256':sha(ROOT/POLICY),'epoch':time.time()},immutable=True)
+ payload={'answers':len(records),'missing':sum(r['score'].get('missing',False) for r in records),'passed':sum(r['score'].get('passed') is True for r in records),'scorer_identity':scorer_identity(policy),'policy_file_sha256':sha(ROOT/POLICY)}
+ complete=a.storage/'control/scoring_complete.json'
+ if complete.exists():
+  if {k:v for k,v in read(complete).items() if k!='epoch'}!=payload:raise ValueError('Existing scoring inventory differs')
+ else:write(complete,{**payload,'epoch':time.time()},immutable=True)
  print('Scoring complete:',len(records),'draws')
 if __name__=='__main__':main()
