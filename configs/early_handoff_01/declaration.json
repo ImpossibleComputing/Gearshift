@@ -1,0 +1,553 @@
+{
+  "schema": "gearshift.early_handoff.v1",
+  "experiment_id": "early_handoff_01",
+  "status": "PLANNED_PREFLIGHT_NOT_LAUNCHED",
+  "public_release_commit": "e25e3f295719f304d3aea140d34e8e96cbce0641",
+  "branch": "research/early-handoff-01",
+  "population": {
+    "kind": "development_previously_inspected",
+    "selection": "All 40 original development IDs in frozen membership order; no outcome-based filtering",
+    "task_ids": [
+      "atcoder/abc356_a",
+      "atcoder/abc358_b",
+      "leetcode/3511",
+      "atcoder/abc359_a",
+      "leetcode/3412",
+      "atcoder/abc349_a",
+      "leetcode/3428",
+      "leetcode/3450",
+      "leetcode/3379",
+      "leetcode/3484",
+      "atcoder/abc362_c",
+      "leetcode/3455",
+      "leetcode/3464",
+      "atcoder/abc357_d",
+      "atcoder/abc360_c",
+      "leetcode/3430",
+      "leetcode/3384",
+      "leetcode/3461",
+      "leetcode/3453",
+      "leetcode/3413",
+      "atcoder/abc357_c",
+      "leetcode/3462",
+      "atcoder/abc364_e",
+      "atcoder/abc351_d",
+      "atcoder/abc352_e",
+      "atcoder/abc359_e",
+      "atcoder/abc362_e",
+      "atcoder/abc364_d",
+      "atcoder/abc348_e",
+      "atcoder/abc351_f",
+      "atcoder/abc362_d",
+      "leetcode/3478",
+      "atcoder/abc353_e",
+      "leetcode/3482",
+      "atcoder/abc363_e",
+      "atcoder/abc349_d",
+      "leetcode/3454",
+      "atcoder/abc358_e",
+      "leetcode/3466",
+      "atcoder/abc359_d"
+    ],
+    "metadata": [
+      {
+        "platform": "atcoder",
+        "question_id": "abc356_a",
+        "contest_id": "abc356",
+        "contest_date": "2024-06-01T00:00:00",
+        "difficulty": "easy",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "dd7dc4887e79b1eac3e4b84b627b61969da21a973ea22096480048b44ad7c80c"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc358_b",
+        "contest_id": "abc358",
+        "contest_date": "2024-06-15T00:00:00",
+        "difficulty": "easy",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "8e6d0b68a95437a2c7cf71d466b18b9697f5dffc6187b4ffac99e483a8529518"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3511",
+        "contest_id": "biweekly-contest-135",
+        "contest_date": "2024-07-20T00:00:00",
+        "difficulty": "easy",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "80c962baa84d78fd6cb4227b08822b89af6636fb60963a72a60df4e6e96ca186"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc359_a",
+        "contest_id": "abc359",
+        "contest_date": "2024-06-22T00:00:00",
+        "difficulty": "easy",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "d07fb5e7ddaa58db9333ba29bb0295c7767c93b289665e1c366d4bc5aecec356"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3412",
+        "contest_id": "weekly-contest-397",
+        "contest_date": "2024-05-11T00:00:00",
+        "difficulty": "easy",
+        "upstream_file": "test2.jsonl",
+        "source_row_sha256": "a9ee6a6525fa65ab4a13363d75be0a602d51a5d8d8593244f782fa97122cf124"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc349_a",
+        "contest_id": "abc349",
+        "contest_date": "2024-04-13T00:00:00",
+        "difficulty": "easy",
+        "upstream_file": "test2.jsonl",
+        "source_row_sha256": "5e8b927d1844698c8cdcc5f10390f8bf5a6c2e8c9b79316d08c460427c782e7d"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3428",
+        "contest_id": "biweekly-contest-131",
+        "contest_date": "2024-05-25T00:00:00",
+        "difficulty": "easy",
+        "upstream_file": "test2.jsonl",
+        "source_row_sha256": "75d93a8d825248877aed16febc649a262cda1c91e12978853a89f361e2ceb358"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3450",
+        "contest_id": "weekly-contest-401",
+        "contest_date": "2024-06-08T00:00:00",
+        "difficulty": "easy",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "b0921c31ad99d11e17b2bd5da323bafcfc60b728ab4e64f593c663dc3a8428fe"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3379",
+        "contest_id": "biweekly-contest-128",
+        "contest_date": "2024-04-13T00:00:00",
+        "difficulty": "easy",
+        "upstream_file": "test2.jsonl",
+        "source_row_sha256": "8db1b1e6ce34780ea1b0cdad0f9a0324285f0a1a201b5358b2e679418cc7a1bc"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3484",
+        "contest_id": "weekly-contest-406",
+        "contest_date": "2024-07-13T00:00:00",
+        "difficulty": "easy",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "ac059a87198c5cee4ba7129f18f13204646f6b88a12511657ed154b0184c2065"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc362_c",
+        "contest_id": "abc362",
+        "contest_date": "2024-07-13T00:00:00",
+        "difficulty": "medium",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "042e93a80a1c1bf8843f4c217b37cd593a80cd0b211c7e405cc44edca70a2989"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3455",
+        "contest_id": "biweekly-contest-135",
+        "contest_date": "2024-07-20T00:00:00",
+        "difficulty": "medium",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "38d91ef21a24398c856a8f33f91fa0daeacc50430871c801a8ead82e80d5d862"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3464",
+        "contest_id": "weekly-contest-403",
+        "contest_date": "2024-06-22T00:00:00",
+        "difficulty": "medium",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "34447d1fb9e93f10b689312c1d6c3faa559d489e0ffd8ccdcd2531816a9236d8"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc357_d",
+        "contest_id": "abc357",
+        "contest_date": "2024-06-08T00:00:00",
+        "difficulty": "medium",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "7e83e47fd39edbe1c5466606f56db3a6ab56f85b3b741f042deeb3b6e2804c4f"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc360_c",
+        "contest_id": "abc360",
+        "contest_date": "2024-06-30T00:00:00",
+        "difficulty": "medium",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "e425ab8108eb987a792ce5f9570fffaa5bdf93a92d8d7801283434e5435f1cbf"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3430",
+        "contest_id": "weekly-contest-400",
+        "contest_date": "2024-06-01T00:00:00",
+        "difficulty": "medium",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "0a6c0d43e632aaf5d49f30134d5d84d33c04b6a0f1ba768d9875b4a4423a6155"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3384",
+        "contest_id": "weekly-contest-396",
+        "contest_date": "2024-05-04T00:00:00",
+        "difficulty": "medium",
+        "upstream_file": "test2.jsonl",
+        "source_row_sha256": "532812c20c55e46fc81b30921c93448c2e11150440f3206dcd65caa5dfd81d9b"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3461",
+        "contest_id": "weekly-contest-403",
+        "contest_date": "2024-06-22T00:00:00",
+        "difficulty": "medium",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "cce7c31e482b1239a6feaa8b0ea494499a7da736367c1900836f0a629299bdd7"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3453",
+        "contest_id": "weekly-contest-405",
+        "contest_date": "2024-07-06T00:00:00",
+        "difficulty": "medium",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "31ce1c0e569d8ad25869030ef6592d2558dc1858c119c47e7d58d6187415aeac"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3413",
+        "contest_id": "biweekly-contest-132",
+        "contest_date": "2024-06-08T00:00:00",
+        "difficulty": "medium",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "ed58aadb9604432b704e668f8a0b950725a32fc2e89f855993c5c28c9e45b541"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc357_c",
+        "contest_id": "abc357",
+        "contest_date": "2024-06-08T00:00:00",
+        "difficulty": "medium",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "1d0907f5692d98c7aa5d192981c5474d2d8e3ca2f40574ddc04aa4c5222ad408"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3462",
+        "contest_id": "weekly-contest-407",
+        "contest_date": "2024-07-20T00:00:00",
+        "difficulty": "medium",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "7374d50ac52447c0ae9ab1c11cf4e0469f45112743061e2fd3bb378b67e7155f"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc364_e",
+        "contest_id": "abc364",
+        "contest_date": "2024-07-27T00:00:00",
+        "difficulty": "hard",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "2803987dab2f4d5e798bae679ac4cbc43b9c0568953aaaf141381f5b6aa0a976"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc351_d",
+        "contest_id": "abc351",
+        "contest_date": "2024-04-27T00:00:00",
+        "difficulty": "hard",
+        "upstream_file": "test2.jsonl",
+        "source_row_sha256": "b6e73abc6ecddf05144ee4f291b0ff0a3847df6f904e20ddf553fb1abffc7ede"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc352_e",
+        "contest_id": "abc352",
+        "contest_date": "2024-05-04T00:00:00",
+        "difficulty": "hard",
+        "upstream_file": "test2.jsonl",
+        "source_row_sha256": "0ae0f2475ab9a1570dabe00fa575caf842d2a7e05aaf67259209d689859e8cac"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc359_e",
+        "contest_id": "abc359",
+        "contest_date": "2024-06-22T00:00:00",
+        "difficulty": "hard",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "0536cccd1b43f17335ae8898449a022b51947005f38a2324ac48505c44db98fa"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc362_e",
+        "contest_id": "abc362",
+        "contest_date": "2024-07-13T00:00:00",
+        "difficulty": "hard",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "0c68c0faf0cef5b85def63d45510691aa01f63b7a8125a2bcc0f9d9a5c833196"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc364_d",
+        "contest_id": "abc364",
+        "contest_date": "2024-07-27T00:00:00",
+        "difficulty": "hard",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "730bffdb8250490c717c9a8c97de59e5afcf947edaadf20efc6283e3be104389"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc348_e",
+        "contest_id": "abc348",
+        "contest_date": "2024-04-06T00:00:00",
+        "difficulty": "hard",
+        "upstream_file": "test2.jsonl",
+        "source_row_sha256": "6968fe6c040ecb060c0f6de502198ef0411c745f27fd062e96239f92a8bf7e8e"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc351_f",
+        "contest_id": "abc351",
+        "contest_date": "2024-04-27T00:00:00",
+        "difficulty": "hard",
+        "upstream_file": "test2.jsonl",
+        "source_row_sha256": "4b4f5671266c0e7253dfa996226d06ef833e61b5543ebd59031732a2f1944103"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc362_d",
+        "contest_id": "abc362",
+        "contest_date": "2024-07-13T00:00:00",
+        "difficulty": "hard",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "6d02bdb76942c5829464a2d90a38fd84b44d4ebc5854815baf3c150c68ae34d7"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3478",
+        "contest_id": "weekly-contest-408",
+        "contest_date": "2024-07-27T00:00:00",
+        "difficulty": "hard",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "d9de3f5c36b5170c2a5f5939092cf7f6cf4e962de20145ff76019a7cfb00c5b9"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc353_e",
+        "contest_id": "abc353",
+        "contest_date": "2024-05-11T00:00:00",
+        "difficulty": "hard",
+        "upstream_file": "test2.jsonl",
+        "source_row_sha256": "887d93484e060fab42d279737fcc0b90b4494d2b356f23cd0bd52fd02e32fbe0"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3482",
+        "contest_id": "weekly-contest-405",
+        "contest_date": "2024-07-06T00:00:00",
+        "difficulty": "hard",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "acb6ebb875aab2367ba35fdb472256bcf58ad74ede7379262504fb21727d5218"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc363_e",
+        "contest_id": "abc363",
+        "contest_date": "2024-07-20T00:00:00",
+        "difficulty": "hard",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "7742d079cacca0f980232e54be48ead5d5d9da05f6c92b1b4bad4c03d0209960"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc349_d",
+        "contest_id": "abc349",
+        "contest_date": "2024-04-13T00:00:00",
+        "difficulty": "hard",
+        "upstream_file": "test2.jsonl",
+        "source_row_sha256": "47023ccafe06a9aa047cee2d7985b25a969bd46521f1ecfc87a1e49634f45c14"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3454",
+        "contest_id": "weekly-contest-407",
+        "contest_date": "2024-07-20T00:00:00",
+        "difficulty": "hard",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "3cec39dc8ad719854124d7de5662227aabd85c8f8c87eda50b1f9132f79e455a"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc358_e",
+        "contest_id": "abc358",
+        "contest_date": "2024-06-15T00:00:00",
+        "difficulty": "hard",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "f28f0a375b4648b1f1b587ac91d8a887148faec51fb77b303e51b3c5ef3f90e8"
+      },
+      {
+        "platform": "leetcode",
+        "question_id": "3466",
+        "contest_id": "biweekly-contest-134",
+        "contest_date": "2024-07-06T00:00:00",
+        "difficulty": "hard",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "3347bd81cda31105a47b2786a560bf2798095d2c44523c49e3d6cb09c16f7e50"
+      },
+      {
+        "platform": "atcoder",
+        "question_id": "abc359_d",
+        "contest_id": "abc359",
+        "contest_date": "2024-06-22T00:00:00",
+        "difficulty": "hard",
+        "upstream_file": "test3.jsonl",
+        "source_row_sha256": "749c9a18031ed4c6c38e7d6f4c89174ace6bb953a5a1feb8d913011d68da0a8c"
+      }
+    ]
+  },
+  "dataset": {
+    "id": "livecodebench/code_generation_lite",
+    "revision": "0fe84c3912ea0c4d4a78037083943e8f0c4dd505",
+    "release": "release_v6",
+    "membership_sha256": "482a0c8c42c5b23f3e937f08892794557c8a68bf08f8b650f63453c3210cb8db",
+    "retrieval": "python scripts/fetch_livecodebench.py"
+  },
+  "models": {
+    "receiver": {
+      "dtype": "bfloat16",
+      "frozen": true,
+      "id": "Qwen/Qwen3-8B",
+      "revision": "b968826d9c46dd6066d109eabc6255188de91218"
+    },
+    "source": {
+      "dtype": "bfloat16",
+      "frozen": true,
+      "id": "Qwen/Qwen3-32B",
+      "revision": "9216db5781bf21249d130ec9da846c4624c16137"
+    }
+  },
+  "decoding": {
+    "do_sample": true,
+    "min_p": 0.0,
+    "num_beams": 1,
+    "policy": "Same thinking-mode sampling through reasoning and final answer. Do not switch to non-thinking template at the boundary.",
+    "presence_penalty": 0.0,
+    "repetition_penalty": 1.0,
+    "temperature": 0.6,
+    "top_k": 20,
+    "top_p": 0.95
+  },
+  "fractions_percent": [
+    0,
+    10,
+    25,
+    50,
+    75,
+    100
+  ],
+  "conditions": [
+    "SMALL_ONLY",
+    "H10",
+    "H25",
+    "H50",
+    "H75",
+    "FULL_TEXT",
+    "LARGE_ONLY"
+  ],
+  "draws_per_task_condition": 3,
+  "planned_answers": 840,
+  "source_trajectories_per_task": 1,
+  "receiver_reasoning_trajectories_per_task_fraction": 1,
+  "fraction_definition": "floor(fraction * L), L = source reasoning token count excluding an emitted closing-think token, but retaining all sampled reasoning on capped traces. Exact cuts, no snapping. 0 independent, 100 forced/natural closing-think bridge and answer only. Intermediate fractions continue thinking, no answer-now instruction.",
+  "handoff": "Native token-exact text replay of original thinking prompt plus prefix; no transferred cache, no added user turn, no future reasoning or source answer. Identical tokenizer hashes required.",
+  "retrospective_limitation": "Fractions require full source length, unavailable to an online policy. Prefix work accounting uses measured cumulative source timestamps; full source collection is always charged to actual study work.",
+  "budgets": {
+    "answer_max_tokens_all_conditions": 4096,
+    "cap_amendment_path": "configs/coding_pilot_v1/cap_amendment_v1.json",
+    "cap_amendment_sha256": "1e893e1c7b8f14398f7bbfbe8777a650b3179f4c3fb08578a4b5ae25642bf2af",
+    "cap_failure": "Preserve capped/early-EOS histories and answers. Never drop, extend selectively or replace a hard task. Oversized original prompt is an explicit protocol failure; do not crop.",
+    "executed_identity_proofs": [
+      "results/coding_pilot_v1/preflight_cap_v1/identity.json",
+      "results/coding_pilot_v1/cap_recovery_parallel_06/worker_00/identity.json"
+    ],
+    "max_total_tokens": 40960,
+    "prompt_max_tokens": 8192,
+    "reasoning_max_tokens_both_models": 24576
+  },
+  "reasoning_budget": "At intermediate points receiver may generate at most 24576 minus supplied source reasoning tokens; original thinking context total bound is unchanged.",
+  "closing_think_token_id": 151668,
+  "eos_token_ids": [
+    151645,
+    151643
+  ],
+  "seed_scheme": "SHA256 early_handoff_01|task_id|draw_index|stream first eight bytes modulo 2**63. One shared receiver_reasoning stream across fractions; three shared receiver_answer streams across fractions; source_reasoning and source_answer separate.",
+  "runtime": {
+    "local_preferred_by_owner": true,
+    "hardware": "Apple M4 Max, 128 GB unified memory",
+    "device": "mps",
+    "dtype": "bfloat16",
+    "torch": "2.14.0",
+    "transformers": "4.57.6",
+    "attention": "sdpa",
+    "quantization": false,
+    "batch_size": 1,
+    "prefill_chunk_tokens": 512,
+    "deterministic_algorithms": true,
+    "new_hardware_not_H200_replication": true,
+    "model_loading": "Separate source and receiver phases; one model resident at a time"
+  },
+  "scoring": {
+    "scorer_version": "gearshift_scorer_v2_20260919_01",
+    "policy_path": "evidence/coding_pilot_v1/confirmation_01_20260919T094418Z/scorer_repair/calibration/frozen_policy.json",
+    "linux_vm_required": true,
+    "candidate_network": false,
+    "hidden_test_access_for_generation": false,
+    "scoring_only_after_generation_seal": true
+  },
+  "analysis": {
+    "cluster": "task",
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 20260922,
+    "interval": "95% paired task-cluster percentile; exploratory, no equivalence claims or confirmation",
+    "comparisons": "Each intermediate vs SMALL_ONLY,LARGE_ONLY,FULL_TEXT",
+    "frontier": "Observed quality vs latency and generated work. Local runtime cannot identify H200 $ frontier. All local monetary estimates exclude hardware depreciation and energy unless measured.",
+    "oracle": "Retrospective task-wise frontier, explicitly nondeployable; no router"
+  },
+  "recovery": {
+    "completed_outputs_immutable": true,
+    "no_quality_retries": true,
+    "checkpoints": "Tokens, RNG state, timings; recover cache by identical per-token replay after the same chunked initial prefill. Verify deterministic replay, never silently use a different prefill shape.",
+    "failure_policy": "Preserve all planned tasks and explicit missingness; stop on integrity/resource failures"
+  },
+  "scope_exclusions": [
+    "cache_translation",
+    "mapper_training",
+    "sparse_attention",
+    "selective_repair",
+    "routing",
+    "confirmation",
+    "new_model_pairs"
+  ],
+  "budget": {
+    "soft_usd": 1000,
+    "hard_usd": 1500,
+    "actual_runpod_spend_usd": 0,
+    "runpod_reserved_usd": 0,
+    "cleanup_reserve_usd": 50,
+    "local_hardware_energy_cost": "not measured; not claimed free compute",
+    "new_remote_allocations": "disabled unless local infeasibility documented first"
+  },
+  "storage": {
+    "ignored_root": "data/early_handoff_01",
+    "raw_benchmark_downloads": "data/coding_pilot_v1/raw",
+    "safe_public_outputs": "results/early_handoff_01",
+    "raw_text_tokens_answers_tests_must_never_be_committed": true
+  }
+}
