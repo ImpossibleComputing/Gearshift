@@ -93,3 +93,41 @@ $PY scripts/early_handoff_hygiene.py
 The scanner compares staged text against freshly fetched upstream text/tests,
 checks raw-data fields and literal token arrays, and invokes gitleaks. It supplements,
 not replaces, a whitelist-only artifact review. Do not merge main or create tags.
+
+## Completed-screen review
+
+The run is complete; do not restart generation or scoring to review it. See
+`EARLY_HANDOFF_RESULTS.md` for actual results, missingness and limitations.
+The first report failed when plotting missing outcomes; the report-only repair
+preserves scores and writes a draft inside the requested output directory,
+**not over the reviewed report**. `receiver_seed` now correctly identifies the
+reasoning RNG rather than duplicating `answer_seed` (null for full-text).
+
+The historical scoring VM was underprovisioned: two workers, 6 GiB VM RAM and
+4 GiB per-candidate address-space limits. Guest OOM kills left 13 missing scores
+on one task after the frozen retries. The commands above describe that run,
+not a recommendation to repeat its capacity risk. No extra retries or changed
+scoring limits were used for this report. Any new corrected-capacity scoring
+run must be separately authorized/labeled and preserve these original results.
+
+Safe numeric-only reproduction, with no model or benchmark access:
+
+```sh
+$PY scripts/early_handoff_report.py \
+  --input results/early_handoff_01/analysis_input.json \
+  --output data/early_handoff_01/review_regenerated
+$PY scripts/early_handoff_audit.py --compact \
+  --input results/early_handoff_01/analysis_input.json \
+  --output data/early_handoff_01/review_regenerated
+cp results/early_handoff_01/audit.json data/early_handoff_01/review_regenerated/audit.json
+$PY scripts/early_handoff_finalize.py \
+  --results data/early_handoff_01/review_regenerated \
+  --report data/early_handoff_01/review_regenerated/EARLY_HANDOFF_RESULTS.md
+```
+
+`audit.json` is a whitelist-only measured provenance receipt, not reconstructible
+from aggregate data alone. `early_handoff_audit.py` without `--compact` verifies
+original ignored evidence and emits it. `missingness_sensitivity.json` is an
+explicit post-run bounds analysis, not a replacement for the frozen null primary
+estimates. The supplementary oracle labels its 39-task fully scored subset;
+all 40 tasks remain in primary evidence and population bounds.

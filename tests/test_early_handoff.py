@@ -151,3 +151,30 @@ def test_generation_seal_idempotent_but_immutable(tmp_path):
  seal(tmp_path,d);assert (tmp_path/'control/generation_seal.json').read_bytes()==original
  write(tmp_path/'raw'/task/'SMALL_ONLY/answer_0/answer.json',{'synthetic':False})
  with pytest.raises(ValueError):seal(tmp_path,d)
+
+def test_missingness_plot_does_not_annotate_null(tmp_path):
+ from scripts.early_handoff_report import analyze,plot_summary
+ rows=analysis_rows();rows[9].update(passed=None,missing=True)
+ summary,_=analyze(rows,['synthetic_a','synthetic_b'])
+ plot_summary(summary,tmp_path/'frontier.png')
+ assert (tmp_path/'frontier.png').stat().st_size>1000
+
+def test_sensitivity_retains_all_tasks_and_labels_subset():
+ from scripts.early_handoff_audit import sensitivity
+ rows=analysis_rows();rows[9].update(passed=None,missing=True)
+ s=sensitivity(rows,['synthetic_a','synthetic_b'])
+ c=s['contrasts']['H50-SMALL_ONLY']
+ assert c['difference_identification_bounds']==pytest.approx([5/6,1])
+ assert len(s['per_task_quality_bounds'])==14
+ assert s['oracle']['fully_scored_task_count']==1
+ assert s['oracle']['excluded_from_subset']==['synthetic_a']
+ assert s['oracle']['all_task_quality_identification_bounds']==[1,1]
+
+def test_sensitivity_matches_primary_when_complete():
+ from scripts.early_handoff_audit import sensitivity
+ from scripts.early_handoff_report import analyze
+ rows=analysis_rows();tasks=['synthetic_a','synthetic_b'];a,_=analyze(rows,tasks);s=sensitivity(rows,tasks)
+ for key,v in a['contrasts'].items():
+  assert s['contrasts'][key]['difference_identification_bounds']==[v['difference'],v['difference']]
+  assert s['contrasts'][key]['task_bootstrap_sensitivity_envelope']==v['ci95']
+ assert s['oracle']['fully_scored_subset_quality']==a['oracle']['mean_success']

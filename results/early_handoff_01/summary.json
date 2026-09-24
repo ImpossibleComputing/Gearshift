@@ -1,0 +1,351 @@
+{
+  "conditions": {
+    "SMALL_ONLY": {
+      "passed": 96,
+      "draws": 120,
+      "missing": 0,
+      "pass_rate": 0.8,
+      "quality_lower_bound": 0.8,
+      "quality_upper_bound": 0.8,
+      "ci95": [
+        0.675,
+        0.925
+      ],
+      "mean_stage_seconds": 533.1461444221495,
+      "stage_seconds_ci95": [
+        404.20173432900236,
+        671.7593550628048
+      ],
+      "failure_categories": {
+        "pass": 96,
+        "test_assertion": 23,
+        "syntax": 1
+      },
+      "receiver_reasoning_tokens_mean": 8814.5,
+      "source_reasoning_tokens_mean": 0.0
+    },
+    "H10": {
+      "passed": 96,
+      "draws": 120,
+      "missing": 0,
+      "pass_rate": 0.8,
+      "quality_lower_bound": 0.8,
+      "quality_upper_bound": 0.8,
+      "ci95": [
+        0.675,
+        0.925
+      ],
+      "mean_stage_seconds": 628.3724343093679,
+      "stage_seconds_ci95": [
+        481.90142980048734,
+        783.7481909177677
+      ],
+      "failure_categories": {
+        "pass": 96,
+        "test_assertion": 21,
+        "cpu_timeout": 3
+      },
+      "receiver_reasoning_tokens_mean": 7941.125,
+      "source_reasoning_tokens_mean": 865.525
+    },
+    "H25": {
+      "passed": 95,
+      "draws": 120,
+      "missing": 2,
+      "pass_rate": null,
+      "quality_lower_bound": 0.7916666666666666,
+      "quality_upper_bound": 0.8083333333333333,
+      "ci95": null,
+      "mean_stage_seconds": 765.4654076054503,
+      "stage_seconds_ci95": [
+        601.1910818942487,
+        933.9354642029564
+      ],
+      "failure_categories": {
+        "pass": 95,
+        "runtime_error": 1,
+        "test_assertion": 21,
+        "infrastructure_failure": 2,
+        "memory_limit": 1
+      },
+      "receiver_reasoning_tokens_mean": 6585.2,
+      "source_reasoning_tokens_mean": 2164.425
+    },
+    "H50": {
+      "passed": 105,
+      "draws": 120,
+      "missing": 3,
+      "pass_rate": null,
+      "quality_lower_bound": 0.875,
+      "quality_upper_bound": 0.9,
+      "ci95": null,
+      "mean_stage_seconds": 1050.4025512368758,
+      "stage_seconds_ci95": [
+        807.868114285846,
+        1311.4399639595522
+      ],
+      "failure_categories": {
+        "pass": 105,
+        "test_assertion": 12,
+        "infrastructure_failure": 3
+      },
+      "receiver_reasoning_tokens_mean": 4845.3,
+      "source_reasoning_tokens_mean": 4329.325
+    },
+    "H75": {
+      "passed": 105,
+      "draws": 120,
+      "missing": 3,
+      "pass_rate": null,
+      "quality_lower_bound": 0.875,
+      "quality_upper_bound": 0.9,
+      "ci95": null,
+      "mean_stage_seconds": 1285.5609585881703,
+      "stage_seconds_ci95": [
+        982.974744677897,
+        1611.3460304238604
+      ],
+      "failure_categories": {
+        "pass": 105,
+        "test_assertion": 9,
+        "infrastructure_failure": 3,
+        "cpu_timeout": 3
+      },
+      "receiver_reasoning_tokens_mean": 2264.05,
+      "source_reasoning_tokens_mean": 6493.925
+    },
+    "FULL_TEXT": {
+      "passed": 106,
+      "draws": 120,
+      "missing": 3,
+      "pass_rate": null,
+      "quality_lower_bound": 0.8833333333333334,
+      "quality_upper_bound": 0.9083333333333334,
+      "ci95": null,
+      "mean_stage_seconds": 1555.9879484765231,
+      "stage_seconds_ci95": [
+        1174.713863323295,
+        1967.6097342055753
+      ],
+      "failure_categories": {
+        "pass": 106,
+        "test_assertion": 9,
+        "infrastructure_failure": 3,
+        "cpu_timeout": 2
+      },
+      "receiver_reasoning_tokens_mean": 0.0,
+      "source_reasoning_tokens_mean": 8659.075
+    },
+    "LARGE_ONLY": {
+      "passed": 106,
+      "draws": 120,
+      "missing": 2,
+      "pass_rate": null,
+      "quality_lower_bound": 0.8833333333333334,
+      "quality_upper_bound": 0.9000000000000001,
+      "ci95": null,
+      "mean_stage_seconds": 1612.4408707490668,
+      "stage_seconds_ci95": [
+        1228.72694848871,
+        2027.5599199474593
+      ],
+      "failure_categories": {
+        "pass": 106,
+        "test_assertion": 9,
+        "infrastructure_failure": 2,
+        "memory_limit": 1,
+        "cpu_timeout": 2
+      },
+      "receiver_reasoning_tokens_mean": 0.0,
+      "source_reasoning_tokens_mean": 8659.075
+    }
+  },
+  "contrasts": {
+    "H10-SMALL_ONLY": {
+      "difference": 0.0,
+      "ci95": [
+        -0.075,
+        0.075
+      ],
+      "paired_task_gains": 1,
+      "paired_task_losses": 1,
+      "paired_task_ties": 38,
+      "mean_seconds_difference": 95.22628988721844,
+      "seconds_difference_ci95": [
+        47.23577592045987,
+        147.29960563627995
+      ],
+      "latency_ratio": 1.1786119826308215,
+      "interval_scope": "Exploratory unadjusted task-cluster intervals; missing outcomes are not treated as observed failures."
+    },
+    "H10-LARGE_ONLY": {
+      "difference": null,
+      "ci95": null,
+      "paired_task_gains": null,
+      "paired_task_losses": null,
+      "paired_task_ties": null,
+      "mean_seconds_difference": -984.0684364396988,
+      "seconds_difference_ci95": [
+        -1264.4883723875498,
+        -732.6252729947984
+      ],
+      "latency_ratio": 0.38970262147811635,
+      "interval_scope": "Exploratory unadjusted task-cluster intervals; missing outcomes are not treated as observed failures."
+    },
+    "H10-FULL_TEXT": {
+      "difference": null,
+      "ci95": null,
+      "paired_task_gains": null,
+      "paired_task_losses": null,
+      "paired_task_ties": null,
+      "mean_seconds_difference": -927.6155141671552,
+      "seconds_difference_ci95": [
+        -1204.8869360904343,
+        -678.9997930407923
+      ],
+      "latency_ratio": 0.4038414532224437,
+      "interval_scope": "Exploratory unadjusted task-cluster intervals; missing outcomes are not treated as observed failures."
+    },
+    "H25-SMALL_ONLY": {
+      "difference": null,
+      "ci95": null,
+      "paired_task_gains": null,
+      "paired_task_losses": null,
+      "paired_task_ties": null,
+      "mean_seconds_difference": 232.3192631833008,
+      "seconds_difference_ci95": [
+        173.66465933337807,
+        294.9964487914578
+      ],
+      "latency_ratio": 1.4357515582056775,
+      "interval_scope": "Exploratory unadjusted task-cluster intervals; missing outcomes are not treated as observed failures."
+    },
+    "H25-LARGE_ONLY": {
+      "difference": null,
+      "ci95": null,
+      "paired_task_gains": null,
+      "paired_task_losses": null,
+      "paired_task_ties": null,
+      "mean_seconds_difference": -846.9754631436165,
+      "seconds_difference_ci95": [
+        -1112.7079264690108,
+        -606.7662670294018
+      ],
+      "latency_ratio": 0.4747246373442828,
+      "interval_scope": "Exploratory unadjusted task-cluster intervals; missing outcomes are not treated as observed failures."
+    },
+    "H25-FULL_TEXT": {
+      "difference": null,
+      "ci95": null,
+      "paired_task_gains": null,
+      "paired_task_losses": null,
+      "paired_task_ties": null,
+      "mean_seconds_difference": -790.5225408710729,
+      "seconds_difference_ci95": [
+        -1054.2274610797651,
+        -554.0156618263753
+      ],
+      "latency_ratio": 0.4919481595952732,
+      "interval_scope": "Exploratory unadjusted task-cluster intervals; missing outcomes are not treated as observed failures."
+    },
+    "H50-SMALL_ONLY": {
+      "difference": null,
+      "ci95": null,
+      "paired_task_gains": null,
+      "paired_task_losses": null,
+      "paired_task_ties": null,
+      "mean_seconds_difference": 517.2564068147263,
+      "seconds_difference_ci95": [
+        380.6163041731246,
+        669.2136621424232
+      ],
+      "latency_ratio": 1.970196281500553,
+      "interval_scope": "Exploratory unadjusted task-cluster intervals; missing outcomes are not treated as observed failures."
+    },
+    "H50-LARGE_ONLY": {
+      "difference": null,
+      "ci95": null,
+      "paired_task_gains": null,
+      "paired_task_losses": null,
+      "paired_task_ties": null,
+      "mean_seconds_difference": -562.0383195121909,
+      "seconds_difference_ci95": [
+        -723.1833376172717,
+        -414.2290588855038
+      ],
+      "latency_ratio": 0.6514363225914178,
+      "interval_scope": "Exploratory unadjusted task-cluster intervals; missing outcomes are not treated as observed failures."
+    },
+    "H50-FULL_TEXT": {
+      "difference": null,
+      "ci95": null,
+      "paired_task_gains": null,
+      "paired_task_losses": null,
+      "paired_task_ties": null,
+      "mean_seconds_difference": -505.5853972396473,
+      "seconds_difference_ci95": [
+        -665.2011703981706,
+        -360.9896261036524
+      ],
+      "latency_ratio": 0.6750711355221812,
+      "interval_scope": "Exploratory unadjusted task-cluster intervals; missing outcomes are not treated as observed failures."
+    },
+    "H75-SMALL_ONLY": {
+      "difference": null,
+      "ci95": null,
+      "paired_task_gains": null,
+      "paired_task_losses": null,
+      "paired_task_ties": null,
+      "mean_seconds_difference": 752.4148141660207,
+      "seconds_difference_ci95": [
+        559.676777703638,
+        965.7333169137149
+      ],
+      "latency_ratio": 2.4112731040782927,
+      "interval_scope": "Exploratory unadjusted task-cluster intervals; missing outcomes are not treated as observed failures."
+    },
+    "H75-LARGE_ONLY": {
+      "difference": null,
+      "ci95": null,
+      "paired_task_gains": null,
+      "paired_task_losses": null,
+      "paired_task_ties": null,
+      "mean_seconds_difference": -326.8799121608962,
+      "seconds_difference_ci95": [
+        -420.7955446424318,
+        -243.52766337534447
+      ],
+      "latency_ratio": 0.797276341668862,
+      "interval_scope": "Exploratory unadjusted task-cluster intervals; missing outcomes are not treated as observed failures."
+    },
+    "H75-FULL_TEXT": {
+      "difference": null,
+      "ci95": null,
+      "paired_task_gains": null,
+      "paired_task_losses": null,
+      "paired_task_ties": null,
+      "mean_seconds_difference": -270.42698988835275,
+      "seconds_difference_ci95": [
+        -361.0072994736883,
+        -190.03135120747876
+      ],
+      "latency_ratio": 0.8262023879085121,
+      "interval_scope": "Exploratory unadjusted task-cluster intervals; missing outcomes are not treated as observed failures."
+    }
+  },
+  "observed_quality_latency_frontier": [
+    "SMALL_ONLY"
+  ],
+  "oracle": {
+    "task_choices": [],
+    "mean_success": null,
+    "mean_stage_seconds": null,
+    "limitation": "Retrospective selection on the same three draws; optimistic and nondeployable. Fraction timing also requires future source length. Not a learned or validated policy."
+  },
+  "tasks": 40,
+  "draws": 840,
+  "missing": 13,
+  "bootstrap_seed": 20260922,
+  "bootstrap_resamples": 10000,
+  "currency": "Measured new RunPod spend $0; local energy/depreciation unmeasured. Quality/latency frontier is hardware-conditional, not an H200 dollar frontier."
+}

@@ -1,0 +1,2116 @@
+{
+  "scope": "Post-run descriptive missingness sensitivity, not a replacement primary analysis. All 40 tasks retained in bounds. Bootstrap envelopes combine adverse/best missing-outcome completions with task resampling, are exploratory and unadjusted, and do not establish equivalence.",
+  "contrasts": {
+    "H10-SMALL_ONLY": {
+      "difference_identification_bounds": [
+        0.0,
+        0.0
+      ],
+      "task_bootstrap_sensitivity_envelope": [
+        -0.075,
+        0.075
+      ],
+      "definite_task_gains": 1,
+      "definite_task_losses": 1,
+      "definite_task_ties": 38,
+      "ambiguous_tasks": 0
+    },
+    "H10-LARGE_ONLY": {
+      "difference_identification_bounds": [
+        -0.1,
+        -0.08333333333333333
+      ],
+      "task_bootstrap_sensitivity_envelope": [
+        -0.19999999999999998,
+        -0.008333333333333333
+      ],
+      "definite_task_gains": 0,
+      "definite_task_losses": 4,
+      "definite_task_ties": 35,
+      "ambiguous_tasks": 1
+    },
+    "H10-FULL_TEXT": {
+      "difference_identification_bounds": [
+        -0.10833333333333332,
+        -0.08333333333333333
+      ],
+      "task_bootstrap_sensitivity_envelope": [
+        -0.20833333333333334,
+        -0.008333333333333333
+      ],
+      "definite_task_gains": 0,
+      "definite_task_losses": 4,
+      "definite_task_ties": 35,
+      "ambiguous_tasks": 1
+    },
+    "H25-SMALL_ONLY": {
+      "difference_identification_bounds": [
+        -0.008333333333333335,
+        0.008333333333333331
+      ],
+      "task_bootstrap_sensitivity_envelope": [
+        -0.08333333333333334,
+        0.09166666666666665
+      ],
+      "definite_task_gains": 1,
+      "definite_task_losses": 2,
+      "definite_task_ties": 36,
+      "ambiguous_tasks": 1
+    },
+    "H25-LARGE_ONLY": {
+      "difference_identification_bounds": [
+        -0.10833333333333332,
+        -0.075
+      ],
+      "task_bootstrap_sensitivity_envelope": [
+        -0.2,
+        0.008333333333333331
+      ],
+      "definite_task_gains": 0,
+      "definite_task_losses": 5,
+      "definite_task_ties": 34,
+      "ambiguous_tasks": 1
+    },
+    "H25-FULL_TEXT": {
+      "difference_identification_bounds": [
+        -0.11666666666666665,
+        -0.075
+      ],
+      "task_bootstrap_sensitivity_envelope": [
+        -0.2166666666666667,
+        0.008333333333333331
+      ],
+      "definite_task_gains": 0,
+      "definite_task_losses": 5,
+      "definite_task_ties": 34,
+      "ambiguous_tasks": 1
+    },
+    "H50-SMALL_ONLY": {
+      "difference_identification_bounds": [
+        0.075,
+        0.1
+      ],
+      "task_bootstrap_sensitivity_envelope": [
+        0.0,
+        0.2
+      ],
+      "definite_task_gains": 3,
+      "definite_task_losses": 0,
+      "definite_task_ties": 36,
+      "ambiguous_tasks": 1
+    },
+    "H50-LARGE_ONLY": {
+      "difference_identification_bounds": [
+        -0.024999999999999994,
+        0.01666666666666667
+      ],
+      "task_bootstrap_sensitivity_envelope": [
+        -0.09999999999999999,
+        0.09166666666666667
+      ],
+      "definite_task_gains": 1,
+      "definite_task_losses": 1,
+      "definite_task_ties": 37,
+      "ambiguous_tasks": 1
+    },
+    "H50-FULL_TEXT": {
+      "difference_identification_bounds": [
+        -0.03333333333333333,
+        0.01666666666666667
+      ],
+      "task_bootstrap_sensitivity_envelope": [
+        -0.1168749999999998,
+        0.09166666666666667
+      ],
+      "definite_task_gains": 1,
+      "definite_task_losses": 1,
+      "definite_task_ties": 37,
+      "ambiguous_tasks": 1
+    },
+    "H75-SMALL_ONLY": {
+      "difference_identification_bounds": [
+        0.075,
+        0.1
+      ],
+      "task_bootstrap_sensitivity_envelope": [
+        0.0,
+        0.2
+      ],
+      "definite_task_gains": 3,
+      "definite_task_losses": 0,
+      "definite_task_ties": 36,
+      "ambiguous_tasks": 1
+    },
+    "H75-LARGE_ONLY": {
+      "difference_identification_bounds": [
+        -0.025,
+        0.01666666666666667
+      ],
+      "task_bootstrap_sensitivity_envelope": [
+        -0.06666666666666667,
+        0.075
+      ],
+      "definite_task_gains": 0,
+      "definite_task_losses": 1,
+      "definite_task_ties": 38,
+      "ambiguous_tasks": 1
+    },
+    "H75-FULL_TEXT": {
+      "difference_identification_bounds": [
+        -0.03333333333333333,
+        0.01666666666666667
+      ],
+      "task_bootstrap_sensitivity_envelope": [
+        -0.09166666666666666,
+        0.075
+      ],
+      "definite_task_gains": 0,
+      "definite_task_losses": 1,
+      "definite_task_ties": 38,
+      "ambiguous_tasks": 1
+    }
+  },
+  "robustly_dominated_under_missingness_bounds": [
+    "H10"
+  ],
+  "potential_frontier_not_resolved_by_missingness": [
+    "SMALL_ONLY",
+    "H25",
+    "H50",
+    "H75",
+    "FULL_TEXT",
+    "LARGE_ONLY"
+  ],
+  "frontier_limitation": "Empirical means only; sampling uncertainty is not incorporated in dominance. Reconstructed local latency is not deployable or monetary cost.",
+  "oracle": {
+    "scope": "Post-run supplementary oracle; never deployable. Quality-first, latency tie-break; LARGE_ONLY excluded from fraction choices. Same three draws used for selection and evaluation.",
+    "all_task_quality_identification_bounds": [
+      0.9,
+      0.925
+    ],
+    "fully_scored_task_count": 39,
+    "excluded_from_subset": [
+      "atcoder/abc364_e"
+    ],
+    "fully_scored_subset_quality": 0.9230769230769231,
+    "fully_scored_subset_mean_seconds": 569.0059428243504,
+    "task_choices_on_fully_scored_subset": [
+      {
+        "task_id": "atcoder/abc356_a",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 99.6005130961227
+      },
+      {
+        "task_id": "atcoder/abc358_b",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 99.46850586236299
+      },
+      {
+        "task_id": "leetcode/3511",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 192.28084423583155
+      },
+      {
+        "task_id": "atcoder/abc359_a",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 58.53097011179974
+      },
+      {
+        "task_id": "leetcode/3412",
+        "condition": "H10",
+        "quality": 1.0,
+        "mean_stage_seconds": 89.8113320970054
+      },
+      {
+        "task_id": "atcoder/abc349_a",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 32.364728458380945
+      },
+      {
+        "task_id": "leetcode/3428",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 93.04250974825118
+      },
+      {
+        "task_id": "leetcode/3450",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 105.88028943080765
+      },
+      {
+        "task_id": "leetcode/3379",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 66.23467375004354
+      },
+      {
+        "task_id": "leetcode/3484",
+        "condition": "H10",
+        "quality": 1.0,
+        "mean_stage_seconds": 345.57322222198127
+      },
+      {
+        "task_id": "atcoder/abc362_c",
+        "condition": "H10",
+        "quality": 0.0,
+        "mean_stage_seconds": 342.23233005635365
+      },
+      {
+        "task_id": "leetcode/3455",
+        "condition": "H50",
+        "quality": 1.0,
+        "mean_stage_seconds": 1382.6449718185856
+      },
+      {
+        "task_id": "leetcode/3464",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 767.798806125531
+      },
+      {
+        "task_id": "atcoder/abc357_d",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 352.15037591565243
+      },
+      {
+        "task_id": "atcoder/abc360_c",
+        "condition": "H10",
+        "quality": 1.0,
+        "mean_stage_seconds": 535.0917563193556
+      },
+      {
+        "task_id": "leetcode/3430",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 142.19975019351114
+      },
+      {
+        "task_id": "leetcode/3384",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 110.11661561167178
+      },
+      {
+        "task_id": "leetcode/3461",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 121.81448234854422
+      },
+      {
+        "task_id": "leetcode/3453",
+        "condition": "H10",
+        "quality": 1.0,
+        "mean_stage_seconds": 261.8714201665716
+      },
+      {
+        "task_id": "leetcode/3413",
+        "condition": "H10",
+        "quality": 1.0,
+        "mean_stage_seconds": 505.0586170545236
+      },
+      {
+        "task_id": "atcoder/abc357_c",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 195.21808477743375
+      },
+      {
+        "task_id": "leetcode/3462",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 507.7965078052366
+      },
+      {
+        "task_id": "atcoder/abc351_d",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 890.9645114154167
+      },
+      {
+        "task_id": "atcoder/abc352_e",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 469.5913414017996
+      },
+      {
+        "task_id": "atcoder/abc359_e",
+        "condition": "SMALL_ONLY",
+        "quality": 0.0,
+        "mean_stage_seconds": 1734.8291804309702
+      },
+      {
+        "task_id": "atcoder/abc362_e",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 712.7996416116754
+      },
+      {
+        "task_id": "atcoder/abc364_d",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 531.2766382783497
+      },
+      {
+        "task_id": "atcoder/abc348_e",
+        "condition": "H10",
+        "quality": 1.0,
+        "mean_stage_seconds": 488.47081063893467
+      },
+      {
+        "task_id": "atcoder/abc351_f",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 737.6284309870098
+      },
+      {
+        "task_id": "atcoder/abc362_d",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 299.4007081397576
+      },
+      {
+        "task_id": "leetcode/3478",
+        "condition": "H10",
+        "quality": 0.0,
+        "mean_stage_seconds": 1420.186341707711
+      },
+      {
+        "task_id": "atcoder/abc353_e",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 334.4932011673227
+      },
+      {
+        "task_id": "leetcode/3482",
+        "condition": "H50",
+        "quality": 1.0,
+        "mean_stage_seconds": 1647.0314002370385
+      },
+      {
+        "task_id": "atcoder/abc363_e",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 815.5376597919967
+      },
+      {
+        "task_id": "atcoder/abc349_d",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 501.8385943051738
+      },
+      {
+        "task_id": "leetcode/3454",
+        "condition": "H75",
+        "quality": 1.0,
+        "mean_stage_seconds": 3363.1111196669713
+      },
+      {
+        "task_id": "atcoder/abc358_e",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 591.6944332765803
+      },
+      {
+        "task_id": "leetcode/3466",
+        "condition": "SMALL_ONLY",
+        "quality": 1.0,
+        "mean_stage_seconds": 482.3776193468754
+      },
+      {
+        "task_id": "atcoder/abc359_d",
+        "condition": "H10",
+        "quality": 1.0,
+        "mean_stage_seconds": 763.218830540524
+      }
+    ]
+  },
+  "per_task_quality_bounds": [
+    {
+      "task_id": "atcoder/abc356_a",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc358_b",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3511",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc359_a",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3412",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc349_a",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3428",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3450",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3379",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3484",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc362_c",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "leetcode/3455",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "leetcode/3464",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc357_d",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc360_c",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3430",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3384",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3461",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3453",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3413",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc357_c",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3462",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc364_e",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc351_d",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc352_e",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc359_e",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc362_e",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc364_d",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc348_e",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc351_f",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc362_d",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3478",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc353_e",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3482",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc363_e",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc349_d",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3454",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc358_e",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3466",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc359_d",
+      "condition": "SMALL_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc356_a",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc358_b",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3511",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc359_a",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3412",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc349_a",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3428",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3450",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3379",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3484",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc362_c",
+      "condition": "H10",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "leetcode/3455",
+      "condition": "H10",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "leetcode/3464",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc357_d",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc360_c",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3430",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3384",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3461",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3453",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3413",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc357_c",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3462",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc364_e",
+      "condition": "H10",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc351_d",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc352_e",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc359_e",
+      "condition": "H10",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc362_e",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc364_d",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc348_e",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc351_f",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc362_d",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3478",
+      "condition": "H10",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc353_e",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3482",
+      "condition": "H10",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc363_e",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc349_d",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3454",
+      "condition": "H10",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc358_e",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3466",
+      "condition": "H10",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc359_d",
+      "condition": "H10",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc356_a",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc358_b",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3511",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc359_a",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3412",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc349_a",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3428",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3450",
+      "condition": "H25",
+      "quality_lower_bound": 0.6666666666666666,
+      "quality_upper_bound": 0.6666666666666666
+    },
+    {
+      "task_id": "leetcode/3379",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3484",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc362_c",
+      "condition": "H25",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "leetcode/3455",
+      "condition": "H25",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "leetcode/3464",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc357_d",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc360_c",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3430",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3384",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3461",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3453",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3413",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc357_c",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3462",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc364_e",
+      "condition": "H25",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.6666666666666666
+    },
+    {
+      "task_id": "atcoder/abc351_d",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc352_e",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc359_e",
+      "condition": "H25",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc362_e",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc364_d",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc348_e",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc351_f",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc362_d",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3478",
+      "condition": "H25",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc353_e",
+      "condition": "H25",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "leetcode/3482",
+      "condition": "H25",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc363_e",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc349_d",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3454",
+      "condition": "H25",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc358_e",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3466",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc359_d",
+      "condition": "H25",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc356_a",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc358_b",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3511",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc359_a",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3412",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc349_a",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3428",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3450",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3379",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3484",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc362_c",
+      "condition": "H50",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "leetcode/3455",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3464",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc357_d",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc360_c",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3430",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3384",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3461",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3453",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3413",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc357_c",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3462",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc364_e",
+      "condition": "H50",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc351_d",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc352_e",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc359_e",
+      "condition": "H50",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc362_e",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc364_d",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc348_e",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc351_f",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc362_d",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3478",
+      "condition": "H50",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc353_e",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3482",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc363_e",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc349_d",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3454",
+      "condition": "H50",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc358_e",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3466",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc359_d",
+      "condition": "H50",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc356_a",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc358_b",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3511",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc359_a",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3412",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc349_a",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3428",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3450",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3379",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3484",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc362_c",
+      "condition": "H75",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "leetcode/3455",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3464",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc357_d",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc360_c",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3430",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3384",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3461",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3453",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3413",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc357_c",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3462",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc364_e",
+      "condition": "H75",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc351_d",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc352_e",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc359_e",
+      "condition": "H75",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc362_e",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc364_d",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc348_e",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc351_f",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc362_d",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3478",
+      "condition": "H75",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc353_e",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3482",
+      "condition": "H75",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc363_e",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc349_d",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3454",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc358_e",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3466",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc359_d",
+      "condition": "H75",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc356_a",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc358_b",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3511",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc359_a",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3412",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc349_a",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3428",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3450",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3379",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3484",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc362_c",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "leetcode/3455",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3464",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc357_d",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc360_c",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3430",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3384",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3461",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3453",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3413",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc357_c",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3462",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc364_e",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc351_d",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc352_e",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc359_e",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc362_e",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc364_d",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc348_e",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc351_f",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc362_d",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3478",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc353_e",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3482",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 0.3333333333333333,
+      "quality_upper_bound": 0.3333333333333333
+    },
+    {
+      "task_id": "atcoder/abc363_e",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc349_d",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3454",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc358_e",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3466",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc359_d",
+      "condition": "FULL_TEXT",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc356_a",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc358_b",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3511",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc359_a",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3412",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc349_a",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3428",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3450",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3379",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3484",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc362_c",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "leetcode/3455",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3464",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc357_d",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc360_c",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3430",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3384",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3461",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3453",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3413",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc357_c",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3462",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc364_e",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.6666666666666666
+    },
+    {
+      "task_id": "atcoder/abc351_d",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc352_e",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc359_e",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc362_e",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc364_d",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc348_e",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc351_f",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc362_d",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3478",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 0.0,
+      "quality_upper_bound": 0.0
+    },
+    {
+      "task_id": "atcoder/abc353_e",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3482",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 0.3333333333333333,
+      "quality_upper_bound": 0.3333333333333333
+    },
+    {
+      "task_id": "atcoder/abc363_e",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc349_d",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3454",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc358_e",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "leetcode/3466",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    },
+    {
+      "task_id": "atcoder/abc359_d",
+      "condition": "LARGE_ONLY",
+      "quality_lower_bound": 1.0,
+      "quality_upper_bound": 1.0
+    }
+  ]
+}

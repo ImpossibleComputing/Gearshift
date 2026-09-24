@@ -1,0 +1,391 @@
+{
+  "schema": "gearshift.early_handoff.audit.v1",
+  "generation_implementation_commit": "bf85c69508589c8f7027af3cdbe10b91904ed921",
+  "verified": {
+    "reasoning_or_prefill_records": 280,
+    "answer_records": 840
+  },
+  "scorer_unchanged": true,
+  "all_sealed_hashes_sizes_verified": true,
+  "exact_task_condition_draw_inventory_verified": true,
+  "prompt_prefix_seed_contracts_verified": true,
+  "scoring_began_after_seal": true,
+  "generation_recovery_attempts": 0,
+  "scoring": {
+    "passed": 709,
+    "missing": 13,
+    "observed_failures": 118,
+    "categories": {
+      "pass": 709,
+      "runtime_error": 1,
+      "test_assertion": 104,
+      "infrastructure_failure": 13,
+      "memory_limit": 2,
+      "syntax": 1,
+      "cpu_timeout": 10
+    },
+    "tasks_with_observed_failures": [
+      "atcoder/abc353_e",
+      "atcoder/abc359_e",
+      "atcoder/abc362_c",
+      "atcoder/abc364_e",
+      "leetcode/3413",
+      "leetcode/3450",
+      "leetcode/3454",
+      "leetcode/3455",
+      "leetcode/3466",
+      "leetcode/3478",
+      "leetcode/3482"
+    ],
+    "infrastructure_retry_count": 14,
+    "missing_execution_attempts": 27,
+    "final_missing_records": [
+      {
+        "task_id": "atcoder/abc364_e",
+        "condition": "H25",
+        "draw": 0,
+        "attempt_count": 2,
+        "return_codes": [
+          -9,
+          -9
+        ],
+        "reasons": [
+          "unexpected_external_termination",
+          "unexpected_external_termination"
+        ],
+        "maximum_rss_kib_max": 3108064
+      },
+      {
+        "task_id": "atcoder/abc364_e",
+        "condition": "H25",
+        "draw": 2,
+        "attempt_count": 2,
+        "return_codes": [
+          -9,
+          -9
+        ],
+        "reasons": [
+          "unexpected_external_termination",
+          "unexpected_external_termination"
+        ],
+        "maximum_rss_kib_max": 3623760
+      },
+      {
+        "task_id": "atcoder/abc364_e",
+        "condition": "H50",
+        "draw": 0,
+        "attempt_count": 2,
+        "return_codes": [
+          -9,
+          -9
+        ],
+        "reasons": [
+          "unexpected_external_termination",
+          "unexpected_external_termination"
+        ],
+        "maximum_rss_kib_max": 3150632
+      },
+      {
+        "task_id": "atcoder/abc364_e",
+        "condition": "H50",
+        "draw": 1,
+        "attempt_count": 2,
+        "return_codes": [
+          -9,
+          -9
+        ],
+        "reasons": [
+          "unexpected_external_termination",
+          "unexpected_external_termination"
+        ],
+        "maximum_rss_kib_max": 3378476
+      },
+      {
+        "task_id": "atcoder/abc364_e",
+        "condition": "H50",
+        "draw": 2,
+        "attempt_count": 2,
+        "return_codes": [
+          -9,
+          -9
+        ],
+        "reasons": [
+          "unexpected_external_termination",
+          "unexpected_external_termination"
+        ],
+        "maximum_rss_kib_max": 3504620
+      },
+      {
+        "task_id": "atcoder/abc364_e",
+        "condition": "H75",
+        "draw": 0,
+        "attempt_count": 2,
+        "return_codes": [
+          -9,
+          -9
+        ],
+        "reasons": [
+          "unexpected_external_termination",
+          "unexpected_external_termination"
+        ],
+        "maximum_rss_kib_max": 3383288
+      },
+      {
+        "task_id": "atcoder/abc364_e",
+        "condition": "H75",
+        "draw": 1,
+        "attempt_count": 2,
+        "return_codes": [
+          -9,
+          -9
+        ],
+        "reasons": [
+          "unexpected_external_termination",
+          "unexpected_external_termination"
+        ],
+        "maximum_rss_kib_max": 3487180
+      },
+      {
+        "task_id": "atcoder/abc364_e",
+        "condition": "H75",
+        "draw": 2,
+        "attempt_count": 2,
+        "return_codes": [
+          -9,
+          -9
+        ],
+        "reasons": [
+          "unexpected_external_termination",
+          "unexpected_external_termination"
+        ],
+        "maximum_rss_kib_max": 3380888
+      },
+      {
+        "task_id": "atcoder/abc364_e",
+        "condition": "FULL_TEXT",
+        "draw": 0,
+        "attempt_count": 2,
+        "return_codes": [
+          -9,
+          -9
+        ],
+        "reasons": [
+          "unexpected_external_termination",
+          "unexpected_external_termination"
+        ],
+        "maximum_rss_kib_max": 3512288
+      },
+      {
+        "task_id": "atcoder/abc364_e",
+        "condition": "FULL_TEXT",
+        "draw": 1,
+        "attempt_count": 2,
+        "return_codes": [
+          -9,
+          -9
+        ],
+        "reasons": [
+          "unexpected_external_termination",
+          "unexpected_external_termination"
+        ],
+        "maximum_rss_kib_max": 3381516
+      },
+      {
+        "task_id": "atcoder/abc364_e",
+        "condition": "FULL_TEXT",
+        "draw": 2,
+        "attempt_count": 2,
+        "return_codes": [
+          -9,
+          -9
+        ],
+        "reasons": [
+          "unexpected_external_termination",
+          "unexpected_external_termination"
+        ],
+        "maximum_rss_kib_max": 3487808
+      },
+      {
+        "task_id": "atcoder/abc364_e",
+        "condition": "LARGE_ONLY",
+        "draw": 0,
+        "attempt_count": 2,
+        "return_codes": [
+          -9,
+          -9
+        ],
+        "reasons": [
+          "unexpected_external_termination",
+          "unexpected_external_termination"
+        ],
+        "maximum_rss_kib_max": 3381196
+      },
+      {
+        "task_id": "atcoder/abc364_e",
+        "condition": "LARGE_ONLY",
+        "draw": 1,
+        "attempt_count": 2,
+        "return_codes": [
+          -9,
+          -9
+        ],
+        "reasons": [
+          "unexpected_external_termination",
+          "unexpected_external_termination"
+        ],
+        "maximum_rss_kib_max": 3505328
+      }
+    ],
+    "vm_memory_gib": 6,
+    "parallel_scoring_workers": 2,
+    "per_candidate_address_space_gib": 4,
+    "kernel_oom_kill_events": 27,
+    "incident": "Guest kernel records OOM kills of scoring Python children. 6 GiB VM with two concurrent candidates and 4 GiB per-candidate limits was underprovisioned. Frozen scorer retains 13 SIGKILL outcomes as missing; no extra retry or reclassification."
+  },
+  "caps": {
+    "SMALL_ONLY_reasoning": 3,
+    "SMALL_ONLY_answer": 1,
+    "H10_reasoning": 1,
+    "H10_answer": 0,
+    "H25_reasoning": 1,
+    "H25_answer": 0,
+    "H50_reasoning": 1,
+    "H50_answer": 0,
+    "H75_reasoning": 1,
+    "H75_answer": 0,
+    "FULL_TEXT_reasoning": 0,
+    "FULL_TEXT_answer": 0,
+    "LARGE_ONLY_reasoning": 2,
+    "LARGE_ONLY_answer": 0
+  },
+  "early_reasoning_eos": {
+    "SMALL_ONLY_reasoning_early_eos": 0,
+    "H10_reasoning_early_eos": 0,
+    "H25_reasoning_early_eos": 0,
+    "H50_reasoning_early_eos": 0,
+    "H75_reasoning_early_eos": 0,
+    "FULL_TEXT_reasoning_early_eos": 0,
+    "LARGE_ONLY_reasoning_early_eos": 0
+  },
+  "actual_study_work": {
+    "generation_wall_seconds": 171584.4950709343,
+    "generation_started_epoch": 1790040468.89854,
+    "generation_completed_epoch": 1790212053.393611,
+    "unique_reasoning_or_prefill_stage_seconds": {
+      "SMALL_ONLY": 19742.448147369083,
+      "H10": 18095.24678782781,
+      "H25": 15173.412661624025,
+      "H50": 11876.395725002862,
+      "H75": 5912.272107793251,
+      "FULL_TEXT": 590.3598036208423,
+      "LARGE_ONLY": 60164.961614082684
+    },
+    "unique_answer_stage_seconds": {
+      "SMALL_ONLY": 4739.942259711912,
+      "H10": 4400.870224083657,
+      "H25": 4303.3026641248725,
+      "H50": 4478.644206166384,
+      "H75": 4496.477775794454,
+      "FULL_TEXT": 4443.422843999346,
+      "LARGE_ONLY": 12971.462893884862
+    },
+    "unique_setup_seconds": {
+      "clone_seconds": 20.205285392003134,
+      "bridge_seconds": 64.39526329701766,
+      "cache_reconstruction_setup_seconds": 0.0,
+      "unique_transfer_seconds": 0.10105012031272054
+    },
+    "model_load_seconds": {
+      "source": 29.16363237495534,
+      "receiver": 7.381541957962327
+    },
+    "unique_measured_stage_and_setup_seconds": 171473.92131389538,
+    "generation_unassigned_residual_seconds": 74.02858270599972,
+    "actual_unique_generated_emissions": {
+      "receiver_reasoning_emissions": 1218200,
+      "receiver_answer_emissions": 444091,
+      "source_reasoning_emissions": 346401,
+      "source_answer_emissions": 71117
+    },
+    "scoring_elapsed_seconds": 1367.0918893814087,
+    "scoring_sum_of_draw_wall_seconds": 2730.8432586193085,
+    "initial_pipeline_until_report_failure_seconds": 172956.07869195938,
+    "cost_scope": "Actual unique work is not the sum of reconstructed per-output hypothetical costs. Residual includes Python, serialization, checkpoint IO, cleanup and scheduling; attribution not separately instrumented. Downloads, preflights and review time are outside generation wall. No kernel-busy measurement or energy/depreciation estimate.",
+    "new_runpod_spend_usd": 0,
+    "local_energy_depreciation_usd": null,
+    "gpu_kernel_busy_seconds": null
+  },
+  "report_incident": {
+    "initial_analysis_failed": true,
+    "reason": "Plot annotated a null pass rate after missing scoring outcomes. Fixed reporting only; no generation or scoring rerun.",
+    "metadata_correction": "Initial report exporter mislabeled answer seed as receiver seed. Receiver seed now records the reasoning RNG seed, null for FULL_TEXT. Saved generation seeds unchanged."
+  },
+  "private_receipt_sha256": {
+    "generation_seal.json": "7d172df8aa9645ca21a4ce015cd1a001c63973ca4f23861db417575673143f77",
+    "worker_complete.json": "676902368d6ae125a648002b3045710715608afe99ba6e13799ba5200836b032",
+    "scoring_complete.json": "770604a051d7d4ff2b59532d6846c98ec27729664856fac1a49165adc5b977db",
+    "prepared_inputs.json": "ea14d70d88080606ef5bce2090a5235a9eba7740f5d36b2902c586341e924f04",
+    "launch.json": "432506078b6201e9125bb2f604d28a5d706744e248fda423a4797715533be16d",
+    "pipeline_status.json": "a809a97a7a3c895b6639c544773b5556546b0712578220f12a870c4640bfa27a",
+    "source_mps_preflight.json": "a472d94bb5c57a24797e23eb9d26bfd2bbb5bfd93beda3e96db520cb71db7de4",
+    "receiver_mps_preflight.json": "34b65e86b0cfaf5c447a66236df6871c040ef572a2309631650ac235fd0c5032",
+    "local_scorer_preflight.json": "ee80eb388bed419470e5bf887c3cf7ec5ca61360968c3952d75dcfa88fc0c9c0",
+    "model_weights_verified.json": "8d298b16c67bf80f62b0e4cb46cef1176e5e2514cda21323ffd26bba90bdb332",
+    "pipeline_analysis.log": "2660fd9b8a9114e4f35f1301383d946322fd9238b55a35995a9e56ca3b078671",
+    "scoring_kernel_audit.log": "8be47d3bf5ce214e0e9a3e46c1a0c98552f8161699448fbb1fb33a204768cae9"
+  },
+  "safe_preflights": {
+    "source": {
+      "role": "source",
+      "exact_shape_replay_logits_bitwise": true,
+      "rng_replayed_16_tokens_match": true,
+      "synthetic_decode_tokens": 64,
+      "synthetic_decode_seconds": 9.647866916027851,
+      "synthetic_tokens_per_second": 6.633590674191183,
+      "prompt_prefill_seconds": 0.781923291971907,
+      "memory": {
+        "tensor_allocated_bytes": 66024060160,
+        "driver_allocated_bytes": 66597896192,
+        "recommended_max_bytes": 115448725504
+      },
+      "torch": "2.14.0",
+      "model_execution_performed": true,
+      "benchmark_tasks_read": false,
+      "long_prefix_tokens": 36865,
+      "long_prefill_seconds": 314.47147541696904,
+      "long_memory": {
+        "tensor_allocated_bytes": 75901783040,
+        "driver_allocated_bytes": 90589315072,
+        "recommended_max_bytes": 115448725504
+      },
+      "long_cache_length": 36865,
+      "passed": true
+    },
+    "receiver": {
+      "role": "receiver",
+      "exact_shape_replay_logits_bitwise": true,
+      "rng_replayed_16_tokens_match": true,
+      "synthetic_decode_tokens": 64,
+      "synthetic_decode_seconds": 3.336143375025131,
+      "synthetic_tokens_per_second": 19.18382779322783,
+      "prompt_prefill_seconds": 0.9745952080120333,
+      "memory": {
+        "tensor_allocated_bytes": 16473584896,
+        "driver_allocated_bytes": 16570335232,
+        "recommended_max_bytes": 115448725504
+      },
+      "torch": "2.14.0",
+      "model_execution_performed": true,
+      "benchmark_tasks_read": false,
+      "long_prefix_tokens": 36865,
+      "long_prefill_seconds": 87.71182029199554,
+      "long_memory": {
+        "tensor_allocated_bytes": 22029405184,
+        "driver_allocated_bytes": 29906124800,
+        "recommended_max_bytes": 115448725504
+      },
+      "long_cache_length": 36865,
+      "passed": true
+    }
+  }
+}

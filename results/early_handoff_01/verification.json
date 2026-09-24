@@ -1,0 +1,44 @@
+{
+  "schema": "gearshift.early_handoff.verification.v1",
+  "test_suite": {
+    "passed": 1510,
+    "skipped": 23,
+    "warnings": 34,
+    "subtests_passed": 48,
+    "duration_seconds": 60.69,
+    "log_sha256": "571f3e1cfb05df8b6db1d1f6a8811f22101ef06a2e42b7b1c698394d0cc0758e",
+    "skip_scope": "Historical nonredistributed input/token corpora, Linux-root-only scorer tests, and optional upstream tokenizer. Original Linux scorer preflight separately passed 18 tests."
+  },
+  "runtime": {
+    "python": "3.12.4",
+    "numpy": "2.5.3",
+    "matplotlib": "3.11.2",
+    "torch": "2.14.0",
+    "transformers": "4.57.6"
+  },
+  "scorer_image_local_sha256": "9c97ec0ecdb045d9480f783390bc6127daacf181004e3ba6ada090556b8e94d0",
+  "compact_byte_identical_files": [
+    "analysis_input.json",
+    "per_draw.json",
+    "per_draw.csv",
+    "per_task.csv",
+    "summary.json",
+    "missingness_sensitivity.json",
+    "condition_summary.csv",
+    "paired_comparisons.csv",
+    "frontier.png",
+    "EARLY_HANDOFF_RESULTS.md"
+  ],
+  "compact_requires_raw_benchmark_or_gpu": false,
+  "raw_audit_passed": true,
+  "raw_generation_or_scoring_rerun_during_review": false,
+  "reversible_fields_gate_passed": true,
+  "hygiene_policy": "Scan all staged blobs against 1055 pinned official upstream rows and gitleaks before commit; scan every final ZIP member separately. Detailed scan receipts remain ignored operational storage. No license/reversibility scanner can replace whitelist review.",
+  "preserved_main_commit": "e25e3f295719f304d3aea140d34e8e96cbce0641",
+  "preserved_progress_02_tag_object": "8e3b7010b7d01146373e0f89aa44e50ea95346f3",
+  "website_modified": false,
+  "archive_modified": false,
+  "new_experiments_launched": false,
+  "compact_non_git_bundle_subset_verified": true,
+  "report_regression_tests_passed": 27
+}
